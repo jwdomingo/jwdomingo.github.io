@@ -1,5 +1,5 @@
-johndomingo.com
-===============
+The Scheme of Things
+====================
 
 johndomingo.com is my first hand-coded website. It is intended to serve as the landing page for my web portfolio where I highlight and test past and current projects.
 
