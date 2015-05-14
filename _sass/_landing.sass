@@ -1,27 +1,39 @@
-html, html a
-  -webkit-font-smoothing: antialiased
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.004)
-  font-family: $base-font-family
-  font-weight: normal
+.title-container
+  position: absolute
+  width: 50%
+  top: 50%
+  margin-top: -25%
 
-body
-  color: $primary4
-
-p
-  font-family: 'Avenir', sans-serif
-  font-weight: 400
+header
+  height: 100vh
+  background:
+    image: url('/assets/img/goldengate.jpg')
+    size: cover
+    position: center
 
 .site-title, .sub-title
   text-transform: uppercase
   text-align: center
+  background-color: transparentize(white,0.5)
 
-h1.site-title
-  font-size: 8.125em
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
 
-h6.sub-title
-  font-size: 1.5625em
+  margin-bottom: 0
 
-h6.sub-title ul li
+.site-title
+  font-size: 4.5em
+  line-height: 1
+
+.sub-title
+  font-size: 1em
+  display: none
+
+.sub-title ul
   list-style-type: none
-  display: inline-block
-  margin-right: 50px
+  display: flex
+  flex-direction: row
+  align-items: center
+  margin-bottom: 0px

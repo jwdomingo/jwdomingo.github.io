@@ -21,6 +21,13 @@ body {
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+p {
+  font-family: 'Avenir', sans-serif;
+  font-weight: 400;
 }
 
 
