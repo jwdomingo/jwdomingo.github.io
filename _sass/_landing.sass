@@ -1,39 +1,61 @@
-.title-container
-  position: absolute
-  width: 50%
-  top: 50%
-  margin-top: -25%
-
 header
   height: 100vh
   background:
     image: url('/assets/img/goldengate.jpg')
     size: cover
-    position: center
-
-.site-title, .sub-title
-  text-transform: uppercase
-  text-align: center
-  background-color: transparentize(white,0.5)
+    position: top center
+    attachment: fixed
 
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
+  text-align: center
 
-  margin-bottom: 0
+.site-title, .sub-title ul li, .sup-title
+  text-transform: uppercase
 
 .site-title
+  background-color: transparentize(white,0.5)
   font-size: 4.5em
   line-height: 1
+  padding: 10px 20px
+  margin-bottom: 25px
 
-.sub-title
-  font-size: 1em
+//  &:hover
+//    background-color: transparent
+//    color: white
+//    font-weight: 700
+
+
+.sub-title ul li
+  font-size: 1.65em
+  margin: 0px 20px
+  padding: 5px 10px
+  color: white
+  font-weight: 700
+
+  &:hover
+    color: $text-color
+    background-color: white
+
+.sup-title
+  font-size: 1.15em
+  margin: 0px
+  padding: 0px auto
   display: none
+  justify-content: center
+
+.title-container h1:hover
+  display: flex
+  background-color: transparent
+  color: white
+  font-weight: 700
 
 .sub-title ul
   list-style-type: none
   display: flex
   flex-direction: row
   align-items: center
-  margin-bottom: 0px
+  justify-content: space-around
+  margin: 0px
