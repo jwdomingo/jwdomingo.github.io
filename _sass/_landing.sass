@@ -5,52 +5,37 @@ header
     size: cover
     position: top center
     attachment: fixed
-
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  text-align: center
-
-.site-title, .sub-title ul li, .sup-title
   text-transform: uppercase
+  text-align: center
+  position: relative
 
-.site-title
-  background-color: transparentize(white,0.5)
-  font-size: 4.5em
-  line-height: 1
-  padding: 10px 20px
-  margin-bottom: 25px
+.header-container
+  width: 100%
+  position: absolute
+  top: 50%
+  left: 50%
+  -webkit-transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%)
 
-//  &:hover
-//    background-color: transparent
-//    color: white
-//    font-weight: 700
-
-
-.sub-title ul li
-  font-size: 1.65em
-  margin: 0px 20px
-  padding: 5px 10px
-  color: white
-  font-weight: 700
+.title-container h1
+  display: inline-block
 
   &:hover
-    color: $text-color
-    background-color: white
+    background-color: transparent
+    color: white
+    font-weight: 700
 
-.sup-title
-  font-size: 1.15em
-  margin: 0px
-  padding: 0px auto
-  display: none
-  justify-content: center
+.site-title
+  font-size: 4.5em
+  line-height: 1
+  background-color: transparentize(white,0.5)
+  margin: 0px 0px 25px
+  padding: 10px 20px
+  cursor: pointer
 
-.title-container h1:hover
-  display: flex
-  background-color: transparent
-  color: white
-  font-weight: 700
+.sub-title-container
+  display: inline-block
+  width: 50%
 
 .sub-title ul
   list-style-type: none
@@ -59,3 +44,15 @@ header
   align-items: center
   justify-content: space-around
   margin: 0px
+
+.sub-title ul li
+  font-size: 1.65em
+  margin: 0px 20px
+  padding: 5px 10px
+  color: white
+  font-weight: 700
+  cursor: pointer
+
+  &:hover
+    color: $text-color
+    background-color: white
