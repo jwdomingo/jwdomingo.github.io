@@ -1,17 +1,10 @@
-body
-  height:100%
-  overflow: scroll
-  -webkit-overflow-scrolling: touch
-
 header
   height: 100vh
   background:
-    image: url('/assets/img/goldengate.jpg')
+    image: url('/assets/img/ggate516x240.jpg')
     size: cover
     position: center
     attachment: fixed
-    height: 100%
-    overflow: hidden
   text-transform: uppercase
   text-align: center
   position: relative
@@ -29,7 +22,7 @@ header
 
   &:hover
     background-color: transparent
-    color: red
+    color: white
     font-weight: 700
 
 .site-title
@@ -63,3 +56,10 @@ header
   &:hover
     color: $text-color
     background-color: white
+
+// MEDIA QUERIES
+
+@media only screen and (min-width: 768px)
+  header
+    background:
+      image: url('/assets/img/ggate1719x800.jpg')
