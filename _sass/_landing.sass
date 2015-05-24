@@ -6,7 +6,6 @@ header
     repeat: no-repeat
     size: cover
     position: center
-    attachment: fixed
   -webkit-background-size: cover
   -moz-background-size: cover
   text-transform: uppercase
@@ -20,6 +19,8 @@ header
   left: 50%
   -webkit-transform: translate(-50%, -50%)
   transform: translate(-50%, -50%)
+  -webkit-transition: 4s
+  transition: 4s
 
 .title-container h1
   display: inline-block
@@ -58,18 +59,18 @@ header
   font-weight: 700
   cursor: pointer
   display: flex
-  //min-width: 0px
-  //webkit-flex: 0 1 auto
-  //background-color: transparentize(pink, 0.5)
 
   &:hover
     color: $text-color
     background-color: white
 
 // MEDIA QUERIES
-@media only screen and (min-width: 512px)
+@media only screen and (min-width: 500px)
   .sub-title ul
     flex-direction: row
+
+  .sub-title-container
+    width: 500px
 
 @media only screen and (min-width: 768px)
   .mobile-background
@@ -77,9 +78,6 @@ header
 
   .site-title
     font-size: 4.5em
-
-  .sub-title-container
-    width: 50%
 
   header
     height: 100vh
