@@ -1,15 +1,15 @@
 header
-  //height: 100vh
-  height: 667px
+  height: 100vh
   background:
     //image: url('/assets/img/ggate516x240@2x.jpg')
     image: url('/assets/img/ggate1719x800.jpg')
     repeat: no-repeat
-    size: auto 100%
-    position: center
+    //size: auto 100%
+    position: bottom center
     attachment: fixed
-  -webkit-background-size: auto 100%
-  -moz-background-size: auto 100%
+    repeat: no-repeat
+  //-webkit-background-size: auto 100%
+  //-moz-background-size: auto 100%
   min-height: 100%
   text-transform: uppercase
   text-align: center
@@ -69,6 +69,9 @@ header
     background-color: white
 
 // MEDIA QUERIES
+@media only screen and (min-width: 512px)
+  .sub-title ul
+    flex-direction: row
 
 @media only screen and (min-width: 768px)
   .site-title
@@ -76,9 +79,6 @@ header
 
   .sub-title-container
     width: 50%
-
-  .sub-title ul
-    flex-direction: row
 
   header
     height: 100vh
