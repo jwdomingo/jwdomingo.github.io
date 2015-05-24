@@ -7,14 +7,29 @@ html
     // Landing Page
     header
       .header-container
-        .title-container      
-          h1.site-title John Domingo
+        .title-container
+          input(type='radio', name='toggler', id='title')
+          h1.site-title
+            label(for='title').lbl-toggler John Domingo
+          
         .sub-title-container
           h6.sub-title
             ul
-              li Designer
-              li Developer
-              li Data Visualist
+              li
+                input(type='radio'
+                      name='toggler'
+                      id='design').toggler
+                label(for='design').lbl-toggler Designer
+              li
+                input(type='radio'
+                      name='toggler'
+                      id='develop').toggler
+                label(for='develop').lbl-toggler Developer
+              li
+                input(type='radio'
+                      name='toggler'
+                      id='datavis').toggler
+                label(for='datavis').lbl-toggler Data Visualist  
           
     // About
     section

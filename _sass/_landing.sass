@@ -19,8 +19,6 @@ header
   left: 50%
   -webkit-transform: translate(-50%, -50%)
   transform: translate(-50%, -50%)
-  -webkit-transition: 4s
-  transition: 4s
 
 .title-container h1
   display: inline-block
@@ -54,13 +52,26 @@ header
 .sub-title ul li
   font-size: 1.65em
   margin: 0px 15px
-  padding: 5px 10px
+  //padding: 5px 10px
   color: white
   font-weight: 700
   cursor: pointer
   display: flex
 
   &:hover
+    color: $text-color
+    background-color: white
+
+// INTERACTIVE TAGS
+.lbl-toggler
+  cursor: pointer
+  padding: 5px 10px
+
+input[type='radio']
+  display: none
+
+.toggler
+  &:checked + label
     color: $text-color
     background-color: white
 
