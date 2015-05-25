@@ -55,7 +55,7 @@ h1.site-title
 
 // INTERACTIVE TAGS
 .tag-list
-  display: none
+  display: flex
   width: 85%
   margin: 0px
   position: absolute
@@ -81,7 +81,7 @@ input[type='radio']
   display: none
 
 input.toggler
-  &:checked + .lbl-toggler
+  //&:checked + .lbl-toggler
     color: $text-color
     background-color: white
 
@@ -91,6 +91,7 @@ input.toggler
     flex-wrap: wrap
     align-items: center
     justify-content: space-around
+    color: red
 
 // MEDIA QUERIES
 @media only screen and (min-width: 500px)
