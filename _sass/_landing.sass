@@ -37,7 +37,8 @@ h1.site-title
   width: 90%
   background-color: transparent
   display: flex
-  flex-direction: column
+  flex-direction: row
+  flex-wrap: wrap
   align-items: center
   justify-content: space-around
   margin: 0px auto
@@ -58,13 +59,15 @@ h1.site-title
   width: 85%
   margin: 0px
   position: absolute
-  top: 120%
+  //top: 120%
+  top: 0px
   left: 50%
   -webkit-transform: translate(-50%, 0%)
   transform: translate(-50%, 0%)
   font-size: .75em
   text-transform: lowercase
-  color: transparentize(white, 0.20)
+  //color: transparentize(white, 0.20)
+  color: black
   list-style-type: none
   white-space: nowrap
   cursor: default
@@ -95,7 +98,7 @@ input.toggler
 @media only screen and (min-width: 500px)
   .sub-title-container
     width: 500px
-    flex-direction: row
+    //flex-direction: row
 
   .tag-list
     width: 175px
