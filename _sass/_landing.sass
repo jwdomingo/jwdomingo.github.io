@@ -82,12 +82,12 @@ input[type='radio']
   display: none
 
 input.toggler
-  &:checked + .tag-list + .lbl-toggler
+  //&:checked + .tag-list + .lbl-toggler
     color: $text-color
     background-color: white
 
   //&:checked + .lbl-toggler + .tag-list
-  &:checked + .tag-list
+  &:checked + p
     visibility: visible
     display: flex
     display: -webkit-flex
