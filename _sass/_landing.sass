@@ -85,7 +85,14 @@ input.toggler
     color: $text-color
     background-color: white
 
-  &:checked + .lbl-toggler + ul.tag-list
+  &:checked + ul.tag-list
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-around
+
+  &:checked + .lbl-toggler + .tag-list
     display: flex
     flex-direction: row
     flex-wrap: wrap
