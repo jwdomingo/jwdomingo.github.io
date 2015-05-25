@@ -66,13 +66,20 @@ h1.site-title
   transform: translate(-50%, 0%)
   font-size: .75em
   text-transform: lowercase
-  color: transparentize(white, 0.20)
-  list-style-type: none
+  //color: transparentize(white, 0.20)
   white-space: nowrap
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  align-items: center
+  justify-content: center
   cursor: default
 
 .tag-list span
-  margin: 0px 5px
+  margin: 0px 3px 6px
+  padding: 0px 5px
+  background-color: transparentize(white, 0.20)
+  color: $text-color
 
 .lbl-toggler
   cursor: pointer
@@ -88,14 +95,6 @@ input.toggler
 
   &:checked ~ .tag-list
     visibility: visible
-    display: flex
-    display: -webkit-flex
-    flex-direction: row
-    -webkit-flex-direction: row
-    flex-wrap: wrap
-    -webkit-flex-wrap: wrap
-    align-items: center
-    justify-content: space-around
 
 // MEDIA QUERIES
 @media only screen and (min-width: 500px)
