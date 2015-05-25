@@ -20,10 +20,11 @@ header
   -webkit-transform: translate(-50%, -50%)
   transform: translate(-50%, -50%)
 
-.title-container h1
+.title-container
   display: inline-block
 
-.site-title
+h1.site-title
+  display: block
   font-size: 4em
   line-height: 1
   background-color: transparentize(white,0.5)
@@ -32,29 +33,45 @@ header
   cursor: pointer
 
 .sub-title-container
-  display: inline-block
+  //display: inline-block
   width: 90%
   background-color: transparent
-
-.sub-title ul
-  list-style-type: none
   display: flex
   flex-direction: column
   align-items: center
   justify-content: space-around
-  margin: 0px
-  white-space: nowrap
+  margin: 0px auto
 
-.sub-title ul li
-  font-size: 1.65em
+.sub-title
+  font-size: 1.1em
   margin: 0px 15px
   //padding: 5px 10px
   color: white
   font-weight: 700
-  //cursor: pointer
+  cursor: pointer
   display: flex
+  white-space: nowrap
 
 // INTERACTIVE TAGS
+.tag-list
+  display: none
+  width: 85%
+  margin: 0px
+  position: absolute
+  top: 120%
+  left: 50%
+  -webkit-transform: translate(-50%, 0%)
+  transform: translate(-50%, 0%)
+  font-size: .75em
+  text-transform: lowercase
+  color: transparentize(white, 0.20)
+  list-style-type: none
+  white-space: nowrap
+  cursor: default
+
+.tag-list li
+  margin: 0px 5px
+
 .lbl-toggler
   cursor: pointer
   padding: 5px 10px
@@ -63,17 +80,26 @@ input[type='radio']
   display: none
 
 input.toggler
-  &:checked + label
+  &:checked + .lbl-toggler
     color: $text-color
     background-color: white
 
+  &:checked + .lbl-toggler + .tag-list
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-around
+
 // MEDIA QUERIES
 @media only screen and (min-width: 500px)
-  .sub-title ul
-    flex-direction: row
-
   .sub-title-container
     width: 500px
+    flex-direction: row
+
+  .tag-list
+    width: 175px
+    top: 150%
 
 @media only screen and (min-width: 768px)
   .title-container h1
@@ -84,8 +110,10 @@ input.toggler
 
   .site-title
     font-size: 4.5em
+    display: inline-block
 
-  .sub-title ul li
+
+  .lbl-toggler
     &:hover
       color: $text-color
       background-color: white

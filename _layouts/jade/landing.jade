@@ -10,26 +10,39 @@ html
         .title-container
           input(type='radio', name='toggler', id='title')
           h1.site-title
-            label(for='title').lbl-toggler John Domingo
-          
+            label(for='title') John Domingo
+            
         .sub-title-container
           h6.sub-title
-            ul
-              li
-                input(type='radio'
-                      name='toggler'
-                      id='design').toggler
-                label(for='design').lbl-toggler Designer
-              li
-                input(type='radio'
-                      name='toggler'
-                      id='develop').toggler
-                label(for='develop').lbl-toggler Developer
-              li
-                input(type='radio'
-                      name='toggler'
-                      id='datavis').toggler
-                label(for='datavis').lbl-toggler Data Visualist  
+            input(type='radio'
+              name='toggler'
+              id='design').toggler
+            label(for='design').lbl-toggler Designer
+            ul.tag-list
+              li Sketch 3
+              li Illustrator
+              li Photoshop
+              li InDesign
+          h6.sub-title
+            input(type='radio'
+              name='toggler'
+              id='develop').toggler
+            label(for='develop').lbl-toggler Developer
+            ul.tag-list
+              li HTML5
+              li CSS3
+              li JavaScript
+              li jQuery
+              li Git
+          h6.sub-title
+            input(type='radio'
+              name='toggler'
+              id='datavis').toggler
+            label(for='datavis').lbl-toggler Data Visualist
+            ul.tag-list
+              li D3.js
+              li MATLAB
+              li Excel VBA
           
     // About
     section
