@@ -55,7 +55,8 @@ h1.site-title
 
 // INTERACTIVE TAGS
 .tag-list
-  display: flex
+  visibility: hidden
+  //display: flex
   width: 85%
   margin: 0px
   position: absolute
@@ -86,12 +87,15 @@ input.toggler
     background-color: white
 
   &:checked + .lbl-toggler + .tag-list
+    visibility: visible
     display: flex
+    display: -webkit-flex
     flex-direction: row
+    -webkit-flex-direction: row
     flex-wrap: wrap
+    -webkit-flex-wrap: wrap
     align-items: center
     justify-content: space-around
-    color: red
 
 // MEDIA QUERIES
 @media only screen and (min-width: 500px)
