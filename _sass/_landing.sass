@@ -23,11 +23,6 @@ header
 .title-container h1
   display: inline-block
 
-  &:hover
-    background-color: transparent
-    color: white
-    font-weight: 700
-
 .site-title
   font-size: 4em
   line-height: 1
@@ -51,17 +46,13 @@ header
   white-space: nowrap
 
 .sub-title ul li
-  font-size: 1.1em
+  font-size: 1.65em
   margin: 0px 15px
   //padding: 5px 10px
   color: white
   font-weight: 700
   //cursor: pointer
   display: flex
-
-  &:hover
-    color: $text-color
-    background-color: white
 
 // INTERACTIVE TAGS
 .lbl-toggler
@@ -75,8 +66,6 @@ input.toggler
   &:checked + label
     color: $text-color
     background-color: white
-    width: auto
-    overflow: hidden
 
 // MEDIA QUERIES
 @media only screen and (min-width: 500px)
@@ -87,23 +76,22 @@ input.toggler
     width: 500px
 
 @media only screen and (min-width: 768px)
-  .mobile-background
-    display: none
+  .title-container h1
+    &:hover
+      background-color: transparent
+      color: white
+      font-weight: 700
 
   .site-title
     font-size: 4.5em
 
+  .sub-title ul li
+    &:hover
+      color: $text-color
+      background-color: white
+
   header
-    height: 100vh
     background:
       //image: url('/assets/img/ggate516x240@2x.jpg')
       image: url('/assets/img/ggate1719x800.jpg')
-      repeat: no-repeat
-      size: cover
-      position: center center
       attachment: fixed
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    text-transform: uppercase
-    text-align: center
-    position: relative
