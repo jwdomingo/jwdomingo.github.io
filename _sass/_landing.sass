@@ -3,7 +3,7 @@
 ////////////
 header
   height: 100vh
-  width: 100vw
+  max-width: 100vw
   text-transform: uppercase
   text-align: center
   position: relative
@@ -34,10 +34,16 @@ header
 
   .container-header
     z-index: 0
-    width: 100%
-    position: absolute
+    max-width: 100vw
+    //height: 100vh
+    //width: 100%
+    position: fixed
     top: 50%
     left: 50%
+    //margin-left: -25%
+    //margin-top: -25%
+    //top: 50%
+    //left: 50%
     transform: translate(-50%, -50%)
 
   .container-title
