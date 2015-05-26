@@ -6,13 +6,16 @@ html
   body
     // Landing Page
     header
-      .header-container
-        .title-container
+      .container-bg(id='test')
+      .arrow
+        a(href='#about') &#9661;
+      .container-header
+        .container-title
           input(type='radio', name='toggler', id='title')
           h1.site-title
             label(for='title') John Domingo
             
-        .sub-title-container
+        .container-sub-title
           h6.sub-title
             input(type='radio'      
               name='toggler'
@@ -43,22 +46,23 @@ html
               span D3.js
               span MATLAB
               span Excel VBA
-          
     // About
-    section
-      p.
-        Just trying to find a foothold in this new territory called web development, so naturally I started a blog about my journey. I'm a data enthusiast with a penchant for interactive visualizations. When I've got free time I like to vedge out in the kitchen or lift heavy objects over my head.
+    section(id='about')
+      .container-section
+        p.
+          Just trying to find a foothold in this new territory called web development, so naturally I started a blog about my journey. I'm a data enthusiast with a penchant for interactive visualizations. When I've got free time I like to vedge out in the kitchen or lift heavy objects over my head.
         
     // Skills
-    section
-      h2 Skills
-      .circle75
-      .cirlce50
-      .circle20
-      .circle90
+    section(id='skills')
+      .container-section
+        h2 Skills
+        .circle75
+        .cirlce50
+        .circle20
+        .circle90
       
     // Projects
-    section
+    section(id='projects')
       h2 Projects
       ul
         li
@@ -88,13 +92,14 @@ html
         
     
     // Timeline
-    section
+    section(id='timeline')
       h2 Timeline
       
     // Blog
-    section
+    section(id='blog')
       h2 The Scheme of Things
       sidebar
         
     // Contact
-    section
+    section(id='contact')
+      h2 Contact
