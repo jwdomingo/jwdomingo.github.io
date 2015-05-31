@@ -23,6 +23,10 @@ header
       position: center
     -webkit-background-size: cover
     -moz-background-size: cover
+    -moz-background-image: url('/assets/img/ggate1719x800@2x.jpg')
+    -moz-background-repeat: no-repeat
+    -moz-background-size: cover
+    -moz-background-position: center
     position: relative
 
   .arrow a
@@ -43,8 +47,11 @@ header
     top: 10%
     left: 50%
     -webkit-transform: translateX(-50%)
+    -moz-transform: translateX(-50%)
     transform: translateX(-50%)
     transition: transform 0.5s
+    -webkit-transition: transform 0.5s
+    -moz-transition: transform 0.5s
 
     .container-title
       display: inline-block
@@ -62,9 +69,13 @@ header
       background-color: transparent
       display: flex
       display: -webkit-flex
+      display: -moz-flex
       flex-direction: row
       -webkit-flex-direction: row
+      -moz-flex-direction: row
       flex-wrap: wrap
+      -webkit-flex-wrap: wrap
+      -moz-flex-wrap: wrap
       align-items: center
       justify-content: space-around
       margin: 0px auto
@@ -130,13 +141,18 @@ section
   top: 120%
   left: 50%
   -webkit-transform: translate(-50%, 0%)
+  -moz-transform: translate(-50%, 0%)
   transform: translate(-50%, 0%)
   font-size: .95em
   text-transform: lowercase
   white-space: nowrap
   display: flex
   flex-direction: row
+  -webkit-flex-direction: row
+  -moz-flex-direction: row
   flex-wrap: wrap
+  -webkit-flex-wrap: wrap
+  -moz-flex-wrap: wrap
   align-items: center
   justify-content: center
 
