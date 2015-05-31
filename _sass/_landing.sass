@@ -74,7 +74,7 @@ header
         white-space: nowrap
 
   .container-about
-    z-index: -2
+    z-index: -3
     width: 100%
     text-align: center
     background-color: transparent
@@ -82,11 +82,13 @@ header
     bottom: 10%
 
     p
+      z-index: -3
       width: 90%
       margin: 0px auto
       text-transform: none
 
 section
+  z-index: 1
   width: 100%
   height: 100vh
   background-color: white
@@ -101,6 +103,7 @@ section
 #about
   z-index: -2
   background-color: transparent
+  position: relative
 
   .container-section
     max-width: 90%
