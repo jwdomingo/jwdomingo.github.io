@@ -60,14 +60,16 @@ header
       width: 100%
       background-color: transparent
       display: flex
+      display: -webkit-flex
       flex-direction: row
+      -webkit-flex-direction: row
       flex-wrap: wrap
       align-items: center
       justify-content: space-around
       margin: 0px auto
 
       .sub-title
-        font-size: 1em
+        font-size: .8em
         margin: 0px
         color: $text-color
         font-weight: 700
@@ -128,7 +130,7 @@ section
   left: 50%
   -webkit-transform: translate(-50%, 0%)
   transform: translate(-50%, 0%)
-  font-size: .75em
+  font-size: .95em
   text-transform: lowercase
   white-space: nowrap
   display: flex
@@ -179,6 +181,9 @@ input.toggler
         .sub-title
           font-size: 1.1em
           margin: 0px 15px
+
+          .tag-list
+            font-size: .75em
 
   .tag-list
     width: 20%
