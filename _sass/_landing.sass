@@ -37,7 +37,7 @@ header
     z-index: 0
     width: 100%
     position: fixed
-    top: 20%
+    top: 10%
     left: 50%
     -webkit-transform: translateX(-50%)
     transform: translateX(-50%)
@@ -73,8 +73,9 @@ header
         display: flex
         white-space: nowrap
 
-  .container-section
-    z-index: 0
+  .container-about
+    z-index: -2
+    width: 100%
     text-align: center
     background-color: transparent
     position: fixed
@@ -99,6 +100,7 @@ section
 ///////////////////
 #about
   z-index: -2
+  background-color: transparent
 
   .container-section
     max-width: 90%
@@ -171,15 +173,12 @@ input.toggler
 ///////////////////
 @media only screen and (min-width: 500px)
   header
-    height: 100vh
-
-    .container-section
+    .container-about
       p
-        width: 60%
+        width: 500px
 
     .container-header
-      -webkit-transform: translate(-50%, 115%)
-      transform: translate(-50%, 115%)
+      transform: translate(-50%, 170%)
 
     .container-sub-title
       width: 500px
