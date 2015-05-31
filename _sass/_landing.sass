@@ -45,7 +45,7 @@ header
     z-index: 1
     width: 100%
     position: fixed
-    top: 10%
+    top: 20%
     left: 50%
     -webkit-transform: translateX(-50%)
     -moz-transform: translateX(-50%)
@@ -59,7 +59,7 @@ header
 
       h1.site-title
         display: block
-        font-size: 4em
+        font-size: 3em
         line-height: 1
         background-color: transparentize(white,0.5)
         margin: 0px 0px 25px
@@ -106,30 +106,69 @@ header
       margin: 0px auto
       text-transform: none
 
+  .periscope
+    z-index: -3
+    height: 100px
+    width: 100px
+    position: fixed
+    top: 5%
+    left: 50%
+    -webkit-transform: translateX(-50%)
+    -moz-transform: translateX(-50%)
+    transform: translateX(-50%)
+    background:
+      image: url('/assets/img/jd1278x1278.jpg')
+      position: top center
+      repeat: no-repeat
+      size: cover
+    border-radius: 50%
+
+
 section
   z-index: 1
   width: 100%
   height: 100vh
+  padding: 200px 0px
   background-color: white
   position: relative
+  transform: translate3d(0,0,0)
+  -webkit-transform: translate3d(0,0,0)
+  -moz-transform: translate3d(0,0,0)
 
   .container-section
     height: 100vh
+    width: 90%
 
 ///////////////////
 // ABOUT SECTION //
 ///////////////////
 #about
-  z-index: -2
+  z-index: -1
   background-color: transparent
   position: relative
+
+  .periscope
+    z-index: 2
+    height: 200px
+    width: 200px
+    position: relative
+    background:
+      image: url('/assets/img/jd1278x1278.jpg')
+      position: top center
+      repeat: no-repeat
+      size: cover
+    margin: 75px auto 0px
+    border-radius: 50%
+    transform: translate3d(0,0,0)
+    -webkit-transform: translate3d(0,0,0)
+    -moz-transform: translate3d(0,0,0)
 
 ////////////////////
 // SKILLS SECTION //
 ////////////////////
 #skills
   z-index: 1
-  padding-top: 200px
+  background-color: transparentize(white, 0.1)
   .container-section
     width: 80%
     margin: 0px auto
@@ -195,10 +234,11 @@ input.toggler
         width: 500px
 
     .container-header
-      transform: translate(-50%, 170%)
+      top: 50%
+      transform: translate(-50%, -50%)
 
       .container-sub-title
-        width: 600px
+        width: 500px
 
         .sub-title
           font-size: 1.1em
@@ -216,7 +256,7 @@ input.toggler
     .container-bg
       background:
         image: url('/assets/img/ggate1719x800.jpg')
-        attachment: fixed
+
     .container-header
       .container-title
         h1.site-title
@@ -225,8 +265,24 @@ input.toggler
 
           &:hover
             background-color: transparent
-            color: white
             font-weight: 700
+
+    .periscope
+      z-index: -3
+      height: 180px
+      width: 180px
+      position: fixed
+      top: 15%
+      left: 50%
+      -webkit-transform: translateX(-50%)
+      -moz-transform: translateX(-50%)
+      transform: translateX(-50%)
+      background:
+        image: url('/assets/img/jd1278x1278.jpg')
+        position: top center
+        repeat: no-repeat
+        size: cover
+      border-radius: 50%
 
   .lbl-toggler
     &:hover
