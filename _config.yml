@@ -11,3 +11,8 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+analytics:
+  provider: google
+  google:
+    tracking_id: 'UA-54540453-1'
