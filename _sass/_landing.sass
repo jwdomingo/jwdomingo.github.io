@@ -3,15 +3,14 @@
 ////////////
 body
   max-width: 100vw
+
 header
-  //height: 100vh
-  max-width: 100vw
   text-transform: uppercase
   text-align: center
   position: relative
 
   .container-bg
-    z-index: -2
+    z-index: -1
     height: 100vh
     width: 100%
     background:
@@ -36,43 +35,55 @@ header
 
   .container-header
     z-index: 0
-    max-width: 100%
+    width: 100%
     position: fixed
-    top: 50%
+    top: 20%
     left: 50%
-    transform: translate(-50%, -50%)
-    -webkit-transform: translate(-50%, -50%)
+    -webkit-transform: translateX(-50%)
+    transform: translateX(-50%)
+    transition: transform 0.5s
 
-  .container-title
-    display: inline-block
+    .container-title
+      display: inline-block
 
-h1.site-title
-  display: block
-  font-size: 4em
-  line-height: 1
-  background-color: transparentize(white,0.5)
-  margin: 0px 0px 25px
-  padding: 10px 20px
-  cursor: pointer
+      h1.site-title
+        display: block
+        font-size: 4em
+        line-height: 1
+        background-color: transparentize(white,0.5)
+        margin: 0px 0px 25px
+        padding: 10px 20px
+        cursor: pointer
 
-.container-sub-title
-  width: 90%
-  background-color: transparent
-  display: flex
-  flex-direction: row
-  flex-wrap: wrap
-  align-items: center
-  justify-content: space-around
-  margin: 0px auto
+    .container-sub-title
+      background-color: transparent
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      align-items: center
+      justify-content: space-around
+      margin: 0px auto
 
-.sub-title
-  font-size: 1.1em
-  margin: 0px 15px
-  color: white
-  font-weight: 700
-  cursor: pointer
-  display: flex
-  white-space: nowrap
+      .sub-title
+        font-size: 1.1em
+        margin: 0px 15px
+        color: $text-color
+        font-weight: 700
+        cursor: pointer
+        display: flex
+        white-space: nowrap
+
+  .container-section
+    z-index: 0
+    text-align: center
+    background-color: transparent
+    position: fixed
+    bottom: 10%
+
+    p
+      width: 90%
+      margin: 0px auto
+      text-transform: none
 
 section
   width: 100%
@@ -88,6 +99,7 @@ section
 ///////////////////
 #about
   z-index: -2
+
   .container-section
     max-width: 90%
     margin: 0px auto
@@ -97,16 +109,15 @@ section
       max-width: 90%
       text-align: center
       position: absolute
-      bottom: 10px
-      //top: 75%
-      //left: 50%
-      //transform: translate(-50%, 0%)
+      bottom: 25%
+      text-transform: none
 
 ////////////////////
 // SKILLS SECTION //
 ////////////////////
 #skills
   z-index: 1
+  padding-top: 200px
   .container-section
     width: 80%
     margin: 0px auto
@@ -117,7 +128,6 @@ section
 //////////////////////
 .tag-list
   visibility: hidden
-  //display: flex
   width: 85%
   margin: 0px
   position: absolute
@@ -127,20 +137,19 @@ section
   transform: translate(-50%, 0%)
   font-size: .75em
   text-transform: lowercase
-  //color: transparentize(white, 0.20)
   white-space: nowrap
   display: flex
   flex-direction: row
   flex-wrap: wrap
   align-items: center
   justify-content: center
-  cursor: default
 
-.tag-list span
-  margin: 0px 3px 6px
-  padding: 0px 5px
-  background-color: transparentize(white, 0.20)
-  color: $text-color
+  span
+    margin: 0px 4px 8px
+    padding: 0px 5px
+    background-color: transparentize(white, 0.5)
+    color: $text-color
+    cursor: default
 
 .lbl-toggler
   cursor: pointer
@@ -161,31 +170,38 @@ input.toggler
 // MEDIA QUERIES //
 ///////////////////
 @media only screen and (min-width: 500px)
-  .container-sub-title
-    width: 500px
-    //flex-direction: row
+  header
+    height: 100vh
+
+    .container-section
+      p
+        width: 60%
+
+    .container-header
+      -webkit-transform: translate(-50%, 115%)
+      transform: translate(-50%, 115%)
+
+    .container-sub-title
+      width: 500px
 
   .tag-list
-    width: 175px
+    width: 20%
     top: 130%
 
 @media only screen and (min-width: 768px)
   .container-bg
     background:
-      //image: url('/assets/img/ggate516x240@2x.jpg')
       image: url('/assets/img/ggate1719x800.jpg')
       attachment: fixed
 
-  .container-title h1
-    &:hover
-      background-color: transparent
-      color: white
-      font-weight: 700
+    h1.site-title
+      font-size: 4.5em
+      display: inline-block
 
-  .site-title
-    font-size: 4.5em
-    display: inline-block
-
+      &:hover
+        background-color: transparent
+        color: white
+        font-weight: 700
 
   .lbl-toggler
     &:hover
