@@ -13,6 +13,7 @@ header
 
   .container-bg
     z-index: -1
+    position: relative
     height: 100vh
     width: 100%
     background:
@@ -22,11 +23,12 @@ header
       position: center
     -webkit-background-size: cover
     -moz-background-size: cover
-    -moz-background-image: url('/assets/img/ggate1719x800@2x.jpg')
     -moz-background-repeat: no-repeat
     -moz-background-size: cover
     -moz-background-position: center
-    position: relative
+    transform: translate3d(0,0,0)
+    -webkit-transform: translate3d(0,0,0)
+    -moz-transform: translate3d(0,0,0)
 
   .arrow a
     z-index: 0
@@ -40,7 +42,7 @@ header
       cursor: pointer
 
   .container-header
-    z-index: 0
+    z-index: 1
     width: 100%
     position: fixed
     top: 10%
@@ -76,7 +78,11 @@ header
       -webkit-flex-wrap: wrap
       -moz-flex-wrap: wrap
       align-items: center
-      justify-content: center
+      -webkit-align-items: center
+      -moz-align-items: center
+      justify-content: space-around
+      -webkit-justify-content: space-around
+      -moz-justify-content: space-around
       margin: 0px auto
 
       .sub-title
@@ -88,17 +94,17 @@ header
         display: flex
         white-space: nowrap
 
-.container-about
-  z-index: -3
-  width: 100%
-  text-align: center
-  position: fixed
-  bottom: 5%
+  .container-about
+    z-index: -3
+    width: 100%
+    text-align: center
+    position: fixed
+    bottom: 5%
 
-  p
-    width: 90%
-    margin: 0px auto
-    text-transform: none
+    p
+      width: 90%
+      margin: 0px auto
+      text-transform: none
 
 section
   z-index: 1
@@ -192,7 +198,7 @@ input.toggler
       transform: translate(-50%, 170%)
 
       .container-sub-title
-        width: 500px
+        width: 600px
 
         .sub-title
           font-size: 1.1em
@@ -202,23 +208,25 @@ input.toggler
             font-size: .75em
 
   .tag-list
-    width: 20%
+    width: 30%
     top: 130%
 
 @media only screen and (min-width: 768px)
-  .container-bg
-    background:
-      image: url('/assets/img/ggate1719x800.jpg')
-      attachment: fixed
+  header
+    .container-bg
+      background:
+        image: url('/assets/img/ggate1719x800.jpg')
+        attachment: fixed
+    .container-header
+      .container-title
+        h1.site-title
+          font-size: 4.5em
+          display: inline-block
 
-    h1.site-title
-      font-size: 4.5em
-      display: inline-block
-
-      &:hover
-        background-color: transparent
-        color: white
-        font-weight: 700
+          &:hover
+            background-color: transparent
+            color: white
+            font-weight: 700
 
   .lbl-toggler
     &:hover
