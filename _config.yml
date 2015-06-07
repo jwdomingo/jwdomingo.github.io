@@ -12,8 +12,6 @@ github_username:  jwdomingo
 markdown: kramdown
 permalink: pretty
 
-gems: [bourbon]
-
 analytics:
   provider: google
   google:
