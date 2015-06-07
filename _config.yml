@@ -1,16 +1,18 @@
 # Site settings
 title: John Domingo | The Scheme of Things
-email: johndomingo@me.com
+email: johnwill.domingo@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   A collection of the  skills I've amassed since beginning my web developemnt journey.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://johndomingo.com" # the base hostname & protocol for your site
+twitter_username: jwdomingo
+github_username:  jwdomingo
 
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+gems: [bourbon]
 
 analytics:
   provider: google

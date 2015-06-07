@@ -1,0 +1,529 @@
+//////////////
+// PARALLAX //
+//////////////
+body
+  max-width: 100vw
+
+header
+  margin-bottom: 100vh
+  text-transform: uppercase
+
+  .bg-img
+    z-index: -1
+    position: relative
+    height: 100vh
+    width: 100%
+    background:
+      image: url('/assets/img/ggate1719x800.jpg')
+      repeat: no-repeat
+      size: cover
+      position: top center
+
+  .container
+    display: block
+    position: fixed
+    left: 50%
+    top: 50%
+    padding: 0px
+
+  #main-title.container
+    z-index: 0
+    width: 100%
+    @include transform(translate(-50%, -150%))
+
+    h1
+      display: block
+      font-size: 2.25em
+      line-height: 1
+      margin: 0px
+      padding: 10px 20px
+      background-color: transparentize(white,0.5)
+      cursor: pointer
+
+  #sub-title.container
+    z-index: 2
+    width: 100vw
+    margin: 0px auto
+    @include transform(translate(-50%, -50%))
+    @include display(flex)
+    @include flex-direction(row)
+    @include flex-wrap(wrap)
+    @include align-items(center)
+    @include justify-content(space-around)
+
+    h6.sub-title
+      font-size: .8em
+      margin: 0px
+      color: $text-color
+      font-weight: 700
+      cursor: pointer
+      @include display(flex)
+      white-space: nowrap
+
+      input.toggler
+        display: none
+        text-align: center
+
+        &:checked + label.lbl-toggler
+          color: $text-color
+          background-color: white
+
+        &:checked ~ p.tag-list
+          visibility: visible
+
+      label.lbl-toggler
+        white-space: nowrap
+        margin: 0px
+        text-align: center
+        cursor: pointer
+        padding: 5px 10px
+        top: 120%
+
+      p.tag-list
+        visibility: hidden
+        width: 85%
+        margin: 0px
+        position: absolute
+        top: 50%
+        left: 50%
+        @include transform(translate(-50%, 100%))
+        font-size: 0.75em
+        line-height: 1.5
+        text-transform: lowercase
+        white-space: nowrap
+        display: flex
+        @include flex-direction(row)
+        @include flex-wrap(wrap)
+        @include align-items(center)
+        @include justify-content(center)
+
+        span
+          margin: 0px 4px 8px
+          padding: 0px 5px
+          background-color: transparentize(white, 0.5)
+          color: $text-color
+          cursor: default
+
+    // .row
+    //   .col-xs-12.col-md-6.col-md-offset-3
+    //     .row
+    //       h6.sub-title
+    //         margin: 0px
+    //         padding: 0px
+    //
+    //         input.toggler
+    //           display: none
+    //           text-align: center
+    //
+    //           &:checked + label.lbl-toggler
+    //             color: $text-color
+    //             background-color: white
+    //
+    //           &:checked ~ p.tag-list
+    //             visibility: visible
+    //
+    //         label.lbl-toggler
+    //           white-space: nowrap
+    //           margin: 0px
+    //           padding: 0px
+    //           text-align: center
+    //
+    //         p.tag-list
+    //           visibility: hidden
+    //           width: 85%
+    //           margin: 0px
+    //           position: absolute
+    //           left: 50%
+    //           -webkit-transform: translate(-50%, 0%)
+    //           -moz-transform: translate(-50%, 0%)
+    //           transform: translate(-50%, 0%)
+    //           font-size: .95em
+    //           text-transform: lowercase
+    //           white-space: nowrap
+    //           // display: flex
+    //           // flex-direction: row
+    //           // -webkit-flex-direction: row
+    //           // -moz-flex-direction: row
+    //           // flex-wrap: wrap
+    //           // -webkit-flex-wrap: wrap
+    //           // -moz-flex-wrap: wrap
+    //           // align-items: center
+    //           // justify-content: center
+    //
+    //           span
+    //             margin: 0px 4px 8px
+    //             padding: 0px 5px
+    //             background-color: transparentize(white, 0.5)
+    //             color: $text-color
+    //             cursor: default
+
+  #about-text.container
+    z-index: -2
+    @include transform(translate(-50%, 50%))
+    width: 95%
+
+    p
+      text-transform: none
+      font-size: .9em
+
+  .profile-img
+    z-index: -2
+    height: 100px
+    width: 100px
+    position: fixed
+    @include transform(translate(-50%, -200%))
+    background:
+      image: url('/assets/img/jd1278x1278.jpg')
+      position: top center
+      repeat: no-repeat
+      size: cover
+    border-radius: 50%
+
+//////////////////////
+// INTERACTIVE TAGS //
+//////////////////////
+.container-about
+  margin-top: 100vh
+
+section
+  z-index: 3
+  width: 100%
+  height: 100vh
+  padding: 200px 0px
+  background-color: white
+  position: relative
+  @include transform(translate3d(0,0,0))
+
+//////////////////////
+// CUSTOM BOOTSTRAP //
+//////////////////////
+.col-xs-0
+  visibility: hidden
+
+@media only screen and (min-width: 500px)
+  header
+    #main-title.container
+      h1
+        display: inline-block
+        font-size: 3.5em
+
+    #sub-title.container
+      h6.sub-title
+        font-size: 1.1em
+
+    #about-text.container
+      p
+        font-size: 1em
+
+    .profile-img
+      height: 150px
+      width: 150px
+      @include transform(translate(-50%, -200%))
+
+@media only screen and (min-width: 768px)
+  header
+    .bg-img
+      background:
+        attachment: fixed
+
+    #main-title.container
+      h1
+        font-size: 4em
+        background-color: transparentize(white,0.5)
+
+    .fg-img-1
+      z-index: 1
+      width: 100%
+      height: 426px
+      position: absolute
+      bottom: 0px
+      left: 0px
+      background:
+        image: url('/assets/img/bg/outcrop1719x800.png')
+        position: bottom center
+        repeat: no-repeat
+        size: cover
+
+@media only screen and (min-width: 992px)
+
+
+// body
+//   max-width: 100vw
+//
+// header
+//   text-transform: uppercase
+//   text-align: center
+//   position: relative
+//   max-height: 100vh
+//   width: 100%
+//
+//   .container-bg
+//     z-index: -1
+//     position: relative
+//     height: 100vh
+//     width: 100%
+//     background:
+//       image: url('/assets/img/ggate1719x800@2x.jpg')
+//       repeat: no-repeat
+//       size: cover
+//       position: center
+//     -webkit-background-size: cover
+//     -moz-background-size: cover
+//     -moz-background-repeat: no-repeat
+//     -moz-background-size: cover
+//     -moz-background-position: center
+//
+//   .arrow a
+//     z-index: 0
+//     color: transparentize(white, 0.15)
+//     font-size: 1.5em
+//     position: absolute
+//     bottom: 5px
+//
+//     &:hover
+//       color: white
+//       cursor: pointer
+//
+//   .container-header
+//     z-index: 1
+//     width: 100%
+//     position: fixed
+//     top: 30%
+//     left: 50%
+//     -webkit-transform: translateX(-50%)
+//     -moz-transform: translateX(-50%)
+//     transform: translateX(-50%)
+//     transition: transform 0.5s
+//     -webkit-transition: transform 0.5s
+//     -moz-transition: transform 0.5s
+//
+//     .container-title
+//       display: inline-block
+//
+//       h1.site-title
+//         display: block
+//         font-size: 3em
+//         line-height: 1
+//         background-color: transparentize(white,0.5)
+//         margin: 0px 0px 25px
+//         padding: 10px 20px
+//         cursor: pointer
+//
+//         label
+//           font-weight: 300
+//
+//     .container-sub-title
+//       background-color: transparent
+//       display: flex
+//       display: -webkit-flex
+//       display: -moz-flex
+//       flex-direction: row
+//       -webkit-flex-direction: row
+//       -moz-flex-direction: row
+//       flex-wrap: wrap
+//       -webkit-flex-wrap: wrap
+//       -moz-flex-wrap: wrap
+//       align-items: center
+//       -webkit-align-items: center
+//       -moz-align-items: center
+//       justify-content: space-around
+//       -webkit-justify-content: space-around
+//       -moz-justify-content: space-around
+//       margin: 0px auto
+//
+//       .sub-title
+//         font-size: .8em
+//         margin: 0px
+//         color: $text-color
+//         font-weight: 700
+//         cursor: pointer
+//         display: flex
+//         white-space: nowrap
+//
+//   .container-about
+//     z-index: -3
+//     width: 100%
+//     text-align: center
+//     position: fixed
+//     bottom: 5%
+//
+//     p
+//       width: 90%
+//       margin: 0px auto
+//       text-transform: none
+//
+//   .periscope
+//     z-index: -3
+//     height: 100px
+//     width: 100px
+//     position: fixed
+//     top: 5%
+//     left: 50%
+//     -webkit-transform: translateX(-50%)
+//     -moz-transform: translateX(-50%)
+//     transform: translateX(-50%)
+//     background:
+//       image: url('/assets/img/jd1278x1278.jpg')
+//       position: top center
+//       repeat: no-repeat
+//       size: cover
+//     border-radius: 50%
+//
+//
+
+//
+//   .container-section
+//     height: 100vh
+//     width: 90%
+//
+// ///////////////////
+// // ABOUT SECTION //
+// ///////////////////
+// #about
+//   z-index: -1
+//   background-color: transparent
+//   position: relative
+//
+//   .periscope
+//     z-index: 2
+//     height: 100px
+//     width: 100px
+//     position: relative
+//     background:
+//       image: url('/assets/img/jd1278x1278.jpg')
+//       position: top center
+//       repeat: no-repeat
+//       size: cover
+//     margin: 75px auto 0px
+//     border-radius: 50%
+//     transform: translate3d(0,0,0)
+//     -webkit-transform: translate3d(0,0,0)
+//     -moz-transform: translate3d(0,0,0)
+//
+// ////////////////////
+// // SKILLS SECTION //
+// ////////////////////
+// #skills
+//   z-index: 1
+//   background-color: transparentize(white, 0.1)
+//   .container-section
+//     width: 80%
+//     margin: 0px auto
+//     background-color: white
+//
+// //////////////////////
+// // INTERACTIVE TAGS //
+// //////////////////////
+// .tag-list
+//   visibility: hidden
+//   width: 85%
+//   margin: 0px
+//   position: absolute
+//   top: 120%
+//   left: 50%
+//   -webkit-transform: translate(-50%, 0%)
+//   -moz-transform: translate(-50%, 0%)
+//   transform: translate(-50%, 0%)
+//   font-size: .95em
+//   text-transform: lowercase
+//   white-space: nowrap
+//   display: flex
+//   flex-direction: row
+//   -webkit-flex-direction: row
+//   -moz-flex-direction: row
+//   flex-wrap: wrap
+//   -webkit-flex-wrap: wrap
+//   -moz-flex-wrap: wrap
+//   align-items: center
+//   justify-content: center
+//
+//   span
+//     margin: 0px 4px 8px
+//     padding: 0px 5px
+//     background-color: transparentize(white, 0.5)
+//     color: $text-color
+//     cursor: default
+//
+// .lbl-toggler
+//   cursor: pointer
+//   padding: 5px 10px
+//
+// input[type='radio']
+//   display: none
+//
+// input.toggler
+//   &:checked + .lbl-toggler
+//     color: $text-color
+//     background-color: white
+//
+//   &:checked ~ .tag-list
+//     visibility: visible
+//
+// ///////////////////
+// // MEDIA QUERIES //
+// ///////////////////
+// @media only screen and (min-width: 500px)
+//   header
+//     .container-about
+//       bottom: 10%
+//
+//       p
+//         width: 500px
+//
+//     .container-header
+//       top: 50%
+//       transform: translate(-50%, -50%)
+//
+//       .container-sub-title
+//         width: 500px
+//
+//         .sub-title
+//           font-size: 1.1em
+//           margin: 0px 15px
+//
+//           .tag-list
+//             font-size: .75em
+//
+//   .tag-list
+//     width: 30%
+//     top: 130%
+//
+// @media only screen and (min-width: 768px)
+//   header
+//     .container-bg
+//       background:
+//         image: url('/assets/img/ggate1719x800.jpg')
+//
+//     .container-header
+//       .container-title
+//         h1.site-title
+//           font-size: 4.5em
+//           display: inline-block
+//
+//           &:hover
+//             background-color: transparent
+//
+//             label
+//               font-weight: 700
+//
+//     .periscope
+//       z-index: -3
+//       height: 180px
+//       width: 180px
+//       position: fixed
+//       top: 15%
+//       left: 50%
+//       -webkit-transform: translateX(-50%)
+//       -moz-transform: translateX(-50%)
+//       transform: translateX(-50%)
+//       background:
+//         image: url('/assets/img/jd1278x1278.jpg')
+//         position: top center
+//         repeat: no-repeat
+//         size: cover
+//       border-radius: 50%
+//
+//   .lbl-toggler
+//     &:hover
+//       color: $text-color
+//       background-color: white

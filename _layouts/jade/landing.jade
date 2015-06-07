@@ -1,7 +1,8 @@
 doctype html
 
 html
-  {% include head.html %}
+  head.
+    {% include head.html %}
   
   body
     // Landing Page
@@ -9,6 +10,7 @@ html
       .arrow
         a(href='#about') &#9661;
       .container-bg
+      .fg-img-1
       .container-header
         .container-title
           input(type='radio', name='toggler', id='title')

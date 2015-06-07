@@ -1,0 +1,309 @@
+doctype html
+
+html(lang="en")
+  head.
+    {% include head.html %}
+
+  body
+    // Landing Page //
+    header.text-center
+      .bg-img
+      
+      #main-title.container
+        h1 John Domingo
+        
+      #sub-title.container
+        h6.sub-title
+          input(type='radio'      
+            name='toggler'
+            id='design').toggler
+          label(for='design').lbl-toggler Designer
+          p.tag-list
+            span Sketch 3
+            span Illustrator
+            span Photoshop
+            span InDesign
+        h6.sub-title
+          input(type='radio'
+            name='toggler'
+            id='develop').toggler
+          label(for='develop').lbl-toggler Developer
+          p.tag-list
+            span HTML5
+            span CSS3
+            span JavaScript
+            span jQuery
+            span Git
+        h6.sub-title
+          input(type='radio'
+            name='toggler'
+            id='datavis').toggler
+          label(for='datavis').lbl-toggler Data Visualist
+          p.tag-list
+            span D3.js
+            span MATLAB
+            span Excel VBA            
+                  
+      #about-text.container
+        p.
+          Trying to find a foothold in this new territory called web development, so naturally I started a blog about my journey. I'm a data enthusiast with a penchant for interactive visualizations. When I've got free time I like to vedge out in the kitchen or lift heavy objects over my head.
+              
+      .fg-img-1
+      
+      .profile-img.container
+      
+    section(id='about')
+    section(id='skills')
+    
+    //script(src="/js/jquery-2.1.4.min.js")
+    //script(src="/js/functions.js")
+//-   .arrow
+//-     a(href='#about') &#9661;
+//-   .container-bg
+//-   .container-header
+//-     .container-title
+//-       input(type='radio', name='toggler', id='title')
+//-       h1.site-title
+//-         label(for='title') John Domingo
+//- 
+//-     .container-sub-title
+//-       h6.sub-title
+//-         input(type='radio'
+//-           name='toggler'
+//-           id='design').toggler
+//-         label(for='design').lbl-toggler Designer
+//-         p.tag-list
+//-           span Sketch 3
+//-           span Illustrator
+//-           span Photoshop
+//-           span InDesign
+//-       h6.sub-title
+//-         input(type='radio'
+//-           name='toggler'
+//-           id='develop').toggler
+//-         label(for='develop').lbl-toggler Developer
+//-         p.tag-list
+//-           span HTML5
+//-           span CSS3
+//-           span JavaScript
+//-           span jQuery
+//-           span Git
+//-       h6.sub-title
+//-         input(type='radio'
+//-           name='toggler'
+//-           id='datavis').toggler
+//-         label(for='datavis').lbl-toggler Data Visualist
+//-         p.tag-list
+//-           span D3.js
+//-           span MATLAB
+//-           span Excel VBA
+//-   .periscope
+//-   .container-about
+//-     p.
+//-       Just trying to find a foothold in this new territory called web development, so naturally I started a blog about my journey. I'm a data enthusiast with a penchant for interactive visualizations. When I've got free time I like to vedge out in the kitchen or lift heavy objects over my head.
+//- 
+//- // About
+//- section(id='about')
+//-   //.periscope
+//- 
+//- 
+//- // Skills
+//- section(id='skills')
+//-   .container-section
+//-     h2 Skills
+//-     .circle75
+//-     .cirlce50
+//-     .circle20
+//-     .circle90
+//- 
+//- hr
+//- 
+//- // Projects
+//- section(id='projects')
+//-   .container-section
+//-     h2 Projects
+//-     ul
+//-       li
+//-         h5 Rainy Days
+//-         h6 d3.js
+//-         p An interactive visualization using dynamic meteorological data
+//-       li
+//-         h5 Jekyll.rb
+//-         h6 GitHub
+//-         p Pull requests and open source contributions to the Jekyll project
+//-       li
+//-         h5 Asbestos TEM Labs
+//-         h6 jQuery
+//-         p A client portal for automated chain of custody submissions
+//-       li
+//-         h5 Scheme Theme
+//-         h6 WordPress
+//-         p A responsive WordPress theme that employs customizable D3 SVGs
+//-       li
+//-         h5 Sketch the Ipsums
+//-         h6 Cocoa
+//-         p A Sketch 3 plugin that aggregates various Lorem Ipsum generators
+//-       li
+//-         h5 Spies v. Spies
+//-         h6 Angular.js
+//-         p A simple multi-player "board game"utilizing the Angular framework
+//- 
+//- hr
+//- 
+//- // Timeline
+//- section(id='timeline')
+//-   .container-section
+//-     h2 Timeline
+//- 
+//- hr
+//- 
+//- // Blog
+//- section(id='blog')
+//-   .container-section
+//-     h2 The Scheme of Things
+//-     sidebar
+//- 
+//- hr
+//- 
+//- // Contact
+//- section(id='contact')
+//-   .container-section
+//-     h2 Contact
+
+
+
+
+////////////////////////////////////////////////////////
+  //- body
+  //-   
+  //-   header.bird-box
+  //-     .back-bird
+  //-     .logo
+  //-     .fore-bird
+  //-     
+  //-   
+  //-   section.content
+  //-     
+  //-     article
+  //-       
+  //-       h1 Unique Style
+  //-       
+  //-       hr
+  //-       
+  //-       p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.
+  //-       
+  //-       hr
+  //- 
+  //-       .clothes-pics
+  //- 
+  //-         .row.img-row
+  //-           figure.columns.four
+  //-             img(src="images/model1.jpg")
+  //-             figcaption BlackBird Sweater - <strong>$135</strong>
+  //-           
+  //-           figure.columns.four
+  //-             img(src="images/model2.jpg")
+  //-             figcaption BlackBird Trousers - <strong>$135</strong>
+  //-             
+  //-           figure.columns.four
+  //-             img(src="images/model3.jpg")
+  //-             figcaption BlackBird Jacket - <strong>$135</strong>
+  //-             
+  //-         .row.img-row
+  //-           figure.columns.four
+  //-             img(src="images/model2.jpg")
+  //-             figcaption BlackBird Trousers - <strong>$135</strong>
+  //-             
+  //-           figure.columns.four
+  //-             img(src="images/model3.jpg")
+  //-             figcaption BlackBird Jacket - <strong>$135</strong>
+  //-             
+  //-           figure.columns.four
+  //-             img(src="images/model1.jpg")
+  //-             figcaption BlackBird Sweater - <strong>$135</strong>
+  //-         
+  //-         .row.img-row
+  //-           figure.columns.four
+  //-             img(src="images/model3.jpg")
+  //-             figcaption BlackBird Jacket - <strong>$135</strong>
+  //-           
+  //-           figure.columns.four
+  //-             img(src="images/model1.jpg")
+  //-             figcaption BlackBird Sweater - <strong>$135</strong>
+  //-           
+  //-           figure.columns.four
+  //-             img(src="images/model2.jpg")
+  //-             figcaption BlackBird Trousers - <strong>$135</strong>
+  //-               
+  //-       
+  //-       h1 Fine Tayloring
+  //-       
+  //-       hr
+  //-       
+  //-       p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.
+  //-       
+  //-       hr
+  //-       
+  //-       .large-window
+  //-         .window-tint
+  //-           .promo-text Fall Suits
+  //-             strong <span>from</span> $99
+  //-             a(href="").window-cta Shop Now
+  //-       
+  //-       
+  //-       
+  //-       h1 Rich History
+  //-       
+  //-       hr
+  //-       
+  //-       p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.
+  //-       
+  //-       hr
+  //-       
+  //-       
+  //-       .blog-posts.row
+  //-         
+  //-         .post.columns.four.post-1
+  //-           h5 Post Title
+  //-           img(src="images/posts/one.jpg")
+  //-           p Incididunt ut labore et dolore magna.
+  //-           p: a.button(href="") Read More
+  //-           
+  //-         .post.columns.four.post-2
+  //-           h5 Post Title
+  //-           img(src="images/posts/two.jpg")
+  //-           p Lorem ipsum dolor sit amet.
+  //-           p: a.button(href="") Read More
+  //-           
+  //-         .post.columns.four.post-3
+  //-           h5 Post Title
+  //-           img(src="images/posts/three.jpg")
+  //-           p Duis aute irure dolor in reprehenderit.
+  //-           p: a.button(href="") Read More
+  //-       
+  //-   footer
+  //-     .row.footer-stuff
+  //-       .columns.three
+  //-         strong FIND US ON
+  //-         ul
+  //-           li: a(href="") Twitter
+  //-           li: a(href="") Facebook
+  //-           li: a(href="") Pinterest
+  //-           li: a(href="") Instagram
+  //-       
+  //-       .columns.three
+  //-         strong OTHER SHOPS
+  //-         ul
+  //-           li: a(href="") Red Robin
+  //-           li: a(href="") Emerald Eagle
+  //-           li: a(href="") Crimson Crane
+  //-           li: a(href="") Auburn Abbot
+  //-       
+  //-       .columns.six
+  //-         p <strong>Sign Up for the newsletter</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  //-         
+  //-         form.row
+  //-           .columns.eight
+  //-             input.u-full-width(type="email" placeholder="Your Email")
+  //-           .columns.four
+  //-             input.button-primary(type="submit")
