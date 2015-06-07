@@ -140,7 +140,6 @@ section
   header
     #main-title.container
       +transform(translate(-50%, -110%))
-      background-color: red
 
       h1
         font-size: 2.5em !important
@@ -156,31 +155,20 @@ section
       +transform(translate(-50%, 40%))
 
     .profile-img
-      +size(80px)
-      +transform(translate(-50%, -185%))
+      +size(80px !important)
+      +transform(translate(-50%, -200%))
 
 @media only screen and (max-height: 375px)
   header
-    #main-title.container
-      +transform(translate(-50%, -110%))
-      background-color: blue !important
-
-      h1
-        font-size: 2.5em !important
-
     #sub-title.container
-      +transform(translate(-50%, -5%))
+      +transform(translate(-50%, -10%))
 
       h6.sub-title
         p.tag-list
-          +transform(translate(-50%, 65%))
+          +transform(translate(-50%, 75%))
 
     #about-text.container
-      +transform(translate(-50%, 40%))
-
-    .profile-img
-      +size(80px)
-      +transform(translate(-50%, -185%))
+      +transform(translate(-50%, 60%))
 
 @media only screen and (min-width: 321px)
   header
