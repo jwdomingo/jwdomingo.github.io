@@ -11,8 +11,7 @@ header
   .bg-img
     z-index: -1
     position: relative
-    height: 100vh
-    width: 100%
+    +size(100% 100vh)
     background:
       image: url('/assets/img/ggate1719x800.jpg')
       repeat: no-repeat
@@ -21,15 +20,13 @@ header
 
   .container
     display: block
-    position: fixed
-    left: 50%
-    top: 50%
+    +position(fixed, 50% null null 50%)
     padding: 0px
 
   #main-title.container
     z-index: 0
     width: 100%
-    @include transform(translate(-50%, -150%))
+    +transform(translate(-50%, -150%))
 
     h1
       display: block
@@ -44,20 +41,19 @@ header
     z-index: 2
     width: 100vw
     margin: 0px auto
-    @include transform(translate(-50%, -50%))
-    @include display(flex)
-    @include flex-direction(row)
-    @include flex-wrap(nowrap)
-    @include align-items(center)
-    @include justify-content(space-around)
+    +transform(translate(-50%, -50%))
+    +display(flex)
+    +flex-direction(row)
+    +align-items(center)
+    +justify-content(space-around)
 
     h6.sub-title
       font-size: .775em
       margin: 0px
       color: $text-color
-      font-weight: 700
+      font-weight: normal
       cursor: pointer
-      @include display(flex)
+      +display(flex)
       white-space: nowrap
 
       input.toggler
@@ -83,19 +79,17 @@ header
         visibility: hidden
         width: 85%
         margin: 0px
-        position: absolute
-        top: 50%
-        left: 50%
-        @include transform(translate(-50%, 150%))
-        font-size: 0.75em
+        +position(absolute, 50% null null 50%)
+        +transform(translate(-50%, 150%))
+        font-size: 0.85em
         line-height: 1.5
         text-transform: lowercase
         white-space: nowrap
         display: flex
-        @include flex-direction(row)
-        @include flex-wrap(wrap)
-        @include align-items(center)
-        @include justify-content(center)
+        +flex-direction(row)
+        +flex-wrap(wrap)
+        +align-items(center)
+        +justify-content(center)
 
         span
           margin: 0px 4px 8px
@@ -106,7 +100,7 @@ header
 
   #about-text.container
     z-index: -2
-    @include transform(translate(-50%, 50%))
+    +transform(translate(-50%, 50%))
     width: 95%
 
     p
@@ -115,10 +109,9 @@ header
 
   .profile-img
     z-index: -2
-    height: 100px
-    width: 100px
+    +size(100px)
     position: fixed
-    @include transform(translate(-50%, -200%))
+    +transform(translate(-50%, -200%))
     background:
       image: url('/assets/img/jd1278x1278.jpg')
       position: top center
@@ -134,18 +127,66 @@ header
 
 section
   z-index: 3
-  width: 100%
-  height: 100vh
+  +size(100% 100vh)
   padding: 200px 0px
   background-color: white
   position: relative
-  @include transform(translate3d(0,0,0))
+  +transform(translate3d(0,0,0))
 
-//////////////////////
-// CUSTOM BOOTSTRAP //
-//////////////////////
-.col-xs-0
-  visibility: hidden
+///////////////////
+// MEDIA QUERIES //
+///////////////////
+@media only screen and (max-height: 320px)
+  header
+    #main-title.container
+      +transform(translate(-50%, -110%))
+      background-color: red
+
+      h1
+        font-size: 2.5em !important
+
+    #sub-title.container
+      +transform(translate(-50%, -5%))
+
+      h6.sub-title
+        p.tag-list
+          +transform(translate(-50%, 65%))
+
+    #about-text.container
+      +transform(translate(-50%, 40%))
+
+    .profile-img
+      +size(80px)
+      +transform(translate(-50%, -185%))
+
+@media only screen and (max-height: 375px)
+  header
+    #main-title.container
+      +transform(translate(-50%, -110%))
+      background-color: blue !important
+
+      h1
+        font-size: 2.5em !important
+
+    #sub-title.container
+      +transform(translate(-50%, -5%))
+
+      h6.sub-title
+        p.tag-list
+          +transform(translate(-50%, 65%))
+
+    #about-text.container
+      +transform(translate(-50%, 40%))
+
+    .profile-img
+      +size(80px)
+      +transform(translate(-50%, -185%))
+
+@media only screen and (min-width: 321px)
+  header
+    #main-title.container
+      h1
+        font-size: 11.75vw
 
 @media only screen and (min-width: 500px)
   header
@@ -163,9 +204,8 @@ section
         font-size: 1em
 
     .profile-img
-      height: 150px
-      width: 150px
-      @include transform(translate(-50%, -200%))
+      +size(150px)
+      +transform(translate(-50%, -200%))
 
 @media only screen and (min-width: 768px)
   header
@@ -180,11 +220,8 @@ section
 
     .fg-img-1
       z-index: 1
-      width: 100%
-      height: 426px
-      position: absolute
-      bottom: 0px
-      left: 0px
+      +size(100% 426px)
+      +position(absolute, null null 0px 0px)
       background:
         image: url('/assets/img/bg/outcrop1719x800.png')
         position: bottom center
