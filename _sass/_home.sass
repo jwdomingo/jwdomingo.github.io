@@ -26,11 +26,11 @@ header
   #main-title.container
     z-index: 0
     width: 100%
-    +transform(translate(-50%, -150%))
+    +transform(translate(-50%, -80px))
 
     h1
       display: block
-      font-size: 2.25em
+      font-size: 2.25rem
       line-height: 1
       margin: 0px
       padding: 10px 20px
@@ -41,14 +41,14 @@ header
     z-index: 2
     width: 100vw
     margin: 0px auto
-    +transform(translate(-50%, -50%))
+    +transform(translate(-50%, -12px))
     +display(flex)
     +flex-direction(row)
     +align-items(center)
     +justify-content(space-around)
 
     h6.sub-title
-      font-size: .775em
+      font-size: .775rem
       margin: 0px
       color: $text-color
       font-weight: normal
@@ -80,8 +80,8 @@ header
         width: 85%
         margin: 0px
         +position(absolute, 50% null null 50%)
-        +transform(translate(-50%, 150%))
-        font-size: 0.85em
+        +transform(translate(-50%, 22px))
+        font-size: 0.85rem
         line-height: 1.5
         text-transform: lowercase
         white-space: nowrap
@@ -100,18 +100,21 @@ header
 
   #about-text.container
     z-index: -2
-    +transform(translate(-50%, 50%))
-    width: 95%
+    +transform(translate(-50%, 50px))
+    width: 92.5%
+
+    hr
+      margin-bottom: 15px
 
     p
       text-transform: none
-      font-size: .9em
+      font-size: .9rem
 
   .profile-img
     z-index: -2
     +size(100px)
     position: fixed
-    +transform(translate(-50%, -200%))
+    +transform(translate(-50%, -185px))
     background:
       image: url('/assets/img/jd1278x1278.jpg')
       position: top center
@@ -136,54 +139,80 @@ section
 ///////////////////
 // MEDIA QUERIES //
 ///////////////////
+@media only screen and (max-width: 320px) and (-webkit-min-device-pixel-ratio: 1.5)
+  header
+    #main-title.container
+      h1
+        font-size: 2.25rem !important
+        color: blue
+
+@media only screen and (max-height: 320px) and (-webkit-min-device-pixel-ratio: 1.5)
+  header
+    #main-title.container
+      +transform(translate(-50%, -70px))
+
+      h1
+        font-size: 1rem
+        display: inline-block
+        color: red
+
+    #sub-title.container
+      width: 400px
+      +transform(translate(-50%, 12px))
+
+      h6.sub-title
+        p.tag-list
+          +transform(translate(-50%, 21.5px))
+
+    #about-text.container
+      +transform(translate(-50%, 65px))
+
+    .profile-img
+      +size(80px)
+      +transform(translate(-50%, -150px))
+
 @media only screen and (max-height: 375px) and (-webkit-min-device-pixel-ratio: 1.5)
   header
     #main-title.container
-      +transform(translate(-50%, -80%))
+      +transform(translate(-50%, -70px))
 
       h1
-        font-size: 3.5em
+        font-size: 3.25rem
         display: inline-block
 
     #sub-title.container
       width: 400px
-      +transform(translate(-50%, 85%))
+      +transform(translate(-50%, 12px))
 
       h6.sub-title
         p.tag-list
-          +transform(translate(-50%, 120%))
+          +transform(translate(-50%, 21.5px))
 
     #about-text.container
-      +transform(translate(-50%, 120%))
+      +transform(translate(-50%, 65px))
 
     .profile-img
       +size(80px)
-      +transform(translate(-50%, -150%))
-
-// @media only screen and (min-width: 321px) and (min-height: 376px)
-//   header
-//     #main-title.container
-//       h1
-//         font-size: 11.75vw
+      +transform(translate(-50%, -150px))
 
 @media only screen and (min-width: 500px) and (min-height: 376px)
   header
     #main-title.container
       h1
         display: inline-block
-        font-size: 3.5em
+        font-size: 3.5rem
 
     #sub-title.container
       h6.sub-title
-        font-size: 1.1em
+        font-size: 1.1rem
 
     #about-text.container
       p
-        font-size: 1em
+        font-size: 1rem
 
     .profile-img
       +size(150px)
-      +transform(translate(-50%, -200%))
+      +transform(translate(-50%, -250px))
 
 @media only screen and (min-width: 768px) and (min-height: 376px)
   header
@@ -193,7 +222,7 @@ section
 
     #main-title.container
       h1
-        font-size: 4em
+        font-size: 4rem
         background-color: transparentize(white,0.5)
 
     .fg-img-1
