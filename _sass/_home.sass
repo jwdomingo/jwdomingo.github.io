@@ -1,21 +1,38 @@
 // Font-Size Variables
-$fs-main: 3.5
-$fs-sub:  1.2
-$fs-tag:  1.1
+$fs-main-xs: 3.5
+$fs-sub-xs:  1.2
+$fs-tag-xs:  1.1
+
+$fs-main-md: 6.2
+$fs-sub-md:  1.5
+$fs-tag-md:  1
+
 
 // Height Variables
-$h-prof-sm: 100px
 $h-prof-xs: 80px
-$h-main:    (10px * $fs-main) + (2 * 10px)
-$h-sub:     (10px * $fs-sub) + (2 * 5px)
-$h-tag:     (10px * $fs-tag) * 1.5
+$h-prof-sm: 100px
+$h-prof-md: 150px
+
+$h-main-xs: (10px * $fs-main-xs) + (2 * 10px)
+$h-sub-xs:  (10px * $fs-sub-xs) + (2 * 5px)
+$h-tag-xs:  (10px * $fs-tag-xs) * 1.5
+
+$h-main-md: (10px * $fs-main-md) + (2 * 10px)
+$h-sub-md:  (10px * $fs-sub-md) + (2 * 5px)
+$h-tag-md:  (10px * $fs-tag-md) * 1.5
 
 // TranslateY Variables
-$ty-prof-sm: -$h-prof-sm - $h-main - 5px
-$ty-prof-xs: -$h-prof-xs - $h-main - 5px
-$ty-main: -$h-main - 5px
-$ty-tag:  ($h-sub / 2) + 10px
-$ty-text:  $h-sub + $h-tag + 25px
+$ty-prof-xs: -$h-prof-xs - $h-main-xs - 5px
+$ty-prof-sm: -$h-prof-sm - $h-main-xs - 5px
+$ty-prof-md: -$h-prof-md - $h-main-md - 5px
+
+$ty-main-xs: -$h-main-xs - 5px
+$ty-tag-xs:  ($h-sub-xs / 2) + 10px
+$ty-text-xs:  $h-sub-xs + $h-tag-xs + 25px
+
+$ty-main-md: -$h-main-md - 5px
+$ty-tag-md:  ($h-sub-md / 2) + 10px
+$ty-text-md:  $h-sub-md + $h-tag-md + 30px
 
 //////////////
 // PARALLAX //
@@ -45,11 +62,11 @@ header
   #main-title.container
     z-index: 0
     width: 100%
-    +transform(translate(-50%, $ty-main))
+    +transform(translate(-50%, $ty-main-xs))
 
     h1
       display: block
-      font-size: #{$fs-main}rem
+      font-size: #{$fs-main-xs}rem
       line-height: 1
       margin: 0px
       padding: 10px 20px
@@ -67,7 +84,7 @@ header
     +justify-content(space-around)
 
     h6.sub-title
-      font-size: #{$fs-sub}rem
+      font-size: #{$fs-sub-xs}rem
       margin: 0px
       color: $text-color
       font-weight: normal
@@ -99,8 +116,8 @@ header
         width: 85%
         margin: 0px
         +position(absolute, 50% null null 50%)
-        +transform(translate(-50%, $ty-tag))
-        font-size: #{$fs-tag}rem
+        +transform(translate(-50%, $ty-tag-xs))
+        font-size: #{$fs-tag-xs}rem
         line-height: 1
         text-transform: lowercase
         white-space: nowrap
@@ -119,7 +136,7 @@ header
 
   #about-text.container
     z-index: -2
-    +transform(translate(-50%, $ty-text))
+    +transform(translate(-50%, $ty-text-xs))
 
     width: 92.5%
 
@@ -159,7 +176,7 @@ section
 @media only screen and (max-height: 320px) and (-webkit-min-device-pixel-ratio: 1.5)
   header
     #main-title.container
-      +transform(translate(-50%, $ty-main + 5px))
+      +transform(translate(-50%, $ty-main-xs + 5px))
 
     .profile-img
       +size(80px)
@@ -187,7 +204,7 @@ section
 @media only screen and (min-width: 500px) and (min-height: 450px)
   header
     #main-title.container
-      +transform(translate(-50%, -41px))
+      +transform(translate(-50%, $ty-main-md))
 
       h1
         font-size: 6.2rem
@@ -195,25 +212,25 @@ section
 
     #sub-title.container
       width: 500px
-      +transform(translate(-50%, 51px))
+      +transform(translate(-50%, 5px))
 
       h6.sub-title
         font-size: 1.5rem
 
         p.tag-list
           font-size: 1rem
-          +transform(translate(-50%, 23px))
+          +transform(translate(-50%, $ty-tag-md))
 
     #about-text.container
       width: 500px
-      +transform(translate(-50%, 112px))
+      +transform(translate(-50%, $ty-text-md))
 
       p
         font-size: 1.5rem
 
     .profile-img
-      +size(150px)
-      +transform(translate(-50%, -200px))
+      +size($h-prof-md)
+      +transform(translate(-50%, $ty-prof-md))
 
 @media only screen and (min-width: 768px) and (min-height: 450px)
   header
