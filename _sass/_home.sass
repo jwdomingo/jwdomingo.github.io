@@ -3,11 +3,19 @@ $fs-main: 3.5
 $fs-sub:  1.2
 $fs-tag:  1.1
 
+// Height Variables
+$h-prof-sm: 100px
+$h-prof-xs: 80px
+$h-main:    (10px * $fs-main) + (2 * 10px)
+$h-sub:     (10px * $fs-sub) + (2 * 5px)
+$h-tag:     (10px * $fs-tag) * 1.5
+
 // TranslateY Variables
-$ty-prof:  100px
-$ty-main:  (10px * $fs-main) + (2 * 10px)
-$ty-sub:   (10px * $fs-sub) + (2 * 5px)
-$ty-tag:   (10px * $fs-tag) * 1.5
+$ty-prof-sm: -$h-prof-sm - $h-main - 5px
+$ty-prof-xs: -$h-prof-xs - $h-main - 5px
+$ty-main: -$h-main - 5px
+$ty-tag:  ($h-sub / 2) + 10px
+$ty-text:  $h-sub + $h-tag + 25px
 
 //////////////
 // PARALLAX //
@@ -37,7 +45,7 @@ header
   #main-title.container
     z-index: 0
     width: 100%
-    +transform(translate(-50%, -27.5px))
+    +transform(translate(-50%, $ty-main))
 
     h1
       display: block
@@ -52,7 +60,7 @@ header
     z-index: 2
     width: 98%
     margin: 0px auto
-    +transform(translate(-50%, 37.5px))
+    +transform(translate(-50%, 5px))
     +display(flex)
     +flex-direction(row)
     +align-items(center)
@@ -91,7 +99,7 @@ header
         width: 85%
         margin: 0px
         +position(absolute, 50% null null 50%)
-        +transform(translate(-50%, 21.5px))
+        +transform(translate(-50%, $ty-tag))
         font-size: #{$fs-tag}rem
         line-height: 1
         text-transform: lowercase
@@ -111,7 +119,8 @@ header
 
   #about-text.container
     z-index: -2
-    +transform(translate(-50%, 96.5px))
+    +transform(translate(-50%, $ty-text))
+
     width: 92.5%
 
     p
@@ -122,7 +131,7 @@ header
     z-index: -2
     +size(100px)
     position: fixed
-    +transform(translate(-50%, -137.5px))
+    +transform(translate(-50%, $ty-prof-sm))
     background:
       image: url('/assets/img/jd1278x1278.jpg')
       position: top center
@@ -150,25 +159,11 @@ section
 @media only screen and (max-height: 320px) and (-webkit-min-device-pixel-ratio: 1.5)
   header
     #main-title.container
-      +transform(translate(-50%, -70px))
-
-      h1
-        color: red
-
-    #sub-title.container
-      width: 300px
-      +transform(translate(-50%, 12px))
-
-      h6.sub-title
-        p.tag-list
-          +transform(translate(-50%, 21.5px))
-
-    #about-text.container
-      +transform(translate(-50%, 65px))
+      +transform(translate(-50%, $ty-main + 5px))
 
     .profile-img
       +size(80px)
-      +transform(translate(-50%, -150px))
+      +transform(translate(-50%, $ty-prof-xs))
 
 //@media only screen and (max-height: 375px) and (-webkit-min-device-pixel-ratio: 1.5)
   header
