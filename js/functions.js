@@ -3,14 +3,6 @@ $(window).scroll(function() {
   var wScroll = $(this).scrollTop();
 
   $('.fg-img-1').css({
-    'transform' : 'translate(0px, ' + wScroll / 10 + '%)'
+    'background-position' : (50 + wScroll / 20) + '% ' + (100 - wScroll / 4) + '%'
   });
-
-  console.log(wScroll);
-});
-
-$( document ).ready(function() {
-
-  //
-
 });
