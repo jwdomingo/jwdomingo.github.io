@@ -1,0 +1,510 @@
+{
+  "nodes": [
+    {
+      "skill": "MongoDB",
+      "level": 5,
+      "type": "dba",
+      "group": "data"
+    },
+    {
+      "skill": "MS Access",
+      "level": 9,
+      "type": "dba",
+      "group": "data"
+    },
+    {
+      "skill": "SQL",
+      "level": 8,
+      "type": "dba",
+      "group": "data"
+    },
+    {
+      "skill": "Illustrator",
+      "level": 10,
+      "type": "design",
+      "group": "graphic"
+    },
+    {
+      "skill": "InDesign",
+      "level": 8,
+      "type": "design",
+      "group": "graphic"
+    },
+    {
+      "skill": "Material Design",
+      "level": 4,
+      "type": "design",
+      "group": "graphic"
+    },
+    {
+      "skill": "Photoshop",
+      "level": 9,
+      "type": "design",
+      "group": "graphic"
+    },
+    {
+      "skill": "Sketch",
+      "level": 10,
+      "type": "design",
+      "group": "graphic"
+    },
+    {
+      "skill": "Bash",
+      "level": 4,
+      "type": "dev",
+      "group": "code"
+    },
+    {
+      "skill": "BASIC",
+      "level": 9,
+      "type": "dev",
+      "group": "code"
+    },
+    {
+      "skill": "Python",
+      "level": 3,
+      "type": "dev",
+      "group": "code"
+    },
+    {
+      "skill": "Scheme",
+      "level": 2,
+      "type": "dev",
+      "group": "code"
+    },
+    {
+      "skill": "Swift",
+      "level": 5,
+      "type": "dev",
+      "group": "code"
+    },
+    {
+      "skill": "VBA",
+      "level": 10,
+      "type": "dev",
+      "group": "code"
+    },
+    {
+      "skill": "VB.NET",
+      "level": 6,
+      "type": "dev",
+      "group": "code"
+    },
+    {
+      "skill": "Git",
+      "level": 7,
+      "type": "dev",
+      "group": "devtools"
+    },
+    {
+      "skill": "Visual Studio",
+      "level": 7,
+      "type": "dev",
+      "group": "ide"
+    },
+    {
+      "skill": "xCode",
+      "level": 7,
+      "type": "dev",
+      "group": "ide"
+    },
+    {
+      "skill": "Audacity",
+      "level": 1,
+      "type": "media",
+      "group": "sound"
+    },
+    {
+      "skill": "GarageBand",
+      "level": 6,
+      "type": "media",
+      "group": "sound"
+    },
+    {
+      "skill": "After Effects",
+      "level": 1,
+      "type": "media",
+      "group": "video"
+    },
+    {
+      "skill": "iMovie",
+      "level": 8,
+      "type": "media",
+      "group": "video"
+    },
+    {
+      "skill": "Kinetic Typography",
+      "level": 2,
+      "type": "media",
+      "group": "video"
+    },
+    {
+      "skill": "MATLAB",
+      "level": 6,
+      "type": "viz",
+      "group": "stats"
+    },
+    {
+      "skill": "R",
+      "level": 2,
+      "type": "viz",
+      "group": "stats"
+    },
+    {
+      "skill": "D3.js",
+      "level": 7,
+      "type": "viz",
+      "group": "web"
+    },
+    {
+      "skill": "JSON",
+      "level": 8,
+      "type": "viz",
+      "group": "web"
+    },
+    {
+      "skill": "SVG",
+      "level": 8,
+      "type": "viz",
+      "group": "web"
+    },
+    {
+      "skill": "Bourbon",
+      "level": 9,
+      "type": "web",
+      "group": "css"
+    },
+    {
+      "skill": "CSS3",
+      "level": 9,
+      "type": "web",
+      "group": "css"
+    },
+    {
+      "skill": "Flexbox",
+      "level": 9,
+      "type": "web",
+      "group": "css"
+    },
+    {
+      "skill": "Sass",
+      "level": 8,
+      "type": "web",
+      "group": "css"
+    },
+    {
+      "skill": "Chrome DevTools",
+      "level": 9,
+      "type": "web",
+      "group": "devtools"
+    },
+    {
+      "skill": "Firebug",
+      "level": 1,
+      "type": "web",
+      "group": "devtools"
+    },
+    {
+      "skill": "Safari Web Inspector",
+      "level": 9,
+      "type": "web",
+      "group": "devtools"
+    },
+    {
+      "skill": "Bootstrap",
+      "level": 10,
+      "type": "web",
+      "group": "frame"
+    },
+    {
+      "skill": "Foundation",
+      "level": 1,
+      "type": "web",
+      "group": "frame"
+    },
+    {
+      "skill": "Skeleton",
+      "level": 5,
+      "type": "web",
+      "group": "frame"
+    },
+    {
+      "skill": "HTML5",
+      "level": 9,
+      "type": "web",
+      "group": "html"
+    },
+    {
+      "skill": "Jade",
+      "level": 10,
+      "type": "web",
+      "group": "html"
+    },
+    {
+      "skill": "CoffeeScript",
+      "level": 1,
+      "type": "web",
+      "group": "js"
+    },
+    {
+      "skill": "JavaScript",
+      "level": 8,
+      "type": "web",
+      "group": "js"
+    },
+    {
+      "skill": "jQuery",
+      "level": 5,
+      "type": "web",
+      "group": "js"
+    },
+    {
+      "skill": "Parallax",
+      "level": 5,
+      "type": "web",
+      "group": "js"
+    },
+    {
+      "skill": "Jekyll",
+      "level": 9,
+      "type": "web",
+      "group": "site"
+    },
+    {
+      "skill": "WordPress",
+      "level": 6,
+      "type": "web",
+      "group": "site"
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 11
+    },
+    {
+      "source": 3,
+      "target": 6
+    },
+    {
+      "source": 3,
+      "target": 7
+    },
+    {
+      "source": 4,
+      "target": 6
+    },
+    {
+      "source": 5,
+      "target": 3
+    },
+    {
+      "source": 5,
+      "target": 7
+    },
+    {
+      "source": 6,
+      "target": 3
+    },
+    {
+      "source": 7,
+      "target": 38
+    },
+    {
+      "source": 8,
+      "target": 9
+    },
+    {
+      "source": 9,
+      "target": 10
+    },
+    {
+      "source": 9,
+      "target": 11
+    },
+    {
+      "source": 10,
+      "target": 11
+    },
+    {
+      "source": 11,
+      "target": 41
+    },
+    {
+      "source": 12,
+      "target": 17
+    },
+    {
+      "source": 13,
+      "target": 14
+    },
+    {
+      "source": 13,
+      "target": 16
+    },
+    {
+      "source": 14,
+      "target": 16
+    },
+    {
+      "source": 15,
+      "target": 8
+    },
+    {
+      "source": 15,
+      "target": 44
+    },
+    {
+      "source": 16,
+      "target": 9
+    },
+    {
+      "source": 16,
+      "target": 17
+    },
+    {
+      "source": 17,
+      "target": 9
+    },
+    {
+      "source": 18,
+      "target": 19
+    },
+    {
+      "source": 19,
+      "target": 21
+    },
+    {
+      "source": 20,
+      "target": 7
+    },
+    {
+      "source": 21,
+      "target": 20
+    },
+    {
+      "source": 22,
+      "target": 20
+    },
+    {
+      "source": 23,
+      "target": 24
+    },
+    {
+      "source": 23,
+      "target": 25
+    },
+    {
+      "source": 24,
+      "target": 25
+    },
+    {
+      "source": 25,
+      "target": 38
+    },
+    {
+      "source": 26,
+      "target": 25
+    },
+    {
+      "source": 27,
+      "target": 23
+    },
+    {
+      "source": 27,
+      "target": 26
+    },
+    {
+      "source": 28,
+      "target": 31
+    },
+    {
+      "source": 29,
+      "target": 38
+    },
+    {
+      "source": 30,
+      "target": 29
+    },
+    {
+      "source": 31,
+      "target": 29
+    },
+    {
+      "source": 32,
+      "target": 44
+    },
+    {
+      "source": 33,
+      "target": 32
+    },
+    {
+      "source": 34,
+      "target": 32
+    },
+    {
+      "source": 34,
+      "target": 33
+    },
+    {
+      "source": 35,
+      "target": 36
+    },
+    {
+      "source": 35,
+      "target": 37
+    },
+    {
+      "source": 36,
+      "target": 30
+    },
+    {
+      "source": 37,
+      "target": 36
+    },
+    {
+      "source": 39,
+      "target": 38
+    },
+    {
+      "source": 40,
+      "target": 41
+    },
+    {
+      "source": 41,
+      "target": 38
+    },
+    {
+      "source": 42,
+      "target": 41
+    },
+    {
+      "source": 43,
+      "target": 29
+    },
+    {
+      "source": 43,
+      "target": 42
+    },
+    {
+      "source": 44,
+      "target": 38
+    },
+    {
+      "source": 45,
+      "target": 38
+    },
+    {
+      "source": 45,
+      "target": 44
+    }
+  ]
+}

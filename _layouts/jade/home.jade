@@ -3,7 +3,6 @@ doctype html
 html(lang="en")
   head.
     {% include head.html %}
-
   body
     // Landing Page //
     header.text-center
@@ -51,9 +50,18 @@ html(lang="en")
       .fg-img-1
       
       .profile-img.container
-    section(id='about')
-    section(id='skills')
     
+    //section(id='about')
+    
+    section(id='skills')
+      h1 Skills
+      .skills-container
+      script(src="/js/d3/d3.min.js")
+      script(src="/js/d3/skills.js")
+      
+    section(id='projects')
+      h1 Projects
+      
     script(src="/js/jquery-2.1.4.min.js")
     script(src="/js/functions.js")
 //-   .arrow

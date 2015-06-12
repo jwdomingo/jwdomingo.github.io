@@ -170,6 +170,54 @@ section
   position: relative
   +transform(translate3d(0,0,0))
 
+  h1
+    position: absolute
+    top: 10px
+    left: 20px
+
+  .skills-container
+    position: fixed
+    bottom: 0px
+    width: 100vw
+    height: 100vh
+
+    svg#skills-vis
+      position: fixed
+      display: block
+      bottom: 0px
+      width: 100vw
+      height: 100vh
+
+      circle
+        cursor: pointer
+
+      circle.dba
+        fill: #ccc
+      circle.design
+        fill: #fcb564
+      circle.dev
+        fill: #e47b63
+      circle.media
+        fill: #5cacc1
+      circle.viz
+        fill: #023647
+      circle.web
+        fill: #8bd1a2
+
+    #bubble-labels
+      position: absolute
+      color: $text-color
+      cursor: pointer
+      display: block
+      text-align: center
+      text-decoration: none
+      line-height: 1em
+      +user-select(none)
+      white-space: wrap
+
+    #bubble-labels.viz
+      color: white
+
 ///////////////////
 // MEDIA QUERIES //
 ///////////////////
