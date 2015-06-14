@@ -3,11 +3,9 @@
 ////////////
 
 	var dataset,
-			collisionPadding = 4,
-  		minCollisionRadius = 12,
-			maxRadius,
-			gravX = 1,
-			gravY = 1,
+			collisionPadding = 4
+  		minCollisionRadius = 12
+			maxRadius = 15
 			jitter = 0.5;
 
 	d3.json('/js/d3/data/json/skills.json', function(error, json){
@@ -23,33 +21,11 @@
 
 				var svg = d3.select(".skills-container")
 					.append("svg")
-					.attr("id", "skills-vis")
-					.call(responsivefy);
+					.attr("id", "skills-vis");
+					//.call(responsivefy);
 
 				var w = document.getElementById('skills-vis').getBoundingClientRect().width;
 				var h = document.getElementById('skills-vis').getBoundingClientRect().height;
-
-				console.log("weight: " + w);
-				console.log("height: " + h);
-
-				// if (w <= h) {
-				// 	gravY = 1;
-				// 	gravX = 16;
-				// } else {
-				// 	gravX = 1;
-				// }
-
-				if (h <= 800 && h < w) {
-					maxRadius = h / 50;
-				} else if (w <= 900 && w < h) {
-					maxRadius = w / 50;
-				} else {
-					maxRadius = 15;
-				}
-
-				console.log("maxRadius: " + maxRadius);
-				console.log("gravX: " + gravX);
-				console.log("gravY: " + gravY);
 
 			  //////////////
 			 /*  SCALES  */
@@ -86,6 +62,27 @@
 					.attr("class", function(d) { return d.type; })
 					.call(force.drag);
 
+				// update = function() {
+				//   return nodes.forEach(function(d, i) {
+				//     return d.forceR = Math.max(minCollisionRadius, rScale(d.));
+				//   });
+				// };
+
+				// var labels1 = svg.selectAll("text")
+				// 	.data(dataset.nodes)
+				// 	.enter()
+				// 	.append("text")
+				// 	.text(function(d, i) {
+				// 		return d.skill;
+				// 	})
+				// 	.attr({
+				// 		"class": function(d) { return d.type; },
+				// 		"font-family": "sans-serif",
+				// 		"font-size": "10px",
+				// 		"text-anchor": "middle",
+				// 		fill: "#023647"
+				// 	});
+
 				var labels = d3.select(".skills-container")
 					.selectAll("#bubble-labels")
 					.data(dataset.nodes)
@@ -119,11 +116,10 @@
 					nodes
 						.each(gravity(dampenedAlpha))
 						.each(collide(jitter))
-						.attr("cx", function(d) {
-							return d.x = Math.max(d.level * 5, Math.min(w - d.level * 5, d.x));
-						})
-					  .attr("cy", function(d) {
-							return d.y = Math.max(d.level * 5, Math.min(h - d.level * 5, d.y));
+						.attr("cx", function(d) { return d.x; })
+					  .attr("cy", function(d) { return d.y; })
+						.attr("transfrom", function(d) {
+							return "translate(#{d.x},#{d.y})"
 						});
 
 					labels
@@ -132,8 +128,7 @@
 						.append("span").text(function(d) { return d.skill; })
 						.each(function(d) {
 							return d.dx = Math.max(2.5 * rScale(d.level), this.getBoundingClientRect().width);
-						})
-						.remove();
+						}).remove();
 
 				  labels
 						.style("width", function(d) {
@@ -152,18 +147,26 @@
   					.style("top", function(d) {
 								return d.y - d.dy / 2 + "px";
 						});
+
+
+
+
+					// labels1.attr("x", function(d) { return d.x; })
+					// 	.attr("y", function(d) { return d.y; });
 				}
+
+			//console.log(json);
 
 				function gravity(alpha) {
 				  var ax, ay, cx, cy;
 				  cx = w / 2;
 				  cy = h / 2;
-				  ax = alpha / gravX;
-				  ay = alpha / gravY;
+				  ax = alpha;
+				  ay = alpha / 8;
 
 				  return function(d) {
 				    d.x += (cx - d.x) * ax;
-				    d.y += (cy - d.y) * ay;
+				    return d.y += (cy - d.y) * ay;
 				  };
 				}; // gravity function
 
@@ -171,15 +174,13 @@
 			function collide(jitter) {
 		    return function(d) {
 		      return dataset.nodes.forEach(function(d2, i) {
-		        var distance, minDistance, moveX, moveY, x, y, dminR, d2minR;
+		        var distance, minDistance, moveX, moveY, x, y;
 
 		        if (d !== d2) {
 		          x = d.x - d2.x;
 		          y = d.y - d2.y;
 		          distance = Math.sqrt(x * x + y * y);
-							dminR = Math.max(minCollisionRadius, rScale(d.level))
-							d2minR = Math.max(minCollisionRadius, rScale(d2.level))
-		          minDistance =  dminR + d2minR + collisionPadding;
+		          minDistance = collisionPadding;
 
 		          if (distance < minDistance) {
 		            distance = (distance - minDistance) / distance * jitter;
@@ -188,7 +189,7 @@
 		            d.x -= moveX;
 		            d.y -= moveY;
 		            d2.x += moveX;
-		            d2.y += moveY;
+		            return d2.y += moveY;
 		          }
 		        }
 		      });
@@ -198,32 +199,32 @@
 		  /////////////////////////
 		 /*  Fx : RESPONSIVEFY  */
 		/////////////////////////
-			function responsivefy(svg) {
-			    // get container + svg aspect ratio
-			    var container = d3.select(svg.node().parentNode),
-			        width = parseInt(svg.style("width")),
-			        height = parseInt(svg.style("height")),
-			        aspect = width / height;
-
-			    // add viewBox and preserveAspectRatio properties,
-			    // and call resize so that svg resizes on inital page load
-			    svg.attr("viewBox", "0 0 " + width + " " + height)
-			        .attr("perserveAspectRatio", "xMinYMid")
-			        .call(resize);
-
-			    // to register multiple listeners for same event type,
-			    // you need to add namespace, i.e., 'click.foo'
-			    // necessary if you call invoke this function for multiple svgs
-			    // api docs: https://github.com/mbostock/d3/wiki/Selections#on
-			    d3.select(window).on("resize." + container.attr("id"), resize);
-
-			    // get width of container and resize svg to fit it
-			    function resize() {
-			        var targetWidth = parseInt(container.style("width"));
-			        svg.attr("width", targetWidth);
-			        svg.attr("height", Math.round(targetWidth / aspect));
-			    }
-				}
+			// function responsivefy(svg) {
+			//     // get container + svg aspect ratio
+			//     var container = d3.select(svg.node().parentNode),
+			//         width = parseInt(svg.style("width")),
+			//         height = parseInt(svg.style("height")),
+			//         aspect = width / height;
+			//
+			//     // add viewBox and preserveAspectRatio properties,
+			//     // and call resize so that svg resizes on inital page load
+			//     svg.attr("viewBox", "0 0 " + width + " " + height)
+			//         .attr("perserveAspectRatio", "xMinYMid")
+			//         .call(resize);
+			//
+			//     // to register multiple listeners for same event type,
+			//     // you need to add namespace, i.e., 'click.foo'
+			//     // necessary if you call invoke this function for multiple svgs
+			//     // api docs: https://github.com/mbostock/d3/wiki/Selections#on
+			//     d3.select(window).on("resize." + container.attr("id"), resize);
+			//
+			//     // get width of container and resize svg to fit it
+			//     function resize() {
+			//         var targetWidth = parseInt(container.style("width"));
+			//         svg.attr("width", targetWidth);
+			//         svg.attr("height", Math.round(targetWidth / aspect));
+			//     }
+			// 	}
 
 		} // else statement
 	});
