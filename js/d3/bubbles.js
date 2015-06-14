@@ -53,8 +53,7 @@ Bubbles = function() {
     });
   };
 
-  force = d3.layout
-    .force()
+  force = d3.layout.force()
     .gravity(0)
     .charge(0)
     .size([width, height])

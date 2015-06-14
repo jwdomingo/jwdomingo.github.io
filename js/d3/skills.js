@@ -32,12 +32,11 @@
 				console.log("weight: " + w);
 				console.log("height: " + h);
 
-				// if (w <= h) {
-				// 	gravY = 1;
-				// 	gravX = 16;
-				// } else {
-				// 	gravX = 1;
-				// }
+				if (w <= h) {
+					gravY = 8;
+				} else {
+					gravX = 8;
+				}
 
 				if (h <= 800 && h < w) {
 					maxRadius = h / 50;
@@ -67,6 +66,7 @@
 					.size([w, h])
 					.gravity(0)
 					.charge(-100)
+					.friction(0.5)
 					.start();
 
 				var edges = svg.selectAll("line")
@@ -94,7 +94,8 @@
     			.attr({
 						"id": "bubble-labels",
 						"class": function(d) { return d.type; }
-					});
+					})
+					.call(force.drag);
 
 				var labelEnter = labels.append("div")
 		      .attr("class", "bubble-label-name")
@@ -120,10 +121,19 @@
 						.each(gravity(dampenedAlpha))
 						.each(collide(jitter))
 						.attr("cx", function(d) {
-							return d.x = Math.max(d.level * 5, Math.min(w - d.level * 5, d.x));
+							if (d.skill == "HTML5" && w > h) {
+								return d.x = w / 2;
+							} else {
+								return d.x = Math.max(d.level * 5, Math.min(w - d.level * 5, d.x));
+							}
 						})
 					  .attr("cy", function(d) {
-							return d.y = Math.max(d.level * 5, Math.min(h - d.level * 5, d.y));
+							if (d.skill == "HTML5" && h > w) {
+								firstTick = false
+								return d.y = h / 2;
+							} else {
+								return d.y = Math.max(d.level * 5, Math.min(h - d.level * 5, d.y));
+							}
 						});
 
 					labels
