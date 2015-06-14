@@ -172,21 +172,22 @@ section
 
   h1
     position: absolute
-    top: 10px
-    left: 20px
+    top: 50px
+    left: 50%
+    +transform(translateX(-50%))
 
   .skills-container
     position: fixed
     bottom: 0px
     width: 100vw
-    height: 100vh
+    height: 87.5vh
 
     svg#skills-vis
       position: fixed
       display: block
       bottom: 0px
       width: 100vw
-      height: 100vh
+      height: 87.5vh
 
       circle
         cursor: pointer
@@ -226,7 +227,7 @@ section
       circle.design.bubble-selected
         fill: $tertiary1
       circle.dev.bubble-selected
-        fill: $accentB1
+        fill: $accentB2
       circle.media.bubble-selected
         fill: $secondary2
       circle.viz.bubble-selected
