@@ -248,7 +248,6 @@
 				var svg = d3.select(".skills-container")
 					.selectAll("*")
 					.remove();
-
 			  chart(0.01);
 			});
 		} // else statement
