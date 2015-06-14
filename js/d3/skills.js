@@ -19,7 +19,8 @@
 						maxRadius,
 						gravX = 1,
 						gravY = 1,
-						centerNode = "HTML5";
+						centerNode = "HTML5",
+						bubbleSelected = false;
 
 				dataset = json;
 
@@ -41,7 +42,7 @@
 						gravX = 8;
 					}
 
-					if (h <= 800 && h < w) {
+					if (h <= 800 && h <= w) {
 						maxRadius = h / 50;
 					} else if (w <= 900 && w < h) {
 						maxRadius = w / 50;
@@ -84,8 +85,9 @@
 						.attr("r", function(d, i) { return rScale(d.level); })
 						.attr("class", function(d) { return d.type; })
 						.call(force.drag)
-						.on("mouseover", mouseover)
-						.on("mouseout", mouseout);
+						.on("mouseover", function(d) { return mouseover(d); })
+						.on("mouseout", mouseout)
+						.on("click", function(d) { return click(d); });
 
 					var labels = d3.select(".skills-container")
 						.selectAll("#bubble-labels")
@@ -97,8 +99,9 @@
 							"class": function(d) { return d.type; }
 						})
 						.call(force.drag)
-						.on("mouseover", mouseover)
-						.on("mouseout", mouseout);
+						.on("mouseover", function(d) { return mouseover(d); })
+						.on("mouseout", mouseout)
+						.on("click", function(d) { return click(d); });
 
 					var labelEnter = labels.append("div")
 			      .attr("class", "bubble-label-name")
@@ -130,17 +133,16 @@
 							.each(gravity(dampenedAlpha))
 							.each(collide(jitter))
 							.attr("cx", function(d) {
-								if (d.skill == centerNode && w > h) {
-									return d.x = w / 2;
-								} else {
+								if ((bubbleSelected && d.skill == centerNode && w >= h) || (d.skill == centerNode && w >= h)) {
+									return d.x = w / 2; }
+								else {
 									return d.x = Math.max(d.level * 5, Math.min(w - d.level * 5, d.x));
 								}
 							})
 						  .attr("cy", function(d) {
-								if (d.skill == centerNode && h > w) {
-									firstTick = false
-									return d.y = h / 2;
-								} else {
+								if ((bubbleSelected && d.skill == centerNode && h > w) || (d.skill == centerNode && h > w)) {
+									return d.y = h / 2; }
+								else {
 									return d.y = Math.max(d.level * 5, Math.min(h - d.level * 5, d.y));
 								}
 							});
@@ -214,12 +216,7 @@
 			    };
 				}; // collide function
 
-				function connectEvents(d) {
-					d.on("mouseover", mouseover);
-					d.on("mouseout", mouseout);
-				}
-
-				function mouseover(d) {
+				var mouseover = function(d) {
     			d3.selectAll("circle")
 						.classed("bubble-hover", function(p) {
 							return p == d;
@@ -229,6 +226,16 @@
 				var mouseout = function() {
     			d3.selectAll("circle")
 						.classed("bubble-hover", false);
+				} // mouseout function
+
+				var click = function(d) {
+					centerNode = d.skill;
+					bubbleSelected = true;
+    			d3.selectAll("circle")
+						.classed("bubble-selected", function(p) {
+							return p == d;
+						});
+					force.start();
 				} // mouseout function
 
 			} // chart function
