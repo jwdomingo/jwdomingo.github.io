@@ -180,14 +180,14 @@ section
     position: fixed
     bottom: 0px
     width: 100vw
-    height: 89vh
+    height: 100vh
 
     svg#skills-vis
       position: fixed
       display: block
       bottom: 0px
       width: 100vw
-      height: 89vh
+      height: 100vh
 
       circle
         cursor: pointer
@@ -311,6 +311,13 @@ section
     .profile-img
       +size($h-prof-md)
       +transform(translate(-50%, $ty-prof-md))
+
+  section
+    .skills-container
+      height: 90vh
+
+      svg#skills-vis
+        height: 90vh
 
 @media only screen and (min-width: 768px) and (min-height: 450px)
   header

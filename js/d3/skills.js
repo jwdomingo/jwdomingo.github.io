@@ -36,11 +36,11 @@
 					var w = document.getElementById('skills-vis').getBoundingClientRect().width;
 					var h = document.getElementById('skills-vis').getBoundingClientRect().height;
 
-					if (w <= h) {
-						gravY = 8;
-					} else {
-						gravX = 8;
-					}
+					// if (w <= h) {
+					// 	gravY = 8;
+					// } else {
+					// 	gravX = 8;
+					// }
 
 					if (h <= 800 && h <= w) {
 						maxRadius = h / 50;
