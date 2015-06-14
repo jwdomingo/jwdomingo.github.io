@@ -204,7 +204,21 @@ section
       circle.web
         fill: $accentA3
 
+      circle.dba.bubble-hover
+        fill: darken(#ccc, 30%)
+      circle.design.bubble-hover
+        fill: $tertiary4
+      circle.dev.bubble-hover
+        fill: $accentB4
+      circle.media.bubble-hover
+        fill: $secondary4
+      circle.viz.bubble-hover
+        fill: $primary4
+      circle.web.bubble-hover
+        fill: $accentA4
+
     #bubble-labels
+      z-index: 1
       margin: 0px
       position: absolute
       color: $text-color
@@ -213,14 +227,10 @@ section
       text-align: center
       text-decoration: none
       line-height: 1em
-      +user-select(none)
       white-space: wrap
 
     #bubble-labels.viz
       color: white
-
-.bubble-label-name, .bubble-label-value
-  +user-select(none)
 
 ///////////////////
 // MEDIA QUERIES //
