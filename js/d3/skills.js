@@ -1,20 +1,20 @@
   ////////////
  /*  DATA  */
 ////////////
-
-	var dataset,
-			collisionPadding = 4,
-  		minCollisionRadius = 12,
-			maxRadius,
-			gravX = 1,
-			gravY = 1,
-			jitter = 0.5;
-
 	d3.json('/js/d3/data/json/skills.json', function(error, json){
 
 		if (error) {
 			console.log(error);
 		} else {
+			var dataset,
+					collisionPadding = 4,
+		  		minCollisionRadius = 12,
+					maxRadius,
+					gravX = 1,
+					gravY = 1,
+					jitter = 0.5,
+					centerNode = "HTML5";
+
 			dataset = json;
 
 				///////////
@@ -121,14 +121,14 @@
 						.each(gravity(dampenedAlpha))
 						.each(collide(jitter))
 						.attr("cx", function(d) {
-							if (d.skill == "HTML5" && w > h) {
+							if (d.skill == centerNode && w > h) {
 								return d.x = w / 2;
 							} else {
 								return d.x = Math.max(d.level * 5, Math.min(w - d.level * 5, d.x));
 							}
 						})
 					  .attr("cy", function(d) {
-							if (d.skill == "HTML5" && h > w) {
+							if (d.skill == centerNode && h > w) {
 								firstTick = false
 								return d.y = h / 2;
 							} else {
