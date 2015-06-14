@@ -83,7 +83,9 @@
 						.append("circle")
 						.attr("r", function(d, i) { return rScale(d.level); })
 						.attr("class", function(d) { return d.type; })
-						.call(force.drag);
+						.call(force.drag)
+						.on("mouseover", mouseover)
+						.on("mouseout", mouseout);
 
 					var labels = d3.select(".skills-container")
 						.selectAll("#bubble-labels")
@@ -94,7 +96,9 @@
 							"id": "bubble-labels",
 							"class": function(d) { return d.type; }
 						})
-						.call(force.drag);
+						.call(force.drag)
+						.on("mouseover", mouseover)
+						.on("mouseout", mouseout);
 
 					var labelEnter = labels.append("div")
 			      .attr("class", "bubble-label-name")
@@ -104,7 +108,8 @@
 			      .attr("class", "bubble-label-value")
 			      .text(function(d) { return d.level; });
 
-					force.on("tick", tick);
+					force
+						.on("tick", tick);
 
 					function tick(e) {
 						if (w < 600) {
@@ -209,9 +214,23 @@
 			    };
 				}; // collide function
 
-				var mouseover = function(d) {
-    			node.classed("bubble-hover", (p) -> p == d)
+				function connectEvents(d) {
+					d.on("mouseover", mouseover);
+					d.on("mouseout", mouseout);
+				}
+
+				function mouseover(d) {
+    			d3.selectAll("circle")
+						.classed("bubble-hover", function(p) {
+							return p == d;
+						});
 				} // mouseover function
+
+				var mouseout = function() {
+    			d3.selectAll("circle")
+						.classed("bubble-hover", false);
+				} // mouseout function
+
 			} // chart function
 
 			////////////////////////////
