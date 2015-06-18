@@ -66,7 +66,7 @@
 						.size([w, h])
 						.gravity(0)
 						.charge(-100)
-						.friction(0.5)
+						.friction(0)
 						.start();
 
 					var edges = svg.selectAll("line")
