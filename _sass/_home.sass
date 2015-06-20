@@ -64,7 +64,7 @@ header
   #main-title.container
     z-index: 0
     width: 100%
-    +transform(translate(-50%, $ty-main-xs))
+    +transform(translate3d(-50%, $ty-main-xs, 0))
 
     h1
       display: block
@@ -150,7 +150,7 @@ header
     z-index: -2
     +size(100px)
     position: fixed
-    +transform(translate(-50%, $ty-prof-sm))
+    +transform(translate3d(-50%, $ty-prof-sm, 0))
     background:
       image: url('/assets/img/jd1278x1278.jpg')
       position: top center
