@@ -44,7 +44,7 @@ header
   margin-bottom: 100vh
   text-transform: uppercase
   +filter(blur(0px))
-  +transition(0.75s)
+  +transition(1s)
 
   .bg-img
     z-index: -1
@@ -251,6 +251,35 @@ section
 
     #bubble-labels.viz
       color: white
+
+//////////////
+// PROJECTS //
+//////////////
+
+#projects
+  .container
+    margin: 0px auto
+
+  .row
+    .sleeve
+      display: block
+      +size(0)
+      margin: 10px
+      border: solid
+      border-color: transparent transparentize(black, 0.3) transparentize(black, 0.3) transparent
+      +transition
+      border-width: 80px
+      padding: 20px
+      background:
+        image: url('http://images.fineartamerica.com/images-medium-large/little-pup-square-dog-photography.jpg')
+        size: 200px
+        repeat: no-repeat
+        position: center
+
+      &:hover
+        border-color: transparent transparentize(teal, 0.85) transparentize(coral, 0.75) transparent
+        background-size: 210px
+        +transition
 
 ///////////////////
 // MEDIA QUERIES //
