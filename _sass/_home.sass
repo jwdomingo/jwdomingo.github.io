@@ -258,28 +258,35 @@ section
 
 #projects
   .container
-    margin: 0px auto
+    .row
+      max-width: 220px
+      margin: 0 auto
 
-  .row
-    .sleeve
-      display: block
-      +size(0)
-      margin: 10px
-      border: solid
-      border-color: transparent transparentize(black, 0.3) transparentize(black, 0.3) transparent
-      +transition
-      border-width: 80px
-      padding: 20px
-      background:
-        image: url('http://images.fineartamerica.com/images-medium-large/little-pup-square-dog-photography.jpg')
-        size: 200px
-        repeat: no-repeat
-        position: center
+      @media only screen and (min-width: 470px)
+        max-width: 440px
 
-      &:hover
-        border-color: transparent transparentize(teal, 0.85) transparentize(coral, 0.75) transparent
-        background-size: 210px
+      @media only screen and (min-width: 660px)
+        max-width: 660px
+
+      .sleeve
+        display: block
+        +size(0)
+        margin: 10px
+        border: solid
+        border-color: transparent transparentize(black, 0.3) transparentize(black, 0.3) transparent
         +transition
+        border-width: 80px
+        padding: 20px
+        background:
+          image: url('http://images.fineartamerica.com/images-medium-large/little-pup-square-dog-photography.jpg')
+          size: 200px
+          repeat: no-repeat
+          position: center
+
+        &:hover
+          border-color: transparent transparentize(teal, 0.85) transparentize(coral, 0.75) transparent
+          background-size: 210px
+          +transition
 
 ///////////////////
 // MEDIA QUERIES //
