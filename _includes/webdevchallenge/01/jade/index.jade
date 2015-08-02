@@ -1,0 +1,354 @@
+doctype html
+
+html(lang="en")
+  head
+    meta(charset='utf-8')
+    meta(name='author', content='John William Domingo')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    title Associates Studio Design
+    meta(name='description', content="30 Day Web Development Challenge - Day 1 | DSGN is a simple, clean and modern retina-display-ready PSD template from The Uncreative Lab.")
+
+    link(rel='stylesheet', type='text/css', href='/css/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='/css/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', type='text/css', href='/css/projects/webdevchallenge/01/css/style.css')
+
+  body
+    header
+      .container-fluid
+        .row.no-pad
+          .col-xs-3
+            .logo#home.dark-text
+              img(src='/assets/projects/webdevchallenge/01/assets/header/logo.png', alt='DSGN Logo')
+              a(href='#') Associates <br/> Studio <br/> Design
+              ul.social.list-inline.accent-text
+                li: a(href='#'): i.fa.fa-facebook
+                li: a(href='#'): i.fa.fa-twitter
+                li: a(href='#'): i.fa.fa-linkedin
+                li: a(href='#'): i.fa.fa-google-plus
+          .col-md-5
+            img(src='/assets/projects/webdevchallenge/01/assets/header/armchairs.png', alt='Brown Leather Armchairs').img-responsive
+          .col-md-4.col-xs-9#header-panel
+            #header-block.light-text
+              nav                
+                input(type='checkbox' id='toggler')
+                label(for='toggler').toggle.light-text
+                #menu
+                  ul.list-inline
+                    li: a(href='#home') Home
+                    li: a(href='#projects') Projects
+                    li: a(href='#studio') Studio
+                    li: a(href='#news') News
+                    li: a(href='#contact') Contact
+                    li: label(for='toggler').close-menu.light-text
+              address
+                | 90802 California <br/>
+                | Long Beach <br/>
+                | PO Box 68789 <br/>
+                | 300 East Ocean <br/>
+                | Boulevard
+            .triangle-line
+            .triangle.triangle-header
+              .triangle-content.light-text
+                a(href='tel:+6493456758') +64 9 345 6758
+                a(href='mailto:info@desgin-studio.com') info@desgin-studio.com            
+    section#projects
+      .container-fluid
+        .row.no-pad.row-collapse
+          .col-xs-12.col-sm-8
+            .row.no-pad.row-fix
+              #projects-panel.col-xs-6
+                #projects-block
+                  ul.list-unstyled.light-text
+                    li: a(href='#') All
+                    li: a(href='#') House
+                    li: a(href='#') Commercial
+                    li: a(href='#') Personal
+                    li: a(href='#') Studio Lab
+                .triangle-line
+                .triangle.triangle-projects
+                  .triangle-content.light-text Projects
+                  
+              #project-no1.col-xs-6.project-caption.container-fluid
+                .row.no-pad
+                  .col-md-6
+                    h3 Fondue
+                    dl.dl-horizontal
+                      dt Project Assistant:
+                      dd Francesco Compieri
+                      dt Material:
+                      dd Glass and Metal
+                      dt Typology:
+                      dd Suspension Lamp
+                      dt Client:
+                      dd David Design
+                      dt Year:
+                      dd 2004
+                  .col-md-2
+                    a(href='#'): i.fa.fa-long-arrow-right  View Project                  
+                  .col-md-2
+                    a(href='#'): i.fa.fa-heart-o
+                  .col-md-2
+                    span +200
+                    
+            .row.no-pad.row-fix
+              #project-no2.col-xs-12.col-sm-4.project-caption.container-fluid
+                .row.no-pad
+                  .col-md-6
+                    h3 Louis XX
+                    dl.dl-horizontal
+                      dt Designer:
+                      dd Phillipe Starck
+                      dt Typology:
+                      dd Chairs
+                      dt Client:
+                      dd Vitra
+                      dt Year:
+                      dd 2012
+                  .col-md-2
+                    a(href='#'): i.fa.fa-long-arrow-right  View Project                  
+                  .col-md-2
+                    a(href='#'): i.fa.fa-heart-o
+                  .col-md-2
+                    span +200
+              #project-no3.col-xs-12.col-sm-8.project-caption.container-fluid
+                .row.no-pad
+                  .col-md-6
+                    h3 395-396 P22
+                    dl.dl-horizontal
+                      dt Designer:
+                      dd Phillipe Starck
+                      dt Typology:
+                      dd Chairs
+                      dt Client:
+                      dd Vitra
+                      dt Year:
+                      dd 2012
+                  .col-md-2
+                    a(href='#'): i.fa.fa-long-arrow-right  View Project                  
+                  .col-md-2
+                    a(href='#'): i.fa.fa-heart-o
+                  .col-md-2
+                    span +200
+                  
+            .row.no-pad.row-fix
+              
+              #project-no4.col-xs-9.project-caption.container-fluid
+                .row.no-pad
+                  .col-md-6
+                    h3 Sesann
+                    dl.dl-horizontal
+                      dt Designer:
+                      dd Gianfranco Frattini
+                      dt Typology:
+                      dd Armchairs
+                      dt Client:
+                      dd Cassina
+                      dt Year:
+                      dd 1970
+                  .col-md-2
+                    a(href='#'): i.fa.fa-long-arrow-right  View Project                  
+                  .col-md-2
+                    a(href='#'): i.fa.fa-heart-o
+                  .col-md-2
+                    span +200
+                  
+              #project-no5.col-xs-3.project-caption.container-fluid
+                .row.no-pad
+                  .col-md-6
+                    h3 Alessi
+                    dl.dl-horizontal
+                      dt Designer:
+                      dd Piero Lissoni
+                      dt Client:
+                      dd Alessi
+                      dt Year:
+                      dd 2013
+                  .col-md-2
+                    a(href='#'): i.fa.fa-long-arrow-right  View Project                  
+                  .col-md-2
+                    a(href='#'): i.fa.fa-heart-o
+                  .col-md-2
+                    span +200
+                  
+          #project-no6.col-xs-12.col-sm-4.project-caption.container-fluid
+            .row.no-pad
+              .col-md-6
+                h3 Potter
+                dl.dl-horizontal
+                  dt For
+                  dd Stelton
+                p Potter focuses on the functionality and process of preparing tea. a big sieve allows the flavor of to evenly brewed.
+              .col-md-2
+                a(href='#'): i.fa.fa-long-arrow-right  View Project                  
+              .col-md-2
+                a(href='#'): i.fa.fa-heart-o
+              .col-md-2
+                span +200  
+          #project-no7.col-xs-12.col-sm-4.project-caption.container-fluid
+            .row.no-pad
+              .col-md-6
+                h3 Tabano
+                dl.dl-horizontal
+                  dt Designer:
+                  dd Patricia Urquiola
+                  dt Typology:
+                  dd Armchairs
+                  dt Client:
+                  dd B&B Italia
+                  dt Year:
+                  dd 2014
+              .col-md-2
+                a(href='#'): i.fa.fa-long-arrow-right  View Project                  
+              .col-md-2
+                a(href='#'): i.fa.fa-heart-o
+              .col-md-2
+                span +200
+            
+          #project-no8.col-xs-12.col-sm-4.project-caption.container-fluid
+            .row.no-pad
+              .col-md-6
+                h3 Fiji
+                dl.dl-horizontal
+                  dt Designer:
+                  dd Cuno Frommherz
+                  dt Typology:
+                  dd Armchairs
+                  dt Year:
+                  dd 2012
+              .col-md-2
+                a(href='#'): i.fa.fa-long-arrow-right  View Project                  
+              .col-md-2
+                a(href='#'): i.fa.fa-heart-o
+              .col-md-2
+                span +200
+          
+          #timeline.col-xs-12.col-sm-4.light-text            
+            .triangle-line
+            .triangle.triangle-projects
+              .triangle-content
+                ul.list-unstyled
+                  li: a(href='#timeline') Timeline
+                  li: a(href='#') 2015
+                  li: a(href='#') 2014
+                  li: a(href='#') 2013
+                  li: a(href='#') 2012
+                  li: a(href='#') 2011
+                
+    section#studio
+      .container-fluid
+        .row.no-pad
+          .col-md-4#studio-panel
+            .triangle-line
+            .triangle.triangle-studio
+              .triangle-content.light-text Studio
+          
+          .col-md-4
+            .studio-desc
+              p.lead Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sollicitudin eros sit amet nulla rhoncus dictum. 
+
+              p.lead Nam rhoncus fringilla dolor vitae vulputate. Nullam quis eros lorem. Integer cursus erat a orci congue feugiat. Cras rhoncus mollis libero, id aliquet purus varius sed.
+              
+              p Aenean ullamcorper porta nisl, ac lobortis elit commodo placerat. 
+
+              p Vivamus eget laoreet enim. Sed nunc dui, egestas vel diam convallis, faucibus iaculis sapien. Sed ut vulputate nisi. 
+
+              p Proin tempor risus tellus. Maecenas sit amet fringilla urna, vel iaculis velit. Sed ac felis et sem mollis dictum sed id orci.
+          
+          .col-md-4
+            img(src='/assets/projects/webdevchallenge/01/assets/studio/studio.jpg', alt="Open Studio Floorplan").img-responsive
+            .awards
+              h6 Awards
+                ul.list-unstyled
+                  li Aenean ullamcorper porta nisl,
+                  li ac lobortis elit
+                  li commodo placerat.
+                  li Vivamus
+                ul.list-unstyled
+                  li Aenean ullamcorper porta nisl,
+                  li ac lobortis elit
+                  li commodo placerat.
+                  li Vivamus
+        .row.no-pad
+          .col-md-3.col-md-offset-1
+            h6 Staff.
+            p Sit Sit amet laoreet sapien dictum. Sed eget eros augue. Pellentesque tempor mi sit amet nisi tincidunt tincidunt. Fusce malesuada lectus sed mauris pharetra faucibus.
+            p Aenean diam tortor, hendrerit ac pulvinar vel, condimentum ac velit. Phasellus eu odio elit. Aenean volutpat mi quam, ut ornare augue tempus ut.
+            p Morbi sagittis diam mauris, in adipiscing nulla convallis ut.
+            
+          .col-md-2
+            img(src='/assets/projects/webdevchallenge/01/assets/studio/philippe_starck.jpg', alt='Phillipe Stark').img-responsive
+            h5 Philippe Starck
+            h6 Designer
+            ul.list-inline.text-left
+              li: a(href='#') CV 
+                i.fa.fa-long-arrow-left
+            ul.list-inline.text-right
+              li: a(href='#'): i.fa.fa-facebook
+              li: a(href='#'): i.fa.fa-twitter
+              li: a(href='#'): i.fa.fa-linkedin
+              li: a(href='#'): i.fa.fa-google-plus
+            
+          .col-md-2
+            img(src='/assets/projects/webdevchallenge/01/assets/studio/mario_bellini.jpg', alt='Mario Bellini').img-responsive
+            h5 Mario Bellini
+            h6 Designer
+            ul.list-inline.text-left
+              li: a(href='#') CV 
+                i.fa.fa-long-arrow-left
+            ul.list-inline.text-right
+              li: a(href='#'): i.fa.fa-facebook
+              li: a(href='#'): i.fa.fa-twitter
+              li: a(href='#'): i.fa.fa-linkedin
+              li: a(href='#'): i.fa.fa-google-plus
+              
+          .col-md-2
+            img(src='/assets/projects/webdevchallenge/01/assets/studio/patricia_urquiola.jpg', alt='Patricia Urquiola').img-responsive
+            h5 Patricia Urquiola
+            h6 Designer
+            ul.list-inline.text-left
+              li: a(href='#') CV 
+                i.fa.fa-long-arrow-left
+            ul.list-inline.text-right
+              li: a(href='#'): i.fa.fa-facebook
+              li: a(href='#'): i.fa.fa-twitter
+              li: a(href='#'): i.fa.fa-linkedin
+              li: a(href='#'): i.fa.fa-google-plus
+          
+    section#news
+      .container-fluid
+        .row.no-pad
+          .col-md-4#news-panel
+            .triangle-line
+            .triangle.triangle-news
+              .triangle-content.light-text News
+          .col-md-4
+            .news-thumb
+              h3 Mauris et dui sed justo placerat tristique. 
+              time(datetime="2015-07-25") 07.25.2015
+              img(src='/assets/projects/webdevchallenge/01/assets/news/news1.jpg', alt='Tripod Lamps').img-responsive
+              p Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt.
+              a(href='#') Read More
+          .col-md-4
+            .news-thumb
+            h3 Mauris et dui sed justo placerat tristique. 
+            time(datetime="2015-07-26") 07.26.2015
+            img(src='/assets/projects/webdevchallenge/01/assets/news/news2.jpg', alt='White Lounge Pod').img-responsive
+            p Praesent non mauris nec orci scelerisque faucibus. Nulla ac varius est. Aenean auctor nisl elit, nec sollicitudin lectus iaculis sed. Maecenas aliquam ligula vitae pharetra scelerisque.
+            a(href='#') Read More
+    
+    footer#contact
+      .container-fluid
+        .row.no-pad
+          .col-xs-6
+            img(src='/assets/projects/webdevchallenge/01/assets/footer/map.jpg', alt='Long Beach Map').img-responsive
+          .col-xs-6
+            .logo.dark-text
+              img(src='/assets/projects/webdevchallenge/01/assets/header/logo.png', alt='DSGN Logo')
+              a(href='#') Associates <br/> Studio <br/> Design
+              ul.social.list-inline.accent-text
+                li: a(href='#'): i.fa.fa-facebook
+                li: a(href='#'): i.fa.fa-twitter
+                li: a(href='#'): i.fa.fa-linkedin
+                li: a(href='#'): i.fa.fa-google-plus
