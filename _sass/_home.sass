@@ -277,16 +277,62 @@ section
         +transition
         border-width: 80px
         padding: 20px
+
+        font-size: 1.4em
+        line-height: 1em
+        font-weight: 700
+        color: white
+
         background:
-          image: url('http://images.fineartamerica.com/images-medium-large/little-pup-square-dog-photography.jpg')
+          image: url('')
           size: 200px
           repeat: no-repeat
           position: center
 
+        .sleeve-label
+          text-align: right
+          position: absolute
+          bottom: -70px
+          right: -70px
+
+          a:link, a:hover, a:visited, a:active
+            color: white
+            text-decoration: none
+
         &:hover
-          border-color: transparent transparentize(teal, 0.85) transparentize(coral, 0.75) transparent
+          border-color: transparent transparentize(teal, 0.45) transparentize(coral, 0.45) transparent
           background-size: 210px
           +transition
+
+        &.project1
+          background:
+            image: url('/assets/projects/rainydays/thumb.png')
+            size: 200px
+
+        &.project2
+          background:
+            image: url('/assets/projects/webdevchallenge/01/assets/header/logo.png')
+            size: 135px
+
+        &.project3
+          background:
+            image: url('https://octodex.github.com/images/Professortocat_v2.png')
+            size: 135px
+
+        &.project4
+          background:
+            image: url('https://seemelearntocode.files.wordpress.com/2013/12/treehouse-logo-mark.png')
+            size: 135px
+
+        &.project5
+          background:
+            image: url('https://pbs.twimg.com/profile_images/499697083398381568/ih2vOpDt.png')
+            size: 200px
+
+        &.project6
+          background:
+            image: url('')
+            size: 135px
 
 ///////////////////
 // MEDIA QUERIES //
