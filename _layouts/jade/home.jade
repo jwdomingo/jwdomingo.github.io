@@ -80,7 +80,15 @@ html(lang="en")
               .sleeve-label Treehouse
           a(href='https://www.codecademy.com/johndomingo' target='_blank')
             .project6.sleeve.col-xs-6.col-lg-4
-              .sleeve-label Codecademy          
+              .sleeve-label Codecademy
+    
+    section(id='webdevchallenge')
+      h1.text-center 30 Day Web Development Challenge
+      
+      .challenges.text-center.
+        {% for post in site.posts %}
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        {% endfor %}
       
     // script(src="/js/jquery-2.1.4.min.js")
     // script(src="/js/functions.js")
