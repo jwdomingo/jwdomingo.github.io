@@ -166,7 +166,8 @@ header
 
 section
   z-index: 3
-  +size(100% 100vh)
+  width: 100%
+  min-height: 100vh
   padding: 200px 0px
   background-color: white
   position: relative
@@ -257,8 +258,6 @@ section
 //////////////
 
 section#projects
-  height: auto
-
   .container
     .row
       max-width: 220px
@@ -341,8 +340,6 @@ section#projects
 /////////////////////
 
 section#webdevchallenge
-  height: auto
-
   .rss2html-note, .rss2html-note-clear
     display: none
 
