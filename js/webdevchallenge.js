@@ -6,11 +6,12 @@ $.ajax({
     $(data).find('channel item').each(function (i) {
       var title = $(this).find('title').text();
       var description = $(this).find('description').text();
-      var category = $(this).find('category').text();
-      var challenge = $(this).find('challenge').text();
-      var project = $(this).find('project').text();
-      var labels;
-      var sources;
+      var link = $(this).find('link').text();
+      var challenge = $(this).attr('challenge');
+      var project = $(this).attr('project');
+      var theme = $(this).attr('theme');
+      var labels = [];
+      var sources = [];
 
       // $('#webdevchallenge .container ul').append(
       //   $('<li />', {
@@ -19,12 +20,9 @@ $.ajax({
       // );
 
       $('#webdevchallenge .challenge' + (i + 1)).append(
-          $('<a />', {
-            text: title
-          }),
-          $('<p />', {
-            text: description
-          })
+          "<a href='" + link + "'><h3>" + title + '</h3></a>',
+          '<h6> Challenge ' + challenge + ' - Project ' + project + " | <a href='http://johndomingo.com/webdevchallenge'>" + theme + '</a>',
+          '<p>' + description + '</p>'
         ); //append link element
       }); // each channel item
   },
