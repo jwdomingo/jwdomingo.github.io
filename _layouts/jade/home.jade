@@ -87,13 +87,20 @@ html(lang="en")
       
       //.rss-container
         //script(src='/js/webdevchallenge.js')
+      //.container
+        //script(id="feed-1440216865204770", type="text/javascript", src="http://rss.bloople.net/?url=http%3A%2F%2Fjohndomingo.com%2Fwebdevchallenge%2Ffeed.xml&showtitle=false&type=js&id=1440216865204770")
       
-      script(id="feed-1440216865204770", type="text/javascript", src="http://rss.bloople.net/?url=http%3A%2F%2Fjohndomingo.com%2Fwebdevchallenge%2Ffeed.xml&showtitle=false&type=js&id=1440216865204770")
+      .container
+        .row
+          .challenge1.col-sm-4.col-sm-offset-0.col-xs-10.col-xs-offset-1
+          .challenge2.col-sm-4.col-sm-offset-0.col-xs-10.col-xs-offset-1
+          .challenge3.col-sm-4.col-sm-offset-0.col-xs-10.col-xs-offset-1
+        ul
+      
+      script(src="/js/jquery-2.1.4.min.js")
+      script(src="/js/webdevchallenge.js")
       
       //.challenges.text-center.
         //{% for post in site.posts %}
           //<a href="{{ post.url }}">{{ post.title }}</a>
         //{% endfor %}
-        
-    //script(src="/js/jquery-2.1.4.min.js")
-    //script(src="/js/functions.js")
