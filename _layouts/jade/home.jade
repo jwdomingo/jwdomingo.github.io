@@ -56,8 +56,8 @@ html(lang="en")
     section(id='skills')
       h1 Skills
       .skills-container
-      script(src="/js/d3/d3.js")
-      script(src="/js/d3/skills.js")
+      script(src='/js/d3/d3.js')
+      script(src='/js/d3/skills.js')
       
     section(id='projects')
       h1 Projects
@@ -81,17 +81,23 @@ html(lang="en")
           a(href='https://www.codecademy.com/johndomingo' target='_blank')
             .project6.sleeve.col-xs-6.col-lg-4
               .sleeve-label Codecademy
+      
+    script(src="/js/jquery-2.1.4.min.js")
     
     section(id='webdevchallenge')
       h1.text-center 30 Day Web Development Challenge
       
-      .challenges.text-center.
-        {% for post in site.posts %}
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        {% endfor %}
+      //.rss-container
+        //script(src='/js/webdevchallenge.js')
       
-    // script(src="/js/jquery-2.1.4.min.js")
-    // script(src="/js/functions.js")
+      script(id="feed-1440216865204770", type="text/javascript", src="http://rss.bloople.net/?url=http%3A%2F%2Fjohndomingo.com%2Fwebdevchallenge%2Ffeed.xml&showtitle=false&type=js&id=1440216865204770")
+      
+      //.challenges.text-center.
+        //{% for post in site.posts %}
+          //<a href="{{ post.url }}">{{ post.title }}</a>
+        //{% endfor %}
+    
+    script(src="/js/functions.js")
 //-   .arrow
 //-     a(href='#about') &#9661;
 //-   .container-bg
