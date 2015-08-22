@@ -2,8 +2,8 @@
 layout: post
 title:  "Telegraph Academy Prep II | Day 01"
 date:   2015-08-17 19:00:00
-categories: blog
-permalink: /:title
+categories: telegraph-academy telegraph-prep bootcamp
+permalink: /blog/:year/:month/:day/:title/
 ---
 
 It was such an exciting feeling to be back in the classroom after nearly two years since I finished up my course at Cal. It was like the first day of computer lab combined with <insert student organization>'s first general meeting: very easy-going instructors and down to earth people.
