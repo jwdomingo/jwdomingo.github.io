@@ -7,6 +7,7 @@ $.ajax({
       var title = $(this).find('title').text();
       var description = $(this).find('description').text();
       var link = $(this).find('link').text();
+      var thumb = $(this).find('thumb').text();
       var challenge = $(this).attr('challenge');
       var project = $(this).attr('project');
       var theme = $(this).attr('theme');
@@ -18,7 +19,7 @@ $.ajax({
         '<a href=\'' + link + '\'><h3>' + title + '</h3></a>' +
         '<h6>Challenge ' + challenge + ' - Project ' + project + ' | <a href=\'http://johndomingo.com/webdevchallenge\'>' + theme + '</a></h6>' +
         '<p>' + description + '</p>' +
-        '<img src=\'http://johndomingo.com/webdevchallenge/assets/brandi/thumb.jpg\' />' +
+        '<img src=\'http://johndomingo.com/webdevchallenge/assets/' + thumb + '/thumb.jpg\' />' +
         '</li>'
       ); //append link element
     }); // each channel item
