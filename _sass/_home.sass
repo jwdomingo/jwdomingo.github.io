@@ -356,6 +356,18 @@ section#webdevchallenge
             li:nth-child(#{length($cycle-colors)}n+#{$i}) a
               color: nth($cycle-colors, $i)
 
+          a
+            text-decoration: none
+            display: inline-block
+
+          img
+            position: absolute
+            z-index: -1
+            top: 0
+            left: 0
+            max-height: 100%
+            max-width: 100%
+            width: auto
 
 ///////////////////
 // MEDIA QUERIES //
