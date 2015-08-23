@@ -351,6 +351,10 @@ section#webdevchallenge
           li
             padding: 30px
             color: white
+            background:
+              size: cover
+              repeat: no-repeat
+              position: top center
 
           @for $i from 1 through length($cycle-colors)
             li:nth-child(#{length($cycle-colors)}n+#{$i}) a
@@ -360,13 +364,14 @@ section#webdevchallenge
             text-decoration: none
             display: inline-block
 
-          img
+          //.thumb
             position: absolute
             z-index: -1
             top: 0
             left: 0
-            max-height: 100%
+            min-height: 100%
             max-width: 100%
+            height: auto
             width: auto
 
 ///////////////////

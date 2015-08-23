@@ -1,5 +1,5 @@
 $.ajax({
-  url: 'http://johndomingo.com/webdevchallenge/feed.xml', //'/webdevchallenge.xml',
+  url: 'http://johndomingo.com/webdevchallenge/feed.xml',//'/webdevchallenge.xml', //
   dataType: 'xml',
   success: function(data) {
     console.log('success!');
@@ -15,16 +15,23 @@ $.ajax({
       var sources = [];
 
       $('#webdevchallenge .challenge' + challenge + ' .slider ul').append(
-        '<li class=\'project\'>' +
-        '<a href=\'' + link + '\'><h3>' + title + '</h3></a>' +
-        '<h6>Challenge ' + challenge + ' - Project ' + project + ' | <a href=\'http://johndomingo.com/webdevchallenge\'>' + theme + '</a></h6>' +
-        '<p>' + description + '</p>' +
-        '<img src=\'http://johndomingo.com/webdevchallenge/assets/' + thumb + '/thumb.jpg\' />' +
+        '<li ' +
+            'class=\'project\' ' +
+            'style=\"background-image: ' +
+              'url(\'http://johndomingo.com/webdevchallenge/assets/' + thumb + '/thumb.jpg\');\">' +
+
+          '<a href=\'' + link + '\'><h3>' + title + '</h3></a>' +
+
+          '<h6>Challenge ' + challenge + ' - Project ' + project +
+            ' | <a href=\'http://johndomingo.com/webdevchallenge\'>' + theme + '</a>' +
+          '</h6>' +
+
+          '<p>' + description + '</p>' +
         '</li>'
       ); //append link element
     }); // each channel item
   },
   error: function() {
-    console.log("Error in xml feed from webdevchallenge");
+    console.log("Error loading XML feed from webdevchallenge");
   }
 });
