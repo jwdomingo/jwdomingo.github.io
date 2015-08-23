@@ -13,12 +13,12 @@ $.ajax({
       var labels = [];
       var sources = [];
 
-      $('#webdevchallenge .challenge' + challenge).append(
-          '<div class=\'project\'>' +
+      $('#webdevchallenge .challenge' + challenge + ' .slider ul').append(
+          '<li class=\'project\'>' +
           '<a href=\'' + link + '\'><h3>' + title + '</h3></a>' +
           '<h6>Challenge ' + challenge + ' - Project ' + project + ' | <a href=\'http://johndomingo.com/webdevchallenge\'>' + theme + '</a></h6>' +
           '<p>' + description + '</p>' +
-          '</div>'
+          '</li>'
         ); //append link element
       }); // each channel item
   },
