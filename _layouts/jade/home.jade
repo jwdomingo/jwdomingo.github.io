@@ -92,7 +92,28 @@ html(lang="en")
       
       .container
         .row
-          .challenge1.col-sm-4.col-sm-offset-0.col-xs-10.col-xs-offset-1
+          //.challenge1.col-sm-4.col-sm-offset-0.col-xs-10.col-xs-offset-1.text-center
+          .challenge1.col-xs-12.text-center
+            .slider
+              input#slides_1(type='radio', name='slides', checked='')
+              input#slides_2(type='radio', name='slides')
+              input#slides_3(type='radio', name='slides')
+              input#slides_4(type='radio', name='slides')
+              ul
+              .arrows
+                label(for='slides_1')
+                label(for='slides_2')
+                label(for='slides_3')
+                label(for='slides_4')
+                label.goto-first(for='slides_1')
+                label.goto-last(for='slides_4')
+              .navigation
+                div
+                  label(for='slides_1')
+                  label(for='slides_2')
+                  label(for='slides_3')
+                  label(for='slides_4')
+
           .challenge2.col-sm-4.col-sm-offset-0.col-xs-10.col-xs-offset-1
           .challenge3.col-sm-4.col-sm-offset-0.col-xs-10.col-xs-offset-1
         .row
