@@ -103,10 +103,14 @@
   top: 50%
   margin-left: -6px
   margin-top: -6px
-  background: #71ad37
+  //background: #71ad37
   border-radius: 50%
   padding: 6px
   opacity: 0
+
+@for $i from 1 through length($cycle-colors)
+  .slider > .navigation label:nth-child(#{length($cycle-colors)}n+#{$i}):after
+    background: nth($cycle-colors, $i)
 
 .slider > .arrows
   +user-select(none)
@@ -151,7 +155,7 @@
   +transition(box-shadow 0.15s, margin 0.15s)
 
 .slider > .arrows label:hover
-  box-shadow: inset 3px -3px 0 2px #71ad37
+  box-shadow: inset 3px -3px 0 2px white
   margin: 0 0px
 
 .slider > .arrows label:before
