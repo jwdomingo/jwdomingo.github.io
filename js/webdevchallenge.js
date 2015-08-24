@@ -1,5 +1,5 @@
 $.ajax({
-  url: 'http://johndomingo.com/webdevchallenge/feed.xml',//'/webdevchallenge.xml', //
+  url: 'http://johndomingo.com/webdevchallenge/feed.xml', //'/webdevchallenge.xml', //
   dataType: 'xml',
   success: function(data) {
     console.log('success!');
