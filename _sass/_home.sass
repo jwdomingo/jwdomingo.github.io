@@ -311,6 +311,14 @@ section#projects
             +clip-path(polygon(80% 0%, 100% 0, 100% 100%, 0 100%, 0 0))
             +transition
 
+            .proj-tag
+              bottom: -230px
+              +transition(0.5s)
+
+            .proj-cta
+              right: 20px
+              +transition(0.5s)
+
             .proj-description
               top: 0px
               left: 0px
@@ -324,6 +332,23 @@ section#projects
             font-size: 1.25em
             font-weight: bold
             width: 210px
+            +transition(0.5s)
+
+          .proj-cta
+            position: absolute
+            bottom: 15px
+            right: -230px
+            text-align: right
+            text-transform: uppercase
+            font-size: .8em
+            font-weight: bold
+            padding: 2px 5px
+            border: 1px solid white
+            +transition(0.5s)
+
+            a:link, a:hover, a:visited, a:active
+              color: white
+              text-decoration: none
 
           .proj-description
             position: absolute
@@ -333,6 +358,7 @@ section#projects
             padding: 40px 20px  0
             height: 180px
             overflow-y: scroll
+            +transition(0.5s)
 
             h4
               margin-bottom: 10px
