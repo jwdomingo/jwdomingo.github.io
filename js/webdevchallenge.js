@@ -1,5 +1,5 @@
 $.ajax({
-  url: 'http://johndomingo.com/webdevchallenge/feed.xml', //'/webdevchallenge.xml', //
+  url: 'http://johndomingo.com/webdevchallenge/feed.xml',//'/webdevchallenge.xml', //
   dataType: 'xml',
   success: function(data) {
     console.log('success!');
@@ -20,13 +20,15 @@ $.ajax({
             'style=\"background-image: ' +
               'url(\'http://johndomingo.com/webdevchallenge/assets/' + thumb + '/thumb.jpg\');\">' +
 
-          '<a href=\'' + link + '\'><h3>' + title + '</h3></a>' +
+          '<div class=\'content\'>' +
+            '<a href=\'' + link + '\'><h3>' + title + '</h3></a>' +
 
-          '<h6>Challenge ' + challenge + ' - Project ' + project +
-            ' | <a href=\'http://johndomingo.com/webdevchallenge\'>' + theme + '</a>' +
-          '</h6>' +
+            '<h6>Challenge ' + challenge + ' - Project ' + project +
+              ' | <a href=\'http://johndomingo.com/webdevchallenge\'>' + theme + '</a>' +
+            '</h6>' +
 
-          '<p>' + description + '</p>' +
+            '<p>' + description + '</p>' +
+          '</div>' +
         '</li>'
       ); //append link element
     }); // each channel item

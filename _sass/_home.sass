@@ -343,6 +343,43 @@ section#webdevchallenge
   padding-bottom: 0
 
   .container
+    .row
+      [class*='challenge']
+        @import slider
+
+        .slider
+          max-width: 100%
+
+          ul
+            li
+              color: white
+              background:
+                size: cover
+                repeat: no-repeat
+                position: top center
+
+            @for $i from 1 through length($cycle-colors)
+              li:nth-child(#{length($cycle-colors)}n+#{$i}) a
+                color: nth($cycle-colors, $i)
+
+            a
+              text-decoration: none
+              display: inline-block
+
+            .content
+              z-index: 2
+              background: rgba(0, 0, 0, 0.7)
+              padding: 100px 140px 50px
+              height: 100%
+              overflow-y: scroll
+              margin-top: 100%
+              +transition(0.5s)
+
+          &:active, &:hover, &:focus
+            ul li .content
+              margin-top: 0%
+              +transition(0.5s)
+
     @media screen and (max-width: 570px)
       max-width: 100%
       margin: 0
@@ -351,38 +388,6 @@ section#webdevchallenge
 
       .row [class*='challenge'] .slider ul
         max-width: 100vw
-
-
-    .row
-      [class*='challenge']
-        @import slider
-
-        .slider ul
-          li
-            padding: 30px
-            color: white
-            background:
-              size: cover
-              repeat: no-repeat
-              position: top center
-
-          @for $i from 1 through length($cycle-colors)
-            li:nth-child(#{length($cycle-colors)}n+#{$i}) a
-              color: nth($cycle-colors, $i)
-
-          a
-            text-decoration: none
-            display: inline-block
-
-          //.thumb
-            position: absolute
-            z-index: -1
-            top: 0
-            left: 0
-            min-height: 100%
-            max-width: 100%
-            height: auto
-            width: auto
 
 ///////////////////
 // MEDIA QUERIES //
