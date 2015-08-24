@@ -34,6 +34,13 @@ $ty-main-md: -$h-main-md - 5px
 $ty-tag-md:  ($h-sub-md / 2) + 10px
 $ty-text-md:  $h-sub-md + $h-tag-md + 30px
 
+// Mixins
+@mixin clip-path($clip)
+  -webkit-clip-path: $clip
+  -moz-clip-path: $clip
+  -ms-clip-path: $clip
+  clip-path: $clip
+
 //////////////
 // PARALLAX //
 //////////////
@@ -258,8 +265,17 @@ section
 //////////////
 
 section#projects
+  padding: 0
+
+  h1
+    padding: 50px 0
+    margin: 0
+    position: relative
+
   .container
-    .row
+    width: 75%
+
+    [class*=col]
       max-width: 220px
       margin: 0 auto
 
@@ -270,25 +286,38 @@ section#projects
         max-width: 660px
 
       .sleeve
-        display: block
-        +size(0)
-        margin: 10px
-        border: solid
-        border-color: transparent transparentize(black, 0.3) transparentize(black, 0.3) transparent
-        +transition
-        border-width: 80px
-        padding: 20px
+        position: absolute
+        z-index: 2
+        bottom: -10px
+        left: 50%
+        +size(230px)
+        margin-left: -115px
+        background: transparentize(black, 0.3)
+        +clip-path(polygon(90% 33%, 100% 33%, 100% 100%, 0 100%, 0 90%))
+        +transition(1s)
 
-        font-size: 1em
-        line-height: 1em
-        font-weight: 700
-        color: white
+        &:hover
+          +clip-path(polygon(80% 0%, 100% 0, 100% 100%, 0 100%, 0 0))
+          +transition
 
+      [class*='project']
+        position: relative
+        z-index: 1
+        margin: 0 auto 30px
+        +size(210px)
         background:
-          image: url('')
-          size: 200px
           repeat: no-repeat
-          position: center
+          position: center center
+
+      .prj-description
+        width: 210px
+        margin: 0 auto
+
+        h4
+          margin-bottom: 10px
+        p
+          font-size: 0.9em
+          margin-bottom: 30px
 
         .sleeve-label
           text-align: right
@@ -300,40 +329,41 @@ section#projects
             color: white
             text-decoration: none
 
-        &:hover
-          border-color: transparent transparentize(teal, 0.45) transparentize(coral, 0.45) transparent
-          background-size: 210px
-          +transition
+    .project1
+      background:
+        image: url('/assets/projects/rainydays/thumb.png')
+        size: 200px
+        color: $secondary3
 
-        &.project1
-          background:
-            image: url('/assets/projects/rainydays/thumb.png')
-            size: 200px
+    .project2
+      background:
+        image: url('/webdevchallenge/assets/focus/logo.png')
+        size: 70px
+        color: $tertiary3
 
-        &.project2
-          background:
-            image: url('/webdevchallenge/assets/focus/logo.png')
-            size: 70px
+    .project3
+      background:
+        image: url('/webdevchallenge/assets/dsgn/header/logo.png')
+        size: 135px
+        color: $accentA3
 
-        &.project3
-          background:
-            image: url('/webdevchallenge/assets/dsgn/header/logo.png')
-            size: 135px
+    .project4
+      background:
+        image: url('https://octodex.github.com/images/Professortocat_v2.png')
+        size: 135px
+        color: $accentB3
 
-        &.project4
-          background:
-            image: url('https://octodex.github.com/images/Professortocat_v2.png')
-            size: 135px
+    .project5
+      background:
+        image: url('https://seemelearntocode.files.wordpress.com/2013/12/treehouse-logo-mark.png')
+        size: 135px
+        color: $primary3
 
-        &.project5
-          background:
-            image: url('https://seemelearntocode.files.wordpress.com/2013/12/treehouse-logo-mark.png')
-            size: 135px
-
-        &.project6
-          background:
-            image: url('https://pbs.twimg.com/profile_images/499697083398381568/ih2vOpDt.png')
-            size: 200px
+    .project6
+      background:
+        image: url('https://pbs.twimg.com/profile_images/499697083398381568/ih2vOpDt.png')
+        size: 200px
+        color: $accentB1
 
 /////////////////////
 // WEBDEVCHALLENGE //
