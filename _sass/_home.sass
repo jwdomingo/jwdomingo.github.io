@@ -22,9 +22,9 @@ $h-sub-md:  (10px * $fs-sub-md) + (2 * 5px)
 $h-tag-md:  (10px * $fs-tag-md) * 1.5
 
 // TranslateY Variables
-$ty-prof-xs: -$h-prof-xs - $h-main-xs - 5px
-$ty-prof-sm: -$h-prof-sm - $h-main-xs - 5px
-$ty-prof-md: -$h-prof-md - $h-main-md - 5px
+$ty-prof-xs: -$h-prof-xs - $h-main-xs - 10px
+$ty-prof-sm: -$h-prof-sm - $h-main-xs - 10px
+$ty-prof-md: -$h-prof-md - $h-main-md - 10px
 
 $ty-main-xs: -$h-main-xs - 5px
 $ty-tag-xs:  ($h-sub-xs / 2) + 10px
@@ -50,6 +50,7 @@ html
 body
   position: relative
   max-width: 100vw
+  overflow-x: hidden
 
 header
   height: 100vh
@@ -134,8 +135,8 @@ header
     label.main
       +transform(translate3d(-50%, $ty-main-xs, 0))
       font-weight: normal
-      width: 502px
-      padding: 10px 20px
+      width: 500px
+      padding: 10px 10px
       background-color: transparentize(white,0.4)
       font-size: #{$fs-main-xs}rem
       margin: 0
