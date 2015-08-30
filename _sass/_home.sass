@@ -50,27 +50,25 @@ html
 body
   position: relative
   max-width: 100vw
-  overflow-x: hidden
 
 header
   height: 100vh
-  margin-bottom: 100vh
   text-transform: uppercase
   +filter(blur(0px))
 
   .background-img
     width: 800%
-    margin-bottom: 200vh
     position: absolute
     top: 0
     left: 50%
     margin-left: -860px
 
-    input
+    input#home
       display: none
 
       &:checked + label
         font-weight: bold
+        background-color: transparent
 
       &:checked
         & ~ svg path
@@ -88,11 +86,9 @@ header
           +transform(translate(700px, -900px) rotate(15deg) translateZ(0))
 
     label
-      position:absolute
       z-index: 0
       display: block
       +position(fixed, 50% null null 50%)
-      padding: 0px
       +transform(translate3d(-50%, $ty-main-xs, 0))
       font-weight: normal
       width: 500px
@@ -105,7 +101,7 @@ header
       line-height: 1
 
       &:hover
-        font-weight: bold
+        font-weight: 700
         background-color: transparentize(white,0.25)
 
     svg
@@ -122,7 +118,7 @@ header
 
       +keyframes(p1)
         0%
-          +transform(translateX(-300px) translateY(-700px) rotate(320deg) translateZ(0))
+          +transform(translateX(-1000px) translateY(-1200px) rotate(320deg) translateZ(0))
         100%
           +transform(translate(0))
 
@@ -131,7 +127,7 @@ header
 
       +keyframes(p2)
         0%
-          +transform(translate(400px) translateY(900px) rotate(350deg) translateZ(0))
+          +transform(translate(100px) translateY(1200px) rotate(350deg) translateZ(0))
         100%
           +transform(translate(0))
 
@@ -140,7 +136,7 @@ header
 
       +keyframes(p3)
         0%
-          +transform(translate(-500px) translateY(-900px) rotate(325deg) translateZ(0))
+          +transform(translate(-1000px) translateY(-600px) rotate(325deg) translateZ(0))
         100%
           +transform(translate(0))
 
@@ -149,7 +145,7 @@ header
 
       +keyframes(p4)
         0%
-          +transform(translate(500px) translateY(900px) rotate(348deg) translateZ(0))
+          +transform(translate(500px) translateY(300px) rotate(348deg) translateZ(0))
         100%
           +transform(translate(0))
 
@@ -198,6 +194,10 @@ header
         cursor: pointer
         padding: 5px 10px
         top: 120%
+
+        &:hover
+          color: $text-color
+          background-color: transparentize(white,0.25)
 
       p.tag-list
         visibility: hidden
