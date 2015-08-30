@@ -76,14 +76,13 @@ header
           stroke: none
 
         & ~ svg path:nth-of-type(4n+1)
-          +transform(translate(200%, 600%) rotate(19deg) translateZ(0))
-          -webkit-transform: -webkit-translateX(200%)
+          +transform(translate(200px, 200px) rotate(19deg) translateZ(0))
         & ~ svg path:nth-of-type(4n+2)
-          +transform(translate(-900%, 800%) rotate(12deg) translateZ(0))
+          +transform(translate(-800px, 400px) rotate(12deg) translateZ(0))
         & ~ svg path:nth-of-type(4n+3)
-          +transform(translate(-1100%, -700%) rotate(22deg) translateZ(0))
+          +transform(translate(-800px, -600px) rotate(22deg) translateZ(0))
         & ~ svg path:nth-of-type(4n+4)
-          +transform(translate(900%, -1000%) rotate(15deg) translateZ(0))
+          +transform(translate(700px, -900px) rotate(15deg) translateZ(0))
 
     label
       position:absolute
@@ -118,39 +117,39 @@ header
 
       +keyframes(p1)
         0%
-          +transform(translateX(-300%) translateY(-700%) rotate(320deg) translateZ(0))
+          +transform(translateX(-300px) translateY(-700px) rotate(320deg) translateZ(0))
         100%
           +transform(translate(0))
 
       path:nth-of-type(4n+1)
-        +animation(p1 1s ease 1)
+        +animation(p1 1.5s ease 1)
 
       +keyframes(p2)
         0%
-          +transform(translate(400%) translateY(-900%) rotate(350deg) translateZ(0))
+          +transform(translate(400px) translateY(900px) rotate(350deg) translateZ(0))
         100%
           +transform(translate(0))
 
       path:nth-of-type(4n+2)
-        +animation(p2 1s ease 1)
+        +animation(p2 1.5s ease 1)
 
       +keyframes(p3)
         0%
-          +transform(translate(500%) translateY(900%) rotate(325deg) translateZ(0))
+          +transform(translate(-500px) translateY(-900px) rotate(325deg) translateZ(0))
         100%
           +transform(translate(0))
 
       path:nth-of-type(4n+3)
-        +animation(p3 1s ease 1)
+        +animation(p3 1.5s ease 1)
 
       +keyframes(p4)
         0%
-          +transform(translate(-500%) translateY(900%) rotate(348deg) translateZ(0))
+          +transform(translate(500px) translateY(900px) rotate(348deg) translateZ(0))
         100%
           +transform(translate(0))
 
       path:nth-of-type(4n+4)
-        +animation(p4 1s ease 1)
+        +animation(p4 1.5s ease 1)
 
   .container
     display: block
