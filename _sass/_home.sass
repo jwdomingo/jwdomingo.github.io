@@ -122,9 +122,6 @@ header
             stroke: $text-color
             stroke-width: 1px
             +transition(all 2s ease)
-        // & ~ label
-        //   background-color: white
-        //   border: 2px solid $text-color
 
     label
       z-index: 0
@@ -132,56 +129,57 @@ header
       +position(fixed, 50% null null 50%)
       cursor: pointer
 
-    label.main
-      +transform(translate3d(-50%, $ty-main-xs, 0))
-      font-weight: normal
-      width: 500px
-      padding: 10px 10px
-      background-color: transparentize(white,0.3)
-      font-size: #{$fs-main-xs}rem
-      margin: 0
-      text-align: center
-      line-height: 1
+      &.main
+        +transform(translate3d(-50%, $ty-main-xs, 0))
+        font-weight: normal
+        width: 500px
+        padding: 10px 10px
+        background-color: transparentize(white,0.3)
+        font-size: #{$fs-main-xs}rem
+        margin: 0
+        text-align: center
+        line-height: 1
 
-      &:active, &:hover, &:focus
-        font-weight: 700
-        background-color: transparentize(white,0.25)
+        &:active, &:hover, &:focus
+          font-weight: 700
+          background-color: transparentize(white,0.25)
 
-      @media only screen and (min-width: 500px) and (min-height: 450px)
-        +transform(translate(-50%, $ty-main-md))
-        font-size: 6.2rem
-        display: inline-block
+        @media only screen and (min-width: 500px) and (min-height: 450px)
+          +transform(translate(-50%, $ty-main-md))
+          font-size: 6.2rem
+          display: inline-block
 
-    label[class*='sub']
-      white-space: nowrap
-      margin: 0px
-      text-align: center
-      cursor: pointer
-      padding: 5px 10px
-      font-size: #{$fs-sub-xs}rem
+      &[class*='sub']
+        margin: 0px
+        text-align: center
+        cursor: pointer
+        padding: 5px 10px
+        font-size: #{$fs-sub-xs}rem
+        +transform(translate(0, 10px))
 
-      &:active, &:hover, &:focus
-        background: white
-        border: 1px solid $text-color
-        +transition
+        &:active, &:hover, &:focus
+          background: white
+          border: 1px solid $text-color
+          +transition
 
-      @media only screen and (min-width: 500px) and (min-height: 450px)
-        +transform(translate(0, 5px))
-        font-size: 1.5rem
+        @media only screen and (min-width: 500px) and (min-height: 450px)
+          +transform(translate(0, 5px))
+          font-size: 1.5rem
 
-        // p.tag-list
-        //   font-size: 1rem
-        //   +transform(translate(-50%, $ty-tag-md))
+      &.sub-design
+        margin-left: -(88px + 65px)
+      &.sub-develop
+        margin-left: (-65px)
+      &.sub-dataviz
+        margin-left: (91px - 65px)
 
-    label.sub-design
-      margin-left: -(123px + 47px + 33.22775px)
-
-    label.sub-develop
-      margin-left: -(47px + 33.22775px)
-
-    label.sub-dataviz
-      margin-left: (133px - 47px - 33.22775px)
-
+      @media only screen and (min-width: 500px)
+        &.sub-design
+          margin-left: -(123px + 47px + 33.22775px)
+        &.sub-develop
+          margin-left: -(47px + 33.22775px)
+        &.sub-dataviz
+          margin-left: (133px - 47px - 33.22775px)
 
     svg
       +size(100% 100vh)
@@ -236,75 +234,10 @@ header
     +position(fixed, 50% null null 50%)
     padding: 0px
 
-  #sub-title.container
-    z-index: 2
-    width: 98%
-    margin: 0px auto
-    +transform(translate(-50%, 5px))
-    +display(flex)
-    +flex-direction(row)
-    +align-items(center)
-    +justify-content(space-around)
-
-    h6.sub-title
-      font-size: #{$fs-sub-xs}rem
-      margin: 0px
-      color: $text-color
-      font-weight: normal
-      cursor: pointer
-      +display(flex)
-      white-space: nowrap
-
-      input.toggler
-        display: none
-        text-align: center
-
-        &:checked + label.lbl-toggler
-          color: $text-color
-          background-color: white
-
-        &:checked ~ p.tag-list
-          visibility: visible
-
-      label.lbl-toggler
-        white-space: nowrap
-        margin: 0px
-        text-align: center
-        cursor: pointer
-        padding: 5px 10px
-        top: 120%
-
-        &:active, &:hover, &:focus
-          color: $text-color
-          background-color: transparentize(white,0.25)
-
-      p.tag-list
-        visibility: hidden
-        width: 85%
-        margin: 0px
-        +position(absolute, 50% null null 50%)
-        +transform(translate(-50%, $ty-tag-xs))
-        font-size: #{$fs-tag-xs}rem
-        line-height: 1
-        text-transform: lowercase
-        white-space: nowrap
-        display: flex
-        +flex-direction(row)
-        +flex-wrap(wrap)
-        +align-items(center)
-        +justify-content(center)
-
-        span
-          margin: 0px 4px
-          padding: 2.5px 5px
-          background-color: transparentize(white, 0.5)
-          color: $text-color
-          cursor: default
-
-  #about-text.container
+  #about-text
     z-index: -2
     +transform(translate(-50%, $ty-text-xs))
-
+    -webkit-overflow-y: scroll
     width: 92.5%
 
     p
@@ -658,17 +591,6 @@ section#webdevchallenge
 
 @media only screen and (min-width: 500px) and (min-height: 450px)
   header
-    #sub-title.container
-      width: 500px
-      +transform(translate(-50%, 5px))
-
-      h6.sub-title
-        font-size: 1.5rem
-
-        p.tag-list
-          font-size: 1rem
-          +transform(translate(-50%, $ty-tag-md))
-
     #about-text.container
       width: 500px
       +transform(translate(-50%, $ty-text-md))
