@@ -63,6 +63,12 @@ header
       size: cover
       position: top center
 
+  svg
+    +size(100% 100vh)
+    
+    g#wind
+      stroke: black
+
   .container
     display: block
     +position(fixed, 50% null null 50%)
@@ -79,8 +85,12 @@ header
       line-height: 1
       margin: 0px
       padding: 10px 20px
-      background-color: transparentize(white,0.5)
+      background-color: transparentize(white,0.4)
       cursor: pointer
+
+      &:active, &:hover, &:focus
+        font-weight: bold
+        background-color: transparentize(white,0.25)
 
   #sub-title.container
     z-index: 2
@@ -525,14 +535,14 @@ section#webdevchallenge
         height: 90vh
 
 @media only screen and (min-width: 768px) and (min-height: 450px)
-  header
+  // header
     // .bg-img
     //   background:
     //     attachment: fixed
 
-    #main-title.container
-      h1
-        background-color: transparentize(white,0.5)
+    // #main-title.container
+    //   h1
+    //     background-color: transparentize(white,0.5)
 
     //.fg-img-1
       z-index: 1
