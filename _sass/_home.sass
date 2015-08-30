@@ -46,28 +46,32 @@ $ty-text-md:  $h-sub-md + $h-tag-md + 30px
 //////////////
 body
   max-width: 100vw
+  overflow-x: hidden
 
 header
+  height: 100vh
   margin-bottom: 100vh
   text-transform: uppercase
   +filter(blur(0px))
-  +transition(1s)
 
-  .bg-img
-    z-index: -1
-    position: relative
-    +size(100% 100vh)
-    background:
-      image: url('/assets/img/goldengate.svg')
-      repeat: no-repeat
-      size: cover
-      position: top center
+  .background-img
+    width: 800%
+    margin-bottom: 200vh
+    position: absolute
+    top: 0
+    left: 50%
+    margin-left: -860px
 
-  svg
-    +size(100% 100vh)
-    
-    g#wind
-      stroke: black
+    svg
+      +size(100% 100vh)
+
+      // g:hover
+      //   stroke: black
+      //   stroke-width: 1px
+      //
+      //   path
+      //     fill: white
+      //     +transition
 
   .container
     display: block
