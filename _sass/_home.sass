@@ -150,10 +150,11 @@ header
           display: inline-block
 
       &[class*='sub']
+        white-space: nowrap
         margin: 0px
         text-align: center
         cursor: pointer
-        padding: 5px 10px
+        padding: 2px 4px
         font-size: #{$fs-sub-xs}rem
         +transform(translate(0, 10px))
 
@@ -167,13 +168,15 @@ header
           font-size: 1.5rem
 
       &.sub-design
-        margin-left: -(88px + 65px)
+        margin-left: -(86.0469px + 46.62505px + 12px)
       &.sub-develop
-        margin-left: (-65px)
+        margin-left: -(46.62505px + 12px)
       &.sub-dataviz
-        margin-left: (91px - 65px)
+        margin-left: (91.62505px - 46.62505px - 12px)
 
       @media only screen and (min-width: 500px)
+        &[class*='sub']
+          padding: 5px 10px
         &.sub-design
           margin-left: -(123px + 47px + 33.22775px)
         &.sub-develop
@@ -563,9 +566,6 @@ section#webdevchallenge
 ///////////////////
 @media only screen and (max-height: 320px) and (-webkit-min-device-pixel-ratio: 1.5)
   header
-    #main-title.container
-      +transform(translate(-50%, $ty-main-xs + 5px))
-
     .profile-img
       +size(80px)
       +transform(translate(-50%, $ty-prof-xs))
