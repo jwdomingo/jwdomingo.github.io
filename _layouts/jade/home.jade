@@ -7,8 +7,8 @@ html(lang="en")
     // Landing Page //
     header
       .background-img
-        input#home(type='checkbox', name='shatter')
-        label.main(for='home') John Domingo
+        input#dataviz-toggle(type='radio', name='toggler')
+        label.sub-dataviz(for='dataviz-toggle') Data Visualist
         
         input#design-toggle(type='radio', name='toggler')
         label.sub-design(for='design-toggle') Designer
@@ -16,8 +16,8 @@ html(lang="en")
         input#develop-toggle(type='radio', name='toggler')
         label.sub-develop(for='develop-toggle') Developer
         
-        input#dataviz-toggle(type='radio', name='toggler')
-        label.sub-dataviz(for='dataviz-toggle') Data Visualist
+        input#home(type='radio', name='toggler')
+        label.main(for='home') John Domingo
         
         svg(xmlns='http://www.w3.org/2000/svg')
           g#wind(sketch:type='MSLayerGroup', transform='translate(1.000000, 1.000000)', stroke='#FFFFFF', stroke-width='0.5', stroke-linejoin='bevel')
@@ -531,6 +531,7 @@ html(lang="en")
       #about-text.container
         p.
           Just trying to find a foothold in this new territory called web development, so naturally I started a blog about my journey. I'm a data enthusiast with a penchant for interactive visualizations. When I've got free time I like to vedge out in the kitchen or lift heavy objects over my head.
+        p Oh by the way, this entire low poly full-viewport background and its animated toggles were created using pure CSS magic.
               
       .fg-img-1
       

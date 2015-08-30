@@ -67,10 +67,35 @@ header
       display: none
 
       &:checked + label
-        font-weight: bold
+        background: white
+        border: 2px solid $text-color
+
+        &:active, &:hover, &:focus
+          border: 2px solid $text-color
+
+      &#home
+        &:checked + label
+          font-weight: bold
+          border: none
+          background: transparent
+
+          & ~ svg
+            g#steel, g#wind, g#sea
+              path
+                fill: transparent
+                stroke: none
+                +transition(all 2s ease)
+            g#land
+              path
+                fill-opacity: 0.33
+                stroke: none
+                +transition(all 2s ease)
 
       &#develop-toggle
         &:checked
+          & ~ label.main
+            background: transparent
+
           & ~ svg path
             fill: black
             fill-opacity: 0.1
@@ -87,11 +112,18 @@ header
 
       &#dataviz-toggle
         &:checked
+          & ~ label
+            background: white
+            +transition(background 2s ease)
+
           & ~ svg path
             fill: white
             stroke: $text-color
             stroke-width: 1px
             +transition(all 2s ease)
+        // & ~ label
+        //   background-color: white
+        //   border: 2px solid $text-color
 
     label
       z-index: 0
@@ -102,7 +134,7 @@ header
     label.main
       +transform(translate3d(-50%, $ty-main-xs, 0))
       font-weight: normal
-      width: 500px
+      width: 502px
       padding: 10px 20px
       background-color: transparentize(white,0.4)
       font-size: #{$fs-main-xs}rem
@@ -110,7 +142,7 @@ header
       text-align: center
       line-height: 1
 
-      &:hover
+      &:active, &:hover, &:focus
         font-weight: 700
         background-color: transparentize(white,0.25)
 
@@ -127,8 +159,10 @@ header
       padding: 5px 10px
       font-size: #{$fs-sub-xs}rem
 
-      &:hover
+      &:active, &:hover, &:focus
         background: white
+        border: 1px solid $text-color
+        +transition
 
       @media only screen and (min-width: 500px) and (min-height: 450px)
         +transform(translate(0, 5px))
@@ -156,7 +190,7 @@ header
         +transition(all 2s ease)
         +transform(translate(0))
 
-        &:hover
+        &:active, &:hover, &:focus
           opacity: 0.5
           +transition
 
@@ -239,7 +273,7 @@ header
         padding: 5px 10px
         top: 120%
 
-        &:hover
+        &:active, &:hover, &:focus
           color: $text-color
           background-color: transparentize(white,0.25)
 
