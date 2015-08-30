@@ -62,39 +62,98 @@ header
     left: 50%
     margin-left: -860px
 
+    input
+      display: none
+
+      &:checked + label
+        font-weight: bold
+
+      &:checked
+        & ~ svg path
+          fill: red
+          fill-opacity: 0.1
+          stroke: none
+
+        & ~ svg path:nth-of-type(4n+1)
+          transform: translate(200%, 600%) rotate(19deg) translateZ(0)
+        & ~ svg path:nth-of-type(4n+2)
+          transform: translate(-900%, 800%) rotate(12deg) translateZ(0)
+        & ~ svg path:nth-of-type(4n+3)
+          transform: translate(-1100%, -700%) rotate(22deg) translateZ(0)
+        & ~ svg path:nth-of-type(4n+4)
+          transform: translate(900%, -1000%) rotate(15deg) translateZ(0)
+
+    label
+      position:absolute
+      z-index: 0
+      display: block
+      +position(fixed, 50% null null 50%)
+      padding: 0px
+      +transform(translate3d(-50%, $ty-main-xs, 0))
+      font-weight: normal
+      padding: 10px 20px
+      background-color: transparentize(white,0.4)
+      cursor: pointer
+      font-size: #{$fs-main-xs}rem
+      margin: 0
+      line-height: 1
+
+      &:active, &:hover, &:focus
+        font-weight: bold
+        background-color: transparentize(white,0.25)
+
     svg
       +size(100% 100vh)
 
-      // g:hover
-      //   stroke: black
-      //   stroke-width: 1px
-      //
-      //   path
-      //     fill: white
-      //     +transition
+      path
+        transform-origin: center center
+        transition: all 2s ease
+        transform: translate(0)
+
+      @keyframes p1
+        0%
+          transform: translate(-300%, -700%) rotate(320deg) translateZ(0)
+        100%
+          transform: translate(0)
+
+      path:nth-of-type(4n+1)
+        animation: p1 1s ease 1
+
+      @keyframes p2
+        0%
+          transform: translate(400%, -900%) rotate(350deg) translateZ(0)
+        100%
+          transform: translate(0)
+
+      path:nth-of-type(4n+2)
+        animation: p2 1s ease 1
+
+      @keyframes p3
+        0%
+          transform: translate(500%, 900%) rotate(325deg) translateZ(0)
+        100%
+          transform: translate(0)
+
+      path:nth-of-type(4n+3)
+        animation: p3 1s ease 1
+
+      @keyframes p4
+        0%
+          transform: translate(-500%, 900%) rotate(348deg) translateZ(0)
+        100%
+          transform: translate(0)
+
+      path:nth-of-type(4n+4)
+        animation: p4 1s ease 1
+
+      path:hover
+        opacity: 0.5
+        +transition
 
   .container
     display: block
     +position(fixed, 50% null null 50%)
     padding: 0px
-
-  #main-title.container
-    z-index: 0
-    width: 100%
-    +transform(translate3d(-50%, $ty-main-xs, 0))
-
-    h1
-      display: block
-      font-size: #{$fs-main-xs}rem
-      line-height: 1
-      margin: 0px
-      padding: 10px 20px
-      background-color: transparentize(white,0.4)
-      cursor: pointer
-
-      &:active, &:hover, &:focus
-        font-weight: bold
-        background-color: transparentize(white,0.25)
 
   #sub-title.container
     z-index: 2
@@ -502,10 +561,9 @@ section#webdevchallenge
 
 @media only screen and (min-width: 500px) and (min-height: 450px)
   header
-    #main-title.container
-      +transform(translate(-50%, $ty-main-md))
-
-      h1
+    .background-img
+      label
+        +transform(translate(-50%, $ty-main-md))
         font-size: 6.2rem
         display: inline-block
 
