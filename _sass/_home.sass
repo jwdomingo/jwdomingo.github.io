@@ -45,6 +45,7 @@ $ty-text-md:  $h-sub-md + $h-tag-md + 30px
 // PARALLAX //
 //////////////
 body
+  position: relative
   max-width: 100vw
   overflow-x: hidden
 
@@ -70,18 +71,19 @@ header
 
       &:checked
         & ~ svg path
-          fill: red
+          fill: black
           fill-opacity: 0.1
           stroke: none
 
         & ~ svg path:nth-of-type(4n+1)
-          transform: translate(200%, 600%) rotate(19deg) translateZ(0)
+          +transform(translate(200%, 600%) rotate(19deg) translateZ(0))
+          -webkit-transform: -webkit-translateX(200%)
         & ~ svg path:nth-of-type(4n+2)
-          transform: translate(-900%, 800%) rotate(12deg) translateZ(0)
+          +transform(translate(-900%, 800%) rotate(12deg) translateZ(0))
         & ~ svg path:nth-of-type(4n+3)
-          transform: translate(-1100%, -700%) rotate(22deg) translateZ(0)
+          +transform(translate(-1100%, -700%) rotate(22deg) translateZ(0))
         & ~ svg path:nth-of-type(4n+4)
-          transform: translate(900%, -1000%) rotate(15deg) translateZ(0)
+          +transform(translate(900%, -1000%) rotate(15deg) translateZ(0))
 
     label
       position:absolute
@@ -98,7 +100,7 @@ header
       margin: 0
       line-height: 1
 
-      &:active, &:hover, &:focus
+      &:hover
         font-weight: bold
         background-color: transparentize(white,0.25)
 
@@ -106,49 +108,49 @@ header
       +size(100% 100vh)
 
       path
-        transform-origin: center center
-        transition: all 2s ease
-        transform: translate(0)
+        +transform-origin(center center)
+        +transition(all 2s ease)
+        +transform(translate(0))
 
-      @keyframes p1
+        &:hover
+          opacity: 0.5
+          +transition
+
+      +keyframes(p1)
         0%
-          transform: translate(-300%, -700%) rotate(320deg) translateZ(0)
+          +transform(translateX(-300%) translateY(-700%) rotate(320deg) translateZ(0))
         100%
-          transform: translate(0)
+          +transform(translate(0))
 
       path:nth-of-type(4n+1)
-        animation: p1 1s ease 1
+        +animation(p1 1s ease 1)
 
-      @keyframes p2
+      +keyframes(p2)
         0%
-          transform: translate(400%, -900%) rotate(350deg) translateZ(0)
+          +transform(translate(400%) translateY(-900%) rotate(350deg) translateZ(0))
         100%
-          transform: translate(0)
+          +transform(translate(0))
 
       path:nth-of-type(4n+2)
-        animation: p2 1s ease 1
+        +animation(p2 1s ease 1)
 
-      @keyframes p3
+      +keyframes(p3)
         0%
-          transform: translate(500%, 900%) rotate(325deg) translateZ(0)
+          +transform(translate(500%) translateY(900%) rotate(325deg) translateZ(0))
         100%
-          transform: translate(0)
+          +transform(translate(0))
 
       path:nth-of-type(4n+3)
-        animation: p3 1s ease 1
+        +animation(p3 1s ease 1)
 
-      @keyframes p4
+      +keyframes(p4)
         0%
-          transform: translate(-500%, 900%) rotate(348deg) translateZ(0)
+          +transform(translate(-500%) translateY(900%) rotate(348deg) translateZ(0))
         100%
-          transform: translate(0)
+          +transform(translate(0))
 
       path:nth-of-type(4n+4)
-        animation: p4 1s ease 1
-
-      path:hover
-        opacity: 0.5
-        +transition
+        +animation(p4 1s ease 1)
 
   .container
     display: block
