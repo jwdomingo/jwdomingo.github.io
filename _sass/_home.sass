@@ -63,38 +63,48 @@ header
     left: 50%
     margin-left: -860px
 
-    input#home
+    input
       display: none
 
       &:checked + label
         font-weight: bold
-        background-color: transparent
 
-      &:checked
-        & ~ svg path
-          fill: black
-          fill-opacity: 0.1
-          stroke: none
+      &#develop-toggle
+        &:checked
+          & ~ svg path
+            fill: black
+            fill-opacity: 0.1
+            stroke: none
 
-        & ~ svg path:nth-of-type(4n+1)
-          +transform(translate(200px, 200px) rotate(79deg) translateZ(0))
-        & ~ svg path:nth-of-type(4n+2)
-          +transform(translate(-800px, 400px) rotate(82deg) translateZ(0))
-        & ~ svg path:nth-of-type(4n+3)
-          +transform(translate(-800px, -600px) rotate(92deg) translateZ(0))
-        & ~ svg path:nth-of-type(4n+4)
-          +transform(translate(700px, -900px) rotate(75deg) translateZ(0))
+          & ~ svg path:nth-of-type(4n+1)
+            +transform(translate(200px, 200px) rotate(79deg) translateZ(0))
+          & ~ svg path:nth-of-type(4n+2)
+            +transform(translate(-800px, 400px) rotate(82deg) translateZ(0))
+          & ~ svg path:nth-of-type(4n+3)
+            +transform(translate(-800px, -600px) rotate(92deg) translateZ(0))
+          & ~ svg path:nth-of-type(4n+4)
+            +transform(translate(700px, -900px) rotate(75deg) translateZ(0))
+
+      &#dataviz-toggle
+        &:checked
+          & ~ svg path
+            fill: white
+            stroke: $text-color
+            stroke-width: 1px
+            +transition(all 2s ease)
 
     label
       z-index: 0
       display: block
       +position(fixed, 50% null null 50%)
+      cursor: pointer
+
+    label.main
       +transform(translate3d(-50%, $ty-main-xs, 0))
       font-weight: normal
       width: 500px
       padding: 10px 20px
       background-color: transparentize(white,0.4)
-      cursor: pointer
       font-size: #{$fs-main-xs}rem
       margin: 0
       text-align: center
@@ -103,6 +113,40 @@ header
       &:hover
         font-weight: 700
         background-color: transparentize(white,0.25)
+
+      @media only screen and (min-width: 500px) and (min-height: 450px)
+        +transform(translate(-50%, $ty-main-md))
+        font-size: 6.2rem
+        display: inline-block
+
+    label[class*='sub']
+      white-space: nowrap
+      margin: 0px
+      text-align: center
+      cursor: pointer
+      padding: 5px 10px
+      font-size: #{$fs-sub-xs}rem
+
+      &:hover
+        background: white
+
+      @media only screen and (min-width: 500px) and (min-height: 450px)
+        +transform(translate(0, 5px))
+        font-size: 1.5rem
+
+        // p.tag-list
+        //   font-size: 1rem
+        //   +transform(translate(-50%, $ty-tag-md))
+
+    label.sub-design
+      margin-left: -(123px + 47px + 33.22775px)
+
+    label.sub-develop
+      margin-left: -(47px + 33.22775px)
+
+    label.sub-dataviz
+      margin-left: (133px - 47px - 33.22775px)
+
 
     svg
       +size(100% 100vh)
@@ -250,7 +294,11 @@ header
 .container-about
   margin-top: 100vh
 
-section
+////////////
+// SKILLS //
+////////////
+
+section#skills
   z-index: 3
   width: 100%
   min-height: 100vh
@@ -567,12 +615,6 @@ section#webdevchallenge
 
 @media only screen and (min-width: 500px) and (min-height: 450px)
   header
-    .background-img
-      label
-        +transform(translate(-50%, $ty-main-md))
-        font-size: 6.2rem
-        display: inline-block
-
     #sub-title.container
       width: 500px
       +transform(translate(-50%, 5px))
