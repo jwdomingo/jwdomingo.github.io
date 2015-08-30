@@ -137,7 +137,7 @@ header
       font-weight: normal
       width: 500px
       padding: 10px 10px
-      background-color: transparentize(white,0.4)
+      background-color: transparentize(white,0.3)
       font-size: #{$fs-main-xs}rem
       margin: 0
       text-align: center
@@ -329,6 +329,14 @@ header
 .container-about
   margin-top: 100vh
 
+//////////////
+// SECTIONS //
+//////////////
+section
+  position: relative
+  z-index: 3
+  background-color: white
+
 ////////////
 // SKILLS //
 ////////////
@@ -338,7 +346,6 @@ section#skills
   width: 100%
   min-height: 100vh
   padding: 200px 0px
-  background-color: white
   position: relative
   +transform(translate3d(0,0,0))
 
