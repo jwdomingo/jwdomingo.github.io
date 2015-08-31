@@ -1,8 +1,7 @@
 $.ajax({
-  url: 'http://johndomingo.com/webdevchallenge/feed.xml',//'/webdevchallenge.xml', //
+  url: 'http://johndomingo.com/webdevchallenge/feed.xml',
   dataType: 'xml',
   success: function(data) {
-    console.log('success!');
     $(data).find('channel item').each(function (i) {
       var title = $(this).find('title').text();
       var description = $(this).find('description').text();
