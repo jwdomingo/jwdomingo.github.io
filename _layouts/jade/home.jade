@@ -6,7 +6,7 @@ html(lang="en")
   body
     // Landing Page //
     header
-      .background-img
+      .header-container
         input#dataviz-toggle(type='radio', name='toggler')
         label.sub-dataviz(for='dataviz-toggle') Data Visualist
         
@@ -18,6 +18,14 @@ html(lang="en")
         
         input#home(type='radio', name='toggler')
         label.main(for='home') John Domingo
+        
+        #about-text.container
+          p.
+            Hey you! I'm a data enthusiast with a penchant for interactive visualizations and light-weight animations. When I've got free time I like to vedge out in the kitchen or lift heavy objects over my head.
+            
+          p Oh by the way, this full-width polygon mesh background and its animated toggle views were created using pure CSS magic.
+        
+        .profile-img.container
         
         svg(xmlns='http://www.w3.org/2000/svg')
           g#wind(sketch:type='MSLayerGroup', transform='translate(1.000000, 1.000000)', stroke='#FFFFFF', stroke-width='0.5', stroke-linejoin='bevel')
@@ -502,14 +510,6 @@ html(lang="en")
             path#path-113(d='M1460.309,347.803 L1462.89,268.445 L1374.241,296.371 L1460.309,347.803 L1460.309,347.803 Z', fill='#313A39', sketch:type='MSShapeGroup')
             path#path-114(d='M1460.309,347.803 L1682.688,288.566 L1568.661,423 L1460.309,347.803 L1460.309,347.803 Z', fill='#252523', sketch:type='MSShapeGroup')
 
-      #about-text.container
-        p.
-          Hey! I'm a data enthusiast with a penchant for interactive visualizations and light-weight animations. When I've got free time I like to vedge out in the kitchen or lift heavy objects over my head.
-          
-        p Oh by the way, this full-width polygon mesh background and its animated toggle views were created using pure CSS magic.
-      
-      .profile-img.container
-    
     section(id='skills')
       h1 Skills
       .skills-container

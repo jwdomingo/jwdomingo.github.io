@@ -57,7 +57,7 @@ header
   text-transform: uppercase
   +filter(blur(0px))
 
-  .background-img
+  .header-container
     width: 800%
     position: absolute
     top: 0
@@ -96,6 +96,14 @@ header
         &:checked
           & ~ label.main
             background: transparent
+
+          & ~ .container
+            +filter(blur(0px))
+            opacity: 1
+            +transition(all 3s ease)
+
+            &#about-text
+              z-index: 2
 
           & ~ svg path
             fill: black
@@ -188,6 +196,45 @@ header
         &.sub-dataviz
           margin-left: (133px - 47px - 33.22775px)
 
+    .container
+      z-index: -999
+      display: block
+      +position(fixed, 50% null null 50%)
+      padding: 0px
+      +filter(blur(5px))
+      opacity: 0
+      +transition(all 2s ease)
+
+    #about-text
+      +transform(translate(-50%, $ty-text-xs))
+      width: 92.5%
+
+      p
+        text-transform: none
+        font-size: 1.25rem
+
+    .profile-img
+      +size(100px)
+      +transform(translate3d(-50%, $ty-prof-sm, 0))
+      background:
+        image: url('/assets/img/jd1278x1278.jpg')
+        position: top center
+        repeat: no-repeat
+        size: cover
+      border-radius: 50%
+
+    @media only screen and (min-width: 500px) and (min-height: 450px)
+      #about-text
+        width: 500px
+        +transform(translate(-50%, $ty-text-md))
+
+        p
+          font-size: 1.5rem
+
+      .profile-img
+        +size($h-prof-md)
+        +transform(translate(-50%, $ty-prof-md))
+
     svg
       +size(100% 100vh)
 
@@ -236,33 +283,6 @@ header
       path:nth-of-type(4n+4)
         +animation(p4 1s ease 1)
 
-  .container
-    display: block
-    +position(fixed, 50% null null 50%)
-    padding: 0px
-
-  #about-text
-    z-index: -2
-    +transform(translate(-50%, $ty-text-xs))
-    -webkit-overflow-y: scroll
-    width: 92.5%
-
-    p
-      text-transform: none
-      font-size: 1.25rem
-
-  .profile-img
-    z-index: -2
-    +size(100px)
-    position: fixed
-    +transform(translate3d(-50%, $ty-prof-sm, 0))
-    background:
-      image: url('/assets/img/jd1278x1278.jpg')
-      position: top center
-      repeat: no-repeat
-      size: cover
-    border-radius: 50%
-
 //////////////////////
 // INTERACTIVE TAGS //
 //////////////////////
@@ -274,7 +294,7 @@ header
 //////////////
 section
   position: relative
-  z-index: 3
+  z-index: 9999
   background-color: white
   min-height: 100vh
 
@@ -594,18 +614,6 @@ section#webdevchallenge
       +transform(translate(-50%, -150px))
 
 @media only screen and (min-width: 500px) and (min-height: 450px)
-  header
-    #about-text.container
-      width: 500px
-      +transform(translate(-50%, $ty-text-md))
-
-      p
-        font-size: 1.5rem
-
-    .profile-img
-      +size($h-prof-md)
-      +transform(translate(-50%, $ty-prof-md))
-
   section
     .skills-container
       height: 90vh
