@@ -510,13 +510,13 @@ html(lang="en")
             path#path-113(d='M1460.309,347.803 L1462.89,268.445 L1374.241,296.371 L1460.309,347.803 L1460.309,347.803 Z', fill='#313A39', sketch:type='MSShapeGroup')
             path#path-114(d='M1460.309,347.803 L1682.688,288.566 L1568.661,423 L1460.309,347.803 L1460.309,347.803 Z', fill='#252523', sketch:type='MSShapeGroup')
 
-    section(id='skills')
+    section#skills
       h1 Skills
       .skills-container
       script(src='/js/d3/d3.js')
       script(src='/js/d3/skills.js')
       
-    section(id='projects')
+    section#projects
       h1.text-center Projects
       .container
         .row
@@ -574,15 +574,17 @@ html(lang="en")
                   p Additional resources to supplement my learning track.
                 .proj-cta
                   a(href='http://codecademy.com/johndomingo') See Project
+
+    section#projects-mobile
     
-    section(id='webdevchallenge')
+    section#webdevchallenge
       h1.text-center 30 Day Web Development Challenge      
       .container
         .row
           //.challenge1.col-sm-4.col-sm-offset-0.col-xs-10.col-xs-offset-1.text-center
           .challenge1.col-xs-12.text-center
             .slider
-              input#slides_1(type='radio', name='slides', checked='')
+              input#slides_1(type='radio', name='slides', checked)
               input#slides_2(type='radio', name='slides')
               input#slides_3(type='radio', name='slides')
               ul
