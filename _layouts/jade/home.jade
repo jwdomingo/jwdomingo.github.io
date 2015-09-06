@@ -3,6 +3,8 @@ doctype html
 html(lang="en")
   head.
     {% include head.html %}
+    
+    <link rel='stylesheet' type='text/css' href='/css/font-awesome/css/font-awesome.min.css'>
   body
     // Landing Page //
     header
@@ -712,6 +714,35 @@ html(lang="en")
       script(src="/js/webdevchallenge.js")
       
     footer
+      .container
+        .row
+          .col-xs-2.col-lg-1
+            h1 JD
+          .col-xs-5
+            h4 About
+            p.
+              Hello there and thanks for visiting. I'm a DBA and consultant at a small geology lab in Berkeley, CA and I've got big dreams to pursue a career in web development.              
+            p.
+              In my free time I like to tinker with new and exciting front-end technologies. This hand-coded page is an amalgam of the skills I've amassed since starting in 2014. Follow me to keep up with the progress I'm making.
+              
+          .col-xs-2
+            ul
+              li Contact
+              li Blog
+          .col-xs-3
+            ul#social.list-inline
+              li: .frame: i.fa.fa-twitter
+              li: .frame: i.fa.fa-github-alt
+              li: .frame: i.fa.fa-instagram
+              li: .frame: i.fa.fa-pinterest-p
+              li: .frame: i.fa.fa-google-plus
+              li: .frame: i.fa.fa-linkedin
+              li: .frame: i.fa.fa-stack-overflow
+              li: .frame: i.fa.fa-vine
+              li: .frame: i.fa.fa-codepen
+              li: .frame: i.fa.fa-jsfiddle
+              li: .frame: i.fa.fa-trello
+      
       p.text-center.
         Made with <a href='http://jekyllrb.com/' target='_blank'>Jekyll</a>, hosted on <a href='https://github.com/jwdomingo/jwdomingo.github.io/'>GitHub Pages</a>.
     

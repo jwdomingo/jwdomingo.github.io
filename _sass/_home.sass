@@ -326,7 +326,7 @@ section
 
   &:last-of-type
     +box-shadow(0px 20px 20px -20px $text-color)
-    margin-bottom: 64px
+    margin-bottom: 500px
 
 ////////////
 // SKILLS //
@@ -789,10 +789,27 @@ footer
   width: 100%
   background-color: transparentize(black, 0.3)
   padding: 20px
+  color: white
+
+  .container
+    width: 100%
+    margin-bottom: 40px
+
+  h1
+    position: absolute
+    top: 20px
+    right: 20px
+    display: inline-block
+    padding: 12px 10px
+    border: 1px solid white
+    border-radius: 50%
+
+  h4
+    margin-top: 25px
 
   p
-    color: white
-    margin: 0
+    margin: 0 auto 10px
+    font-size: 0.75em
 
     a:link, a:visited, a:active
       color: $secondary3
@@ -800,3 +817,25 @@ footer
     a:hover
       color: $secondary3
       text-decoration: none
+  ul
+    list-style: none
+    margin-top: 25px
+
+    &#social
+      font-size: 1.1em
+
+      li
+        padding: 0 5px 10px 5px
+
+        .frame
+          i
+            padding: 8px 9.5px
+            border: 1px solid white
+            border-radius: 50%
+
+            &.fa.fa-pinterest
+              padding: 6px 9.5px
+            &.fa.fa-codepen, &.fa.fa-google-plus
+              padding: 8px
+            &.fa.fa-jsfiddle
+              padding: 8px 7.5px
