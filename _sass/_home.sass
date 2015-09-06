@@ -688,20 +688,19 @@ section#projects-mobile
             background:
               image: url('/assets/projects/codecademy.svg')
 
-    li:nth-child(odd)
-      .sleeve, input.prj-close:checked + .sleeve
-        +clip-path(polygon(0 90%, 90% 33%, 100% 33%, 100% 100%, 0 100%))
-        +transition(1s)
+          &:nth-child(odd)
+            .sleeve, input.prj-close:checked + .sleeve
+              +clip-path(polygon(0 90%, 90% 33%, 100% 33%, 100% 100%, 0 100%))
+              +transition(1s)
 
-    li:nth-child(even)
-      .sleeve, input.prj-close:checked + .sleeve
-        +clip-path(polygon(0 33%, 10% 33%, 100% 90%, 100% 100%, 0 100%))
-        +transition(1s)
+          &:nth-child(even)
+            .sleeve, input.prj-close:checked + .sleeve
+              +clip-path(polygon(0 33%, 10% 33%, 100% 90%, 100% 100%, 0 100%))
+              +transition(1s)
 
-    li
-      input[id*='prj-sleeve_']:checked + .sleeve, .sleeve:hover
-        +clip-path(polygon(0 0, 50% 0%, 100% 0, 100% 100%, 0 100%))
-        +transition(1s)
+          input[id*='prj-sleeve_']:checked + .sleeve, .sleeve:hover
+            +clip-path(polygon(0 0, 50% 0%, 100% 0, 100% 100%, 0 100%))
+            +transition(1s)
 
 /////////////////////
 // WEBDEVCHALLENGE //
