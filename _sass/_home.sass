@@ -590,11 +590,18 @@ section#webdevchallenge
             .content
               z-index: 2
               background: rgba(0, 0, 0, 0.7)
-              padding: 100px 140px 50px
+              padding: 50px 50px 50px
               height: 100%
               overflow-y: scroll
               margin-top: 100vh
               +transition(0.5s)
+
+              @media only screen and (min-width: 768px)
+                padding: 100px 140px 50px
+
+          @media only screen and (max-width: 400px)
+            .arrows label
+              padding: 9px
 
           &:active, &:hover, &:focus
             ul li .content
