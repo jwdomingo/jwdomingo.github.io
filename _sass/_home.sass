@@ -401,7 +401,7 @@ section#skills
 // PROJECTS //
 //////////////
 
-section#projects
+section#projects, section#projects-mobile
   padding: 0
 
   h1
@@ -410,17 +410,20 @@ section#projects
     position: relative
 
   .container
-    width: 75%
+    width: 100%
+
+    @media only screen and (min-width: 500px)
+      width: 490px
+
+    @media only screen and (min-width: 768px)
+      width: 750px
+
+    @media only screen and (min-width: 992px)
+
+    @media only screen and (min-width: 1200px)
 
     [class*=col]
-      max-width: 220px
       margin: 0 auto
-
-      @media only screen and (min-width: 470px)
-        max-width: 440px
-
-      @media only screen and (min-width: 660px)
-        max-width: 660px
 
       [class*='project']
         position: relative
@@ -430,6 +433,9 @@ section#projects
         background:
           repeat: no-repeat
           position: center center
+
+        @media only screen and (max-width: 500px)
+          width: 100%
 
         .sleeve
           position: absolute
@@ -541,8 +547,16 @@ section#projects
 ///////////////////////
 // PROJECTS : MOBILE //
 ///////////////////////
+section#projects-mobile
+  display: none
 
-section#projt-
+@media only screen and (max-width: 500px)
+  section#projects
+    display: none
+  section#projects-mobile
+    display: block
+    .slider
+      background-color: red
 
 /////////////////////
 // WEBDEVCHALLENGE //
@@ -554,8 +568,6 @@ section#webdevchallenge
   .container
     .row
       [class*='challenge']
-        @import slider
-
         .slider
           max-width: 100%
 
@@ -581,7 +593,7 @@ section#webdevchallenge
               padding: 100px 140px 50px
               height: 100%
               overflow-y: scroll
-              margin-top: 100%
+              margin-top: 100vh
               +transition(0.5s)
 
           &:active, &:hover, &:focus
