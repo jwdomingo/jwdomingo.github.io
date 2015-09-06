@@ -553,10 +553,137 @@ section#projects-mobile
 @media only screen and (max-width: 500px)
   section#projects
     display: none
+
   section#projects-mobile
     display: block
+
     .slider
-      background-color: red
+
+      ul
+        max-width: 100vw
+
+        li
+          [class*='project']
+            height: 60vh
+            background:
+              size: cover
+              repeat: no-repeat
+              position: bottom center
+
+            .sleeve
+              position: relative
+              z-index: 2
+              +size(100vw 60vh)
+              color: white
+              overflow: hidden
+              background: transparentize(black, 0.3)
+
+              &:hover
+                .proj-tag
+                  bottom: -230px
+                  +transition(0.5s)
+
+                .proj-cta
+                  right: 20px
+                  +transition(0.5s)
+
+                .proj-description
+                  left: 0px
+                  +transition(0.5s)
+
+              .proj-tag
+                position: absolute
+                bottom: 45px
+                right: 20px
+                text-align: right
+                font-size: 1.5em
+                font-weight: bold
+                width: 210px
+                +transition(0.5s)
+
+              .proj-cta
+                position: absolute
+                bottom: 50px
+                right: -230px
+                text-align: right
+                text-transform: uppercase
+                font-size: .8em
+                font-weight: bold
+                padding: 2px 5px
+                border: 1px solid white
+                +transition(0.5s)
+
+                a:link, a:hover, a:visited, a:active
+                  color: white
+                  text-decoration: none
+
+              .proj-description
+                position: absolute
+                top: 0px
+                left: -100vw
+                width: 210px
+                margin: 0 auto
+                padding: 40px 20px  0
+                height: 180px
+                overflow-y: scroll
+                +transition(0.5s)
+
+                h4
+                  margin-bottom: 10px
+                  font-weight: bold
+                p
+                  font-size: 0.8em
+                  margin-bottom: 30px
+
+                .sleeve-label
+                  text-align: right
+                  position: absolute
+                  bottom: -70px
+                  right: -70px
+
+                  a:link, a:hover, a:visited, a:active
+                    color: white
+                    text-decoration: none
+
+          &:nth-child(odd) > [class*='project'] .sleeve
+            +clip-path(polygon(90% 33%, 100% 33%, 100% 100%, 0 100%, 0 90%))
+            +transition(1s)
+
+            &:hover
+              +clip-path(polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 0))
+              +transition
+
+          &:nth-child(even) > [class*='project'] .sleeve
+            +clip-path(polygon(0 33%, 10% 33%, 100% 90%, 100% 100%, 0 100%))
+            +transition(1s)
+
+            &:hover
+              +clip-path(polygon(0 0, 50% 0, 100% 0, 100% 100%, 0 100%))
+              +transition
+
+          .project1
+            background:
+              image: url('/assets/projects/rainydays.svg')
+
+          .project2
+            background:
+              image: url('/assets/projects/focus.png')
+
+          .project3
+            background:
+              image: url('/assets/projects/dsgn.svg')
+
+          .project4
+            background:
+              image: url('/assets/projects/github.svg')
+
+          .project5
+            background:
+              image: url('/assets/projects/treehouse.svg')
+
+          .project6
+            background:
+              image: url('/assets/projects/codecademy.svg')
 
 /////////////////////
 // WEBDEVCHALLENGE //
