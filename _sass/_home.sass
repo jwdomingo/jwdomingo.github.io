@@ -230,6 +230,10 @@ header
         size: cover
       border-radius: 50%
 
+      @media only screen and (max-height: 320px) and (-webkit-min-device-pixel-ratio: 1.5)
+        +size(80px)
+        +transform(translate(-50%, $ty-prof-xs))
+
     @media only screen and (min-width: 500px) and (min-height: 450px)
       #about-text
         width: 500px
@@ -381,6 +385,12 @@ section#skills
         fill: $primary1
       circle.web.bubble-selected
         fill: $accentA1
+
+    @media only screen and (min-width: 500px) and (min-height: 450px)
+      height: 90vh
+
+      svg#skills-vis
+        height: 90vh
 
     #bubble-labels
       z-index: 1
@@ -760,60 +770,3 @@ section#webdevchallenge
 
       .row [class*='challenge'] .slider ul
         max-width: 100vw
-
-///////////////////
-// MEDIA QUERIES //
-///////////////////
-@media only screen and (max-height: 320px) and (-webkit-min-device-pixel-ratio: 1.5)
-  header
-    .profile-img
-      +size(80px)
-      +transform(translate(-50%, $ty-prof-xs))
-
-//@media only screen and (max-height: 375px) and (-webkit-min-device-pixel-ratio: 1.5)
-  header
-    #main-title.container
-      +transform(translate(-50%, -70px))
-
-    #sub-title.container
-      +transform(translate(-50%, 12px))
-
-      h6.sub-title
-        p.tag-list
-          +transform(translate(-50%, 21.5px))
-
-    #about-text.container
-      +transform(translate(-50%, 65px))
-
-    .profile-img
-      +size(80px)
-      +transform(translate(-50%, -150px))
-
-@media only screen and (min-width: 500px) and (min-height: 450px)
-  section
-    .skills-container
-      height: 90vh
-
-      svg#skills-vis
-        height: 90vh
-
-@media only screen and (min-width: 768px) and (min-height: 450px)
-  // header
-    // .bg-img
-    //   background:
-    //     attachment: fixed
-
-    // #main-title.container
-    //   h1
-    //     background-color: transparentize(white,0.5)
-
-    //.fg-img-1
-      z-index: 1
-      +size(100% 426px)
-      +position(absolute, null null 0px 0px)
-      background:
-        image: url('/assets/img/bg/outcrop1719x800.png')
-        position: 50% 100%
-        repeat: no-repeat
-
-@media only screen and (min-width: 992px) and (min-height: 376px)
