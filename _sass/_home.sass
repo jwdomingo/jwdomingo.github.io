@@ -412,6 +412,8 @@ section#projects, section#projects-mobile
   .container
     width: 100%
 
+section#projects
+  .container
     @media only screen and (min-width: 500px)
       width: 490px
 
@@ -537,26 +539,6 @@ section#projects, section#projects-mobile
       background:
         image: url('/assets/projects/codecademy.svg')
 
-.thing
-  +size(230px)
-  background:
-    image: url('/assets/projects/codecademy.svg')
-    repeat: no-repeat
-    position: center center
-
-  .Xsleeve
-    position: absolute
-    bottom: 0
-    left: 0
-    +size(230px)
-    background: transparentize(black, 0.3)
-    +clip-path(polygon(0 90%, 90% 33%, 100% 33%, 100% 100%, 0 100%))
-    +transition(1s)
-
-    &:hover
-      +transition(all 0.5s ease)
-      +clip-path(polygon(0 0, 50% 0%, 100% 0, 100% 100%, 0 100%))
-
 ///////////////////////
 // PROJECTS : MOBILE //
 ///////////////////////
@@ -576,7 +558,7 @@ section#projects-mobile
         max-width: 100vw
 
         li
-          [class*='project']
+          .project
             height: 60vh
             background:
               size: cover
@@ -585,7 +567,6 @@ section#projects-mobile
 
             .sleeve
               position: relative
-              z-index: 2
               +size(100vw 60vh)
               color: white
               overflow: hidden
@@ -658,45 +639,33 @@ section#projects-mobile
                     color: white
                     text-decoration: none
 
-          &:nth-child(odd) > [class*='project'] .sleeve
-            +clip-path(polygon(0 90%, 90% 33%, 100% 33%, 100% 100%, 0 100%))
-            +transition(1s)
-
-            &:hover
-              +clip-path(polygon(0 0, 50% 0%, 100% 0, 100% 100%, 0 100%))
-              +transition
-
-          &:nth-child(even) > [class*='project'] .sleeve
-            +clip-path(polygon(0 33%, 10% 33%, 100% 90%, 100% 100%, 0 100%))
-            +transition(1s)
-
-            &:hover
-              +clip-path(polygon(0 0, 50% 0, 100% 0, 100% 100%, 0 100%))
-              +transition
-
           .project1
             background:
               image: url('/assets/projects/rainydays.svg')
-
           .project2
             background:
               image: url('/assets/projects/focus.png')
-
           .project3
             background:
               image: url('/assets/projects/dsgn.svg')
-
           .project4
             background:
               image: url('/assets/projects/github.svg')
-
           .project5
             background:
               image: url('/assets/projects/treehouse.svg')
-
           .project6
             background:
               image: url('/assets/projects/codecademy.svg')
+
+    .project
+      .sleeve
+        +clip-path(polygon(0 90%, 90% 33%, 100% 33%, 100% 100%, 0 100%))
+        +transition(1s)
+
+        &:active, &:hover, &:focus
+          +clip-path(polygon(0 0, 50% 0%, 100% 0, 100% 100%, 0 100%))
+          +transition(1s)
 
 /////////////////////
 // WEBDEVCHALLENGE //
