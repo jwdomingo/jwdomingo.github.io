@@ -565,6 +565,9 @@ section#projects-mobile
               repeat: no-repeat
               position: bottom center
 
+            input
+              display: none
+
             .sleeve
               position: relative
               +size(100vw 60vh)
@@ -572,72 +575,78 @@ section#projects-mobile
               overflow: hidden
               background: transparentize(black, 0.3)
 
-              &:hover
-                .proj-tag
-                  bottom: -230px
-                  +transition(0.5s)
+            label[class*='proj-tag']
+              position: absolute
+              bottom: 65px
+              text-align: right
+              font-size: 1.25em
+              font-weight: bold
+              padding: 4px 8px
+              border: 1px solid white
+              cursor: pointer
+              +transition(0.5s)
 
-                .proj-cta
-                  right: 20px
-                  +transition(0.5s)
+            label.proj-tag-A
+              right: 40px
+            label.proj-tag-B
+              left: 40px
 
-                .proj-description
-                  left: 0px
-                  +transition(0.5s)
+            .proj-cta
+              position: absolute
+              bottom: 65px
+              right: -230px
+              text-align: right
+              text-transform: uppercase
+              font-size: 1em
+              font-weight: bold
+              padding: 3px 6px
+              border: 1px solid white
+              +transition(0.5s)
 
-              .proj-tag
-                position: absolute
-                bottom: 45px
-                right: 20px
-                text-align: right
-                font-size: 1.5em
+              a:link, a:hover, a:visited, a:active
+                color: white
+                text-decoration: none
+
+            .proj-description
+              position: absolute
+              top: 20px
+              left: -100vw
+              width: 85%
+              margin: 0 auto
+              padding: 40px 20px  0
+              height: 180px
+              overflow-y: scroll
+              +transition(0.5s)
+
+              h4
+                margin-bottom: 10px
                 font-weight: bold
-                width: 210px
-                +transition(0.5s)
+              p
+                font-size: 0.8em
+                margin-bottom: 30px
 
-              .proj-cta
-                position: absolute
-                bottom: 50px
-                right: -230px
+              .sleeve-label
                 text-align: right
-                text-transform: uppercase
-                font-size: .8em
-                font-weight: bold
-                padding: 2px 5px
-                border: 1px solid white
-                +transition(0.5s)
+                position: absolute
+                bottom: -70px
+                right: -70px
 
                 a:link, a:hover, a:visited, a:active
                   color: white
                   text-decoration: none
 
-              .proj-description
-                position: absolute
-                top: 0px
-                left: -100vw
-                width: 210px
-                margin: 0 auto
-                padding: 40px 20px  0
-                height: 180px
-                overflow-y: scroll
+            input:checked + .sleeve, .sleeve:hover
+              label[class*='proj-tag']
+                bottom: -230px
                 +transition(0.5s)
 
-                h4
-                  margin-bottom: 10px
-                  font-weight: bold
-                p
-                  font-size: 0.8em
-                  margin-bottom: 30px
+              .proj-cta
+                right: 40px
+                +transition(0.5s)
 
-                .sleeve-label
-                  text-align: right
-                  position: absolute
-                  bottom: -70px
-                  right: -70px
-
-                  a:link, a:hover, a:visited, a:active
-                    color: white
-                    text-decoration: none
+              .proj-description
+                left: 40px
+                +transition(0.5s)
 
           .project1
             background:
@@ -658,14 +667,20 @@ section#projects-mobile
             background:
               image: url('/assets/projects/codecademy.svg')
 
-    .project
+    li:nth-child(odd)
       .sleeve
         +clip-path(polygon(0 90%, 90% 33%, 100% 33%, 100% 100%, 0 100%))
         +transition(1s)
 
-        &:active, &:hover, &:focus
-          +clip-path(polygon(0 0, 50% 0%, 100% 0, 100% 100%, 0 100%))
-          +transition(1s)
+    li:nth-child(even)
+      .sleeve
+        +clip-path(polygon(0 33%, 10% 33%, 100% 90%, 100% 100%, 0 100%))
+        +transition(1s)
+
+    li
+      input:checked + .sleeve, .sleeve:hover
+        +clip-path(polygon(0 0, 50% 0%, 100% 0, 100% 100%, 0 100%))
+        +transition(1s)
 
 /////////////////////
 // WEBDEVCHALLENGE //
