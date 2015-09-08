@@ -59,6 +59,8 @@ body
   overflow-x: hidden
 
 header
+  position: relative
+  z-index: 1
   height: 100vh
   text-transform: uppercase
   +filter(blur(0px))
@@ -212,7 +214,7 @@ header
           margin-left: (133px - 47px - 33.22775px)
 
     .container
-      z-index: -999
+      z-index: -2
       display: block
       +position(absolute, 50% null null 50%)
       padding: 0px
@@ -780,11 +782,16 @@ section#webdevchallenge
 ////////////
 section:last-of-type
   +box-shadow(0px 20px 20px -20px $text-color)
-  margin-bottom: 408px
+  //margin-bottom: 408px
+
+#reveal-footer
+  +size(100vw 408px)
+  position: relative
+  z-index: -1
 
 footer
   position: fixed
-  z-index: -2
+  z-index: 0
   bottom: 0
   width: 100%
   height: 408px
@@ -838,28 +845,52 @@ footer
       display: inline-block
 
   ul.social
+    position: relative
     list-style: none
-    margin: 0
+    margin: 15px auto 0
     cursor: pointer
     font-size: 1.1em
+    width: 225px
+    border: 1px solid transparent
 
 
     @media only screen and (min-width: 500px)
       margin-top: 25px
 
     li
-      margin: 10px 5px 5px
+      position: absolute
+      left: 5px
+      //margin: 0 5px
       +size(35px)
-      border: 1px solid white
-      border-radius: 50%
+      list-decoration: none
       cursor: pointer
+      border-radius: 50%
+      box-shadow: inset 0 0 0 1px transparent
 
       &:hover
-        background-color: red
+        border-radius: 10%
+        box-shadow: inset 0 0 0 1px white
+        +transition(opacity 1s)
 
-      label
+      &:nth-child(5n+2)
+        left: 50px
+
+      &:nth-child(5n+3)
+        left: 95px
+
+      &:nth-child(5n+4)
+        left: 140px
+
+      &:nth-child(5n+5)
+        left: 185px
+
+      &:nth-child(5) ~ li
+        top: 35px
+
+      & > label
         padding: 0
         margin: 0
+        cursor: pointer
 
         .frame
           display: table
@@ -868,6 +899,41 @@ footer
             display: table-cell
             vertical-align: middle
             line-height: 34px
+
+    & > label
+      opacity: 0
+      position: absolute
+      top: 5px
+      right: 10px
+      +transition(opacity 1s)
+
+  input
+    display: none
+
+    &:checked ~ ul
+      border: 1px solid white
+      height: 71px
+      +transition(1s)
+
+      li
+        opacity: 0
+        +transition(opacity 1s)
+
+      & > label.social-close
+        opacity: 1
+        +transition(opacity 1s)
+
+    &#social-close:checked + ul
+      border: none
+      +transition(1s)
+
+      li
+        opacity: 1
+        +transition(opacity 1s)
+
+      & > label.social-close
+        opacity: 0
+        +transition(opacity 1s)
 
         // .frame
         //   i

@@ -712,7 +712,9 @@ html(lang="en")
       
       script(src="/js/jquery-2.1.4.min.js")
       script(src="/js/webdevchallenge.js")
-      
+    
+    #reveal-footer
+    
     footer
       .container
         .row
@@ -732,17 +734,30 @@ html(lang="en")
               li Contact
               li Blog
           .col-xs-12.col-sm-3.text-center
+            input#social-1(type='radio', name='social')
+            input#social-2(type='radio', name='social')
+            input#social-3(type='radio', name='social')
+            input#social-4(type='radio', name='social')
+            input#social-5(type='radio', name='social')
+            input#social-6(type='radio', name='social')
+            input#social-7(type='radio', name='social')
+            input#social-8(type='radio', name='social')
+            input#social-9(type='radio', name='social')
+            input#social-10(type='radio', name='social')
+            input#social-close(type='radio', name='social')
+            
             ul.social.list-inline
-              li: label: .frame: i.fa.fa-twitter
-              li: label: .frame: i.fa.fa-github-alt
-              li: label: .frame: i.fa.fa-instagram
-              li: label: .frame: i.fa.fa-pinterest-p
-              li: label: .frame: i.fa.fa-google-plus
-              li: label: .frame: i.fa.fa-linkedin
-              li: label: .frame: i.fa.fa-stack-overflow
-              li: label: .frame: i.fa.fa-codepen
-              li: label: .frame: i.fa.fa-jsfiddle
-              li: label: .frame: i.fa.fa-trello
+              li: label(for='social-1'): .frame: i.fa.fa-twitter 
+              li: label(for='social-2'): .frame: i.fa.fa-github-alt
+              li: label(for='social-3'): .frame: i.fa.fa-instagram
+              li: label(for='social-4'): .frame: i.fa.fa-pinterest-p
+              li: label(for='social-5'): .frame: i.fa.fa-google-plus      
+              li: label(for='social-6'): .frame: i.fa.fa-linkedin
+              li: label(for='social-7'): .frame: i.fa.fa-stack-overflow
+              li: label(for='social-8'): .frame: i.fa.fa-codepen
+              li: label(for='social-9'): .frame: i.fa.fa-jsfiddle
+              li: label(for='social-10'): .frame: i.fa.fa-trello
+              label.social-close(for='social-close') &times;
 
       #footer        
         p.text-center.
