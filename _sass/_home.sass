@@ -324,10 +324,6 @@ section
     padding: 50px 0
     margin: 0
 
-  &:last-of-type
-    +box-shadow(0px 20px 20px -20px $text-color)
-    margin-bottom: 500px
-
 ////////////
 // SKILLS //
 ////////////
@@ -782,30 +778,44 @@ section#webdevchallenge
 ////////////
 // FOOTER //
 ////////////
+section:last-of-type
+  +box-shadow(0px 20px 20px -20px $text-color)
+  margin-bottom: 408px
+
 footer
   position: fixed
   z-index: -2
   bottom: 0
   width: 100%
+  height: 408px
   background-color: transparentize(black, 0.3)
-  padding: 20px
+  padding: 0
   color: white
 
   .container
     width: 100%
-    margin-bottom: 40px
+    padding: 10px
+    margin: 0
 
-  h1
-    position: absolute
-    top: 20px
-    right: 20px
-    display: inline-block
-    padding: 12px 10px
-    border: 1px solid white
-    border-radius: 50%
+  .h1-logo
+    text-align: center
+    h1
+      display: inline-block
+      padding: 8px 6px
+      margin: 10px auto
+      border: 1px solid white
+      border-radius: 50%
+      font-size: 1.5em
+
+      @media only screen and (min-width: 500px)
+        position: absolute
+        top: 20px
+        right: 20px
+        margin-left: -33.14065px
 
   h4
-    margin-top: 25px
+    @media only screen and (min-width: 500px)
+      margin-top: 25px
 
   p
     margin: 0 auto 10px
@@ -817,25 +827,57 @@ footer
     a:hover
       color: $secondary3
       text-decoration: none
-  ul
+
+  #footer
+    width: 100%
+    position: absolute
+    bottom: 10px
+    text-align: center
+    p
+      margin: 0
+      display: inline-block
+
+  ul.social
     list-style: none
-    margin-top: 25px
+    margin: 0
+    cursor: pointer
+    font-size: 1.1em
 
-    &#social
-      font-size: 1.1em
 
-      li
-        padding: 0 5px 10px 5px
+    @media only screen and (min-width: 500px)
+      margin-top: 25px
+
+    li
+      margin: 10px 5px 5px
+      +size(35px)
+      border: 1px solid white
+      border-radius: 50%
+      cursor: pointer
+
+      &:hover
+        background-color: red
+
+      label
+        padding: 0
+        margin: 0
 
         .frame
-          i
-            padding: 8px 9.5px
-            border: 1px solid white
-            border-radius: 50%
+          display: table
 
-            &.fa.fa-pinterest
-              padding: 6px 9.5px
-            &.fa.fa-codepen, &.fa.fa-google-plus
-              padding: 8px
-            &.fa.fa-jsfiddle
-              padding: 8px 7.5px
+          i
+            display: table-cell
+            vertical-align: middle
+            line-height: 34px
+
+        // .frame
+        //   i
+        //     padding: 8px 9.5px
+        //     border: 1px solid white
+        //     border-radius: 50%
+        //
+        //     &.fa.fa-pinterest
+        //       padding: 6px 9.5px
+        //     &.fa.fa-codepen, &.fa.fa-google-plus
+        //       padding: 8px
+        //     &.fa.fa-jsfiddle
+        //       padding: 8px 7.5px
