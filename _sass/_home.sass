@@ -94,19 +94,27 @@ header
             z-index: 2
             +filter(blur(0px))
             opacity: 1
-            +transition(all 3s ease)
+            +transition(all 2.5s ease)
 
           & ~ svg
             g#steel, g#wind, g#sea
               path
-                fill: transparent
-                stroke: none
-                +transition(all 2s ease)
+                +animation(hideAll 2s ease forwards)
+
+                +keyframes(hideAll)
+                  to
+                    fill: transparent
+                    stroke: none
+                    +transition(all 2s ease)
             g#land
               path
-                fill-opacity: 0.33
-                stroke: none
-                +transition(all 2s ease)
+                +animation(hideLand 2s ease forwards)
+
+                +keyframes(hideLand)
+                  to
+                    fill-opacity: 0.33
+                    stroke: none
+                    +transition(all 2s ease)
 
       &#develop-toggle
         &:checked
@@ -123,10 +131,14 @@ header
               z-index: 2
 
           & ~ svg path
-            fill: black
-            fill-opacity: 0.1
-            stroke: none
-            +transition(all 2s ease)
+            +animation(blacken 2s ease forwards)
+
+            +keyframes(blacken)
+              to
+                fill: black
+                fill-opacity: 0.1
+                stroke: none
+                +transition(all 2s ease)
 
           & ~ svg path:nth-of-type(4n+1)
             +transform(translate(200px, 200px) rotate(79deg) translateZ(0))
@@ -144,14 +156,21 @@ header
             +transition(background 2s ease)
 
           & ~ svg path
-            fill: white
-            stroke: $text-color
-            stroke-width: 1px
-            +transition(all 2s ease)
+            stroke-dasharray: 0
+            stroke-dashoffset: 0
+            +animation(outline 2s ease forwards)
+
+            +keyframes(outline)
+              to
+                fill: white
+                stroke: $text-color
+                stroke-width: 1px
+                +transition(all 2s ease)
+                stroke-dasharray: 0
+                stroke-dashoffset: 0
 
             &:hover
               fill: black
-              +transition
 
     label
       z-index: 0
@@ -264,46 +283,58 @@ header
         +transform-origin(center center)
         +transition(all 2s ease)
         +transform(translate(0))
+        stroke-dasharray: 1000
+        stroke-dashoffset: 1000
+        +animation(draw 3s linear forwards)
 
         &:active, &:hover, &:focus
           opacity: 0.5
           +transition
 
-      +keyframes(p1)
-        0%
-          +transform(translateX(-1000px) translateY(-1200px) rotate(320deg) translateZ(0))
-        100%
-          +transform(translate(0))
+        +keyframes(draw)
+          0%
+            fill: white
+            stroke: $text-color
+          33%
+            fill: white
+          100%
+            stroke-dashoffset: 0
 
-      path:nth-of-type(4n+1)
-        +animation(p1 1s ease 1)
-
-      +keyframes(p2)
-        0%
-          +transform(translate(100px) translateY(1200px) rotate(350deg) translateZ(0))
-        100%
-          +transform(translate(0))
-
-      path:nth-of-type(4n+2)
-        +animation(p2 1s ease 1)
-
-      +keyframes(p3)
-        0%
-          +transform(translate(-1000px) translateY(-600px) rotate(325deg) translateZ(0))
-        100%
-          +transform(translate(0))
-
-      path:nth-of-type(4n+3)
-        +animation(p3 1s ease 1)
-
-      +keyframes(p4)
-        0%
-          +transform(translate(500px) translateY(300px) rotate(348deg) translateZ(0))
-        100%
-          +transform(translate(0))
-
-      path:nth-of-type(4n+4)
-        +animation(p4 1s ease 1)
+      // +keyframes(p1)
+      //   0%
+      //     +transform(translateX(-1000px) translateY(-1200px) rotate(320deg) translateZ(0))
+      //   100%
+      //     +transform(translate(0))
+      //
+      // path:nth-of-type(4n+1)
+      //   +animation(p1 1s ease 1)
+      //
+      // +keyframes(p2)
+      //   0%
+      //     +transform(translate(100px) translateY(1200px) rotate(350deg) translateZ(0))
+      //   100%
+      //     +transform(translate(0))
+      //
+      // path:nth-of-type(4n+2)
+      //   +animation(p2 1s ease 1)
+      //
+      // +keyframes(p3)
+      //   0%
+      //     +transform(translate(-1000px) translateY(-600px) rotate(325deg) translateZ(0))
+      //   100%
+      //     +transform(translate(0))
+      //
+      // path:nth-of-type(4n+3)
+      //   +animation(p3 1s ease 1)
+      //
+      // +keyframes(p4)
+      //   0%
+      //     +transform(translate(500px) translateY(300px) rotate(348deg) translateZ(0))
+      //   100%
+      //     +transform(translate(0))
+      //
+      // path:nth-of-type(4n+4)
+      //   +animation(p4 1s ease 1)
 
 //////////////////////
 // INTERACTIVE TAGS //
