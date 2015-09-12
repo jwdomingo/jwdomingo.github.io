@@ -99,9 +99,9 @@ header
           & ~ svg
             g#land, g#steel, g#wind, g#sea
               path
-                +animation(hideLand 2s ease forwards)
+                +animation(dim 2s ease forwards)
 
-                +keyframes(hideLand)
+                +keyframes(dim)
                   to
                     fill-opacity: 0.25
                     stroke: none
