@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blogpost
 title:  "Telegraph Academy Prep II | Day 01"
 date:   2015-08-17 19:00:00
 categories: telegraph-academy telegraph-prep bootcamp
