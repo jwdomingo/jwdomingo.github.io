@@ -53,12 +53,12 @@ $ty-text-md:  $h-sub-md + $h-tag-md + 30px
 html
   overflow-x: hidden
 
-body
+body#home-body
   position: relative
   z-index: -1
   max-width: 100vw
 
-header
+header#home-header
   position: relative
   z-index: 1
   height: 100vh
@@ -95,7 +95,7 @@ header
             opacity: 1
             +transition(all 2.5s ease)
 
-          & ~ svg
+          & ~ svg#svg-hero-bkg
             g#land, g#steel, g#wind, g#sea
               path
                 +animation(dim 2s ease forwards)
@@ -120,7 +120,7 @@ header
             &#about-text
               z-index: 2
 
-          & ~ svg path
+          & ~ svg#svg-hero-bkg path
             +animation(blacken 2s ease forwards)
 
             +keyframes(blacken)
@@ -130,13 +130,13 @@ header
                 stroke: none
                 +transition(all 2s ease)
 
-          & ~ svg path:nth-of-type(4n+1)
+          & ~ svg#svg-hero-bkg path:nth-of-type(4n+1)
             +transform(translate(200px, 200px) rotate(79deg) translateZ(0))
-          & ~ svg path:nth-of-type(4n+2)
+          & ~ svg#svg-hero-bkg path:nth-of-type(4n+2)
             +transform(translate(-800px, 400px) rotate(82deg) translateZ(0))
-          & ~ svg path:nth-of-type(4n+3)
+          & ~ svg#svg-hero-bkg path:nth-of-type(4n+3)
             +transform(translate(-800px, -600px) rotate(92deg) translateZ(0))
-          & ~ svg path:nth-of-type(4n+4)
+          & ~ svg#svg-hero-bkg path:nth-of-type(4n+4)
             +transform(translate(700px, -900px) rotate(75deg) translateZ(0))
 
       &#dataviz-toggle
@@ -145,7 +145,7 @@ header
             background: white
             +transition(background 2s ease)
 
-          & ~ svg path
+          & ~ svg#svg-hero-bkg path
             stroke-dasharray: 0
             stroke-dashoffset: 0
             +animation(outline 2s ease forwards)
@@ -266,7 +266,7 @@ header
         +size($h-prof-md)
         +transform(translate(-50%, $ty-prof-md))
 
-    svg
+    svg#svg-hero-bkg
       +size(100% 100vh)
 
       path
