@@ -1,0 +1,30 @@
+---
+layout: blogpost
+readwrite: false
+---
+
+<div class="blogroll-preview">
+
+  <ul class="blogpost-list">
+    {% for post in site.posts %}
+      <li>
+        <h2>
+          <a class="blogpost-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+
+        {% assign wordCount = post.content | number_of_words %}
+        {% assign readTime = wordCount | divided_by:250 %}
+        {% assign remainder = wordCount | modulo:250 %}
+
+        {% if remainder > 0 %} {% assign readTime = readTime | plus:1 %} {% endif %}
+
+        <h6 class="blogpost-meta"><small>read</small> {{ readTime }} min ({{ wordCount }} words) / <small>write</small> {{ post.date | date: "%b %-d, %Y" }}</h6>
+
+        <p class="blogpost-preview">{{ post.content | strip_html | truncatewords:50}} <a class="blogpost-readmore" href="{{ post.url | prepend: site.baseurl }}"><small>Read more &rArr;</small></a></p>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
+
+</div>

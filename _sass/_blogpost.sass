@@ -1,3 +1,7 @@
+*
+  -webkit-font-smoothing: antialiased
+  font-smoothing: antialiased
+
 ::selection
   background: $accentA2
 
@@ -8,17 +12,152 @@ a, a:visited
     color: $text-color
     text-decoration: none
 
+body
+  background: #fcfcfc
+
 .container-fluid
+
   .row
     .col
       padding: 0
 
       header.blogpost-header
         min-height: 100vh
-        background: transparentize(black, 0.3)
+        width: 25%
+        position: fixed
+        background:
+          image: url('/assets/img/goldengate.svg')
+          position: center top
+          repeat: no-repeat
+          size: cover
+        +animation(shrink 0.5s ease-out)
+
+        @keyframes shrink
+          from
+            width: 100%
+          to
+            width: 25%
+
+        aside
+          min-height: 100vh
+          background-color: transparentize(black, 0.3)
+          display: flex
+          +align-items(center)
+          +justify-content(center)
+
+          .aside-content
+            text-align: center
+            color: white
+
+            svg
+              height: 75px
+              margin: 0 auto
+
+              path.logo-path
+                fill: white
+                +transform(rotate(0deg))
+                transform-origin: 50%
+                +transition(transform 0.2s)
+
+              path.frame-path
+                stroke: white
+
+              &:hover
+                path.logo-path
+                  +transform(rotate(30deg))
+                  transform-origin: 50%
+                  +transition(transform 0.5s)
+
+            h3
+              margin: 0
+              padding: 75px 8px 0
+
+            hr
+              border: 0
+              width: 85%
+              height: 1px
+              background-image: linear-gradient(to right, transparentize(white, 0.95), transparentize(white, 0.25), transparentize(white, 0.95))
+              margin: 25px auto
+
+            p
+              width: 80%
+              color: transparentize(white, 0.25)
+              font-size: 0.9em
+              margin: 0 auto
+              line-height: 1.5
+
+      header.blogroll-header
+        width: 100%
+        position: relative
+        background-attachment: fixed
+        +animation(grow 0.5s ease-out)
+
+        @keyframes grow
+          from
+            width: 25%
+          to
+            width: 100%
+
+        a.blog-logo
+          svg
+            margin: 15vh 0 0
+
+        p
+          max-width: 350px
+
+        p.blogpost-preview
+          max-width: 500px
+          text-align: justify
+
+        ul.blogpost-list
+          margin: 25px auto 0
+          height: 200px
+          max-width: 95%
+          overflow-y: auto
+          border: 1px solid transparentize(white, 0.7)
+          padding: 20px
+          +filter(blur(none))
+
+          li
+            +filter(blur(none))
 
       article.blogpost-content
         padding: 100px 150px
 
-svg
-  height: 1em
+        h1, h3, h5
+          text-align: center
+
+        h1.blogpost-title
+          font-weight: 700
+          font-size: 3.5em
+          margin: 0
+
+        h3
+          color: lighten(black, 60%)
+          margin: 25px auto 0
+
+        h5
+          text-transform: uppercase
+          margin: 50px auto
+          font-weight: 600
+          color: $secondary4
+
+          small
+            color: $primary3
+
+        hr
+          border: 0
+          height: 1px
+          background-image: linear-gradient(to right, transparentize(black, 0.95), transparentize(black, 0.25), transparentize(black, 0.95))
+          margin: 50px auto 25px
+
+
+ul.blogpost-list
+  list-style: none
+  margin: 50px 0 0
+
+  li
+    margin: 0 0 25px
+
+    h2
+      margin: 0 0 5px
