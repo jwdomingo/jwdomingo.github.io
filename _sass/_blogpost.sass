@@ -23,13 +23,14 @@ body
 
       header.blogpost-header
         min-height: 100vh
-        width: 25%
         position: fixed
+
         background:
           image: url('/assets/img/goldengate.svg')
           position: center top
           repeat: no-repeat
           size: cover
+
         +animation(shrink 0.5s ease-out)
 
         @keyframes shrink
@@ -70,7 +71,7 @@ body
 
             h3
               margin: 0
-              padding: 75px 8px 0
+              margin: 75px 8px 0
 
             hr
               border: 0
@@ -86,10 +87,43 @@ body
               margin: 0 auto
               line-height: 1.5
 
+        @media only screen and (min-width: 768px)
+          width: 25%
+
+        @media only screen and (max-width: 768px)
+          position: fixed
+          z-index: 1
+          width: 100%
+          min-height: 0
+          height: 200px
+          background:
+            attachment: fixed
+            size: contain
+
+          aside
+            min-height: 0
+            height: 200px
+
+            .aside-content
+              svg
+                height: 60px
+
+              h3, hr, p
+                visibility: hidden
+
+        @media only screen and (max-width: 443px)
+          position: fixed
+          z-index: 1
+          width: 100%
+          min-height: 0
+          height: 200px
+          background:
+            attachment: fixed
+            size: auto 200px
+
       header.blogroll-header
         width: 100%
         position: relative
-        background-attachment: fixed
         +animation(grow 0.5s ease-out)
 
         @keyframes grow
@@ -110,19 +144,56 @@ body
           text-align: justify
 
         ul.blogpost-list
-          margin: 25px auto 0
+          list-style: none
+          margin: 50px auto 0
           height: 200px
           max-width: 95%
-          overflow-y: auto
+          overflow-y: scroll
           border: 1px solid transparentize(white, 0.7)
           padding: 20px
           +filter(blur(none))
 
+          &::-webkit-scrollbar
+            width: 5px !important
+
+          &::-webkit-scrollbar *
+            background: transparent !important
+
+          &::-webkit-scrollbar-thumb
+            background: transparent !important
+            border-radius: 5px
+
+          &:hover, &:focus, &:active
+            &::-webkit-scrollbar-thumb
+              background: transparentize(white, 0.7) !important
+
           li
-            +filter(blur(none))
+            margin: 0 0 25px
+
+            a, a:visited
+              color: $secondary2
+
+              &:hover
+                color: $tertiary2
+
+            h2
+              font-size: 2em
+              margin: 0 0 5px
+
+            h6
+              font-size: 0.8em
+              margin: 10px auto
+
+
 
       article.blogpost-content
-        padding: 100px 150px
+        position: relative
+        z-index: 0
+        padding: 10% 15%
+
+        @media only screen and (max-width: 768px)
+          margin-top: 200px
+          padding: 50px 20px
 
         h1, h3, h5
           text-align: center
@@ -151,13 +222,36 @@ body
           background-image: linear-gradient(to right, transparentize(black, 0.95), transparentize(black, 0.25), transparentize(black, 0.95))
           margin: 50px auto 25px
 
+    .col-fullbar
+      header.blogroll-header
+        min-height: 100vh
+        background-size: cover
 
-ul.blogpost-list
-  list-style: none
-  margin: 50px 0 0
+        aside
+          min-height: 100vh
+          background-color: transparentize(black, 0.3)
 
-  li
-    margin: 0 0 25px
+          .aside-content
+            svg
+              height: 45px
+              margin: 0
 
-    h2
-      margin: 0 0 5px
+            h3, hr, p
+              visibility: visible
+
+            h3
+              margin: 20px 8px 0
+              font-size: 1.3em
+
+            hr
+              margin: 15px auto
+
+            p
+              font-size: 0.8em
+
+            ul
+              margin-top: 25px
+              padding: 10px
+
+              li p
+                width: 95%
