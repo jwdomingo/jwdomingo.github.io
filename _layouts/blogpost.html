@@ -11,8 +11,8 @@ css: blogpost
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col col-sidebar {% if page.readwrite == false %}col-sm-12{% else %}col-sm-3{% endif %}">
-          <header class="blogpost-header {% if page.readwrite == false %}blogroll-header{% endif %}">
+        <div class="col{% if page.readwrite == false %} col-fullbar col-sm-12{% else %} col-sidebar col-sm-3{% endif %}">
+          <header class="blogpost-header{% if page.readwrite == false %} blogroll-header{% endif %}">
             <aside>
               <div class="aside-content">
                 <a class="blog-logo" href="{% if page.readwrite != false %}/blog/{% else %}/{% endif %}">
