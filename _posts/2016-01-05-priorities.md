@@ -2,7 +2,7 @@
 layout: blogpost
 title:  "Priorities"
 subtitle: "you know, that thing you've been avoiding"
-date:   2016-01-05 11:59:56
+date:   2016-01-05 11:27:25
 categories: blog theschemeofthings
 ---
 
