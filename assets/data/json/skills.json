@@ -91,7 +91,7 @@
   },
   {
     "Skill":"Illustrator",
-    "Level":10,
+    "Level":9,
     "Type":"design",
     "Group":"graphic"
   },
@@ -139,13 +139,13 @@
   },
   {
     "Skill":"JavaScript",
-    "Level":8,
+    "Level":9,
     "Type":"develop",
     "Group":"js"
   },
   {
     "Skill":"jQuery",
-    "Level":5,
+    "Level":9,
     "Type":"develop",
     "Group":"js"
   },
@@ -181,13 +181,13 @@
   },
   {
     "Skill":"Sass",
-    "Level":8,
+    "Level":9,
     "Type":"web",
     "Group":"css"
   },
   {
     "Skill":"Chrome Developer Tools",
-    "Level":9,
+    "Level":8,
     "Type":"web",
     "Group":"dev"
   },
