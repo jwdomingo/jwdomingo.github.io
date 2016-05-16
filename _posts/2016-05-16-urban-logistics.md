@@ -5,6 +5,9 @@ subtitle: "Creating an interactive dashboard with dimensional charts and crossfi
 date:   2016-05-16 12:49:00
 categories: blog theschemeofthings
 ---
+
+<img width="50%" alt="Urban Logistics for Postmates" src="/assets/projects/urban-logistics/urbanlogistics.png">
+
 Urban Logistics is a sample data visualization dashboard for marketing and growth analysis using generic courier delivery service data provided by [Postmates](https://postmates.com/developer).
 
 <img width="100%" alt="Urban Logistics Dashboard" src="/assets/projects/urban-logistics/dashboard.png">
