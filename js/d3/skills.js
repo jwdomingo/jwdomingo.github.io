@@ -28,9 +28,12 @@ d3.json('/js/d3/data/json/skills.json', function (error, json) {
       var edge = {};
       dataset.nodes.forEach(function (node, i) {
         if (node.targets.length) {
-          dataset.edges.push({
-            source: i,
-            target: skills[node.skill]
+          node.targets.forEach(function (target) {
+            console.log(skills[target])
+            dataset.edges.push({
+              source: i,
+              target: skills[target]
+            })
           })
         }
       })
