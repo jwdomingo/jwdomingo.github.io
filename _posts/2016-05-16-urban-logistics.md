@@ -2,7 +2,7 @@
 layout: blogpost
 title:  "Urban Logistics"
 subtitle: "Creating an interactive dashboard with dimensional charts and crossfilters"
-date:   2016-05-16 12:49:00
+date:   2016-05-12 12:30:00
 categories: blog theschemeofthings
 ---
 
