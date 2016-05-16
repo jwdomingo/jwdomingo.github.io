@@ -1,40 +1,47 @@
-  ////////////
- /*  DATA  */
-////////////
-	d3.json('/js/d3/data/json/skills.json', function(error, json){
+d3.json('/js/d3/data/json/skills.json', function (error, json) {
+  if (error) {
+    console.log('Could not load json file:', error)
+    throw new Error('Could not load json file:' + error)
+  } else {
 
-		if (error) {
-			console.log(error);
-		} else {
+    //////////////////////////
+    /*  DRAW VISUALIZATION  */
+    //////////////////////////
+    chart(0.5)
 
-			//////////////////////////
-		 /*  DRAW VISUALIZATION  */
-		//////////////////////////
-			chart(0.5);
+    function chart(jitter) {
+      var dataset = json;
+      var collisionPadding = 4;
+      var minCollisionRadius = 12;
+      var maxRadius;
+      var gravX = 1;
+      var gravY = 1;
+      var centerNode = "HTML5";
+      var bubbleSelected = false;
 
-			function chart(jitter) {
-				var dataset,
-						collisionPadding = 4,
-			  		minCollisionRadius = 12,
-						maxRadius,
-						gravX = 1,
-						gravY = 1,
-						centerNode = "HTML5",
-						bubbleSelected = false;
+      var skills = {}
+      dataset.nodes.forEach(function (node, i) {
+        skills[node.skill] = i
+      })
 
-				dataset = json;
+      dataset.edges = [];
+      var edge = {};
+      dataset.nodes.forEach(function (node, i) {
+        if (node.targets.length) {
+          dataset.edges.push({
+            source: i,
+            target: skills[node.skill]
+          })
+        }
+      })
 
-					///////////
-				 /*  SVG  */
-				///////////
+      var svg = d3.select(".skills-container")
+        .append("svg")
+        .attr("id", "skills-vis");
+        //.call(responsivefy);
 
-					var svg = d3.select(".skills-container")
-						.append("svg")
-						.attr("id", "skills-vis");
-						//.call(responsivefy);
-
-					var w = document.getElementById('skills-vis').getBoundingClientRect().width;
-					var h = document.getElementById('skills-vis').getBoundingClientRect().height;
+      var w = document.getElementById('skills-vis').getBoundingClientRect().width;
+      var h = document.getElementById('skills-vis').getBoundingClientRect().height;
 
 					// if (w <= h) {
 					// 	gravY = 8;
