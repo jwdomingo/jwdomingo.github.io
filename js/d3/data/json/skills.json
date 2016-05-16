@@ -88,7 +88,7 @@
       "skill": "react",
       "level": 7,
       "type": "frontend",
-      "targets": "redux",
+      "targets": ["redux"],
       "description": "I love React because it allows developers to create highly manageable and componentized frontends that can accurately describe the UI at any given time. The virtual DOM makes rendering incredibly fast while JSX enhances JavaScript with markup capabilities instead of giving HTML clunky superpowers it's not meant to have."
     },
     {
@@ -165,7 +165,7 @@
       "skill": "express",
       "level": 8,
       "type": "backend",
-      "targets": [],
+      "targets": ["node"],
       "description": ""
     },
     {
@@ -179,7 +179,7 @@
       "skill": "node",
       "level": 9,
       "type": "backend",
-      "targets": ["express"],
+      "targets": ["express", "python"],
       "description": ""
     },
     {
@@ -291,7 +291,7 @@
       "skill": "webpack",
       "level": 8,
       "type": "devops",
-      "targets": ["git", "require"],
+      "targets": ["git", "requirejs"],
       "description": ""
     },
     {
@@ -305,21 +305,21 @@
       "skill": "illustrator",
       "level": 8,
       "type": "design",
-      "targets": ["photoshop", "indesign"],
+      "targets": ["photoshop", "indesign", "sketch"],
       "description": ""
     },
     {
       "skill": "indesign",
       "level": 5,
       "type": "design",
-      "targets": [],
+      "targets": ["illustrator"],
       "description": ""
     },
     {
       "skill": "photoshop",
       "level": 7,
       "type": "design",
-      "targets": [],
+      "targets": ["illustrator"],
       "description": ""
     },
     {
@@ -328,236 +328,6 @@
       "type": "design",
       "targets": ["cocoascript", "illustrator"],
       "description": ""
-    }
-  ],
-  "edges": [
-    {
-      "source": 0,
-      "target": 2
-    },
-    {
-      "source": 1,
-      "target": 2
-    },
-    {
-      "source": 2,
-      "target": 11
-    },
-    {
-      "source": 3,
-      "target": 6
-    },
-    {
-      "source": 3,
-      "target": 7
-    },
-    {
-      "source": 4,
-      "target": 6
-    },
-    {
-      "source": 5,
-      "target": 3
-    },
-    {
-      "source": 5,
-      "target": 7
-    },
-    {
-      "source": 6,
-      "target": 3
-    },
-    {
-      "source": 7,
-      "target": 38
-    },
-    {
-      "source": 8,
-      "target": 9
-    },
-    {
-      "source": 9,
-      "target": 10
-    },
-    {
-      "source": 9,
-      "target": 11
-    },
-    {
-      "source": 10,
-      "target": 11
-    },
-    {
-      "source": 11,
-      "target": 41
-    },
-    {
-      "source": 12,
-      "target": 17
-    },
-    {
-      "source": 13,
-      "target": 14
-    },
-    {
-      "source": 13,
-      "target": 16
-    },
-    {
-      "source": 14,
-      "target": 16
-    },
-    {
-      "source": 15,
-      "target": 8
-    },
-    {
-      "source": 15,
-      "target": 44
-    },
-    {
-      "source": 16,
-      "target": 9
-    },
-    {
-      "source": 16,
-      "target": 17
-    },
-    {
-      "source": 17,
-      "target": 9
-    },
-    {
-      "source": 18,
-      "target": 19
-    },
-    {
-      "source": 19,
-      "target": 21
-    },
-    {
-      "source": 20,
-      "target": 7
-    },
-    {
-      "source": 21,
-      "target": 20
-    },
-    {
-      "source": 22,
-      "target": 20
-    },
-    {
-      "source": 23,
-      "target": 24
-    },
-    {
-      "source": 23,
-      "target": 25
-    },
-    {
-      "source": 24,
-      "target": 25
-    },
-    {
-      "source": 25,
-      "target": 38
-    },
-    {
-      "source": 26,
-      "target": 25
-    },
-    {
-      "source": 27,
-      "target": 23
-    },
-    {
-      "source": 27,
-      "target": 26
-    },
-    {
-      "source": 28,
-      "target": 31
-    },
-    {
-      "source": 29,
-      "target": 38
-    },
-    {
-      "source": 30,
-      "target": 29
-    },
-    {
-      "source": 31,
-      "target": 29
-    },
-    {
-      "source": 32,
-      "target": 44
-    },
-    {
-      "source": 33,
-      "target": 32
-    },
-    {
-      "source": 34,
-      "target": 32
-    },
-    {
-      "source": 34,
-      "target": 33
-    },
-    {
-      "source": 35,
-      "target": 36
-    },
-    {
-      "source": 35,
-      "target": 37
-    },
-    {
-      "source": 36,
-      "target": 30
-    },
-    {
-      "source": 37,
-      "target": 36
-    },
-    {
-      "source": 39,
-      "target": 38
-    },
-    {
-      "source": 40,
-      "target": 41
-    },
-    {
-      "source": 41,
-      "target": 38
-    },
-    {
-      "source": 42,
-      "target": 41
-    },
-    {
-      "source": 43,
-      "target": 29
-    },
-    {
-      "source": 43,
-      "target": 42
-    },
-    {
-      "source": 44,
-      "target": 38
-    },
-    {
-      "source": 45,
-      "target": 38
-    },
-    {
-      "source": 45,
-      "target": 44
     }
   ]
 }
