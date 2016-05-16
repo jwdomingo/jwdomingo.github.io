@@ -1,280 +1,280 @@
 {
   "nodes": [
     {
-      "skill": "MongoDB",
+      "skill": "ajax",
       "level": 5,
-      "type": "dba",
-      "group": "data"
+      "type": "frontend",
+      "description": ""
     },
     {
-      "skill": "MS Access",
-      "level": 9,
-      "type": "dba",
-      "group": "data"
+      "skill": "angular",
+      "level": 7,
+      "type": "frontend",
+      "description": ""
     },
     {
-      "skill": "SQL",
+      "skill": "backbone",
+      "level": 5,
+      "type": "frontend",
+      "description": ""
+    },
+    {
+      "skill": "bootstrap",
       "level": 8,
-      "type": "dba",
-      "group": "data"
+      "type": "frontend",
+      "description": ""
     },
     {
-      "skill": "Illustrator",
+      "skill": "canvas",
+      "level": 6,
+      "type": "frontend",
+      "description": ""
+    },
+    {
+      "skill": "css",
       "level": 10,
-      "type": "design",
-      "group": "graphic"
+      "type": "frontend",
+      "description": ""
     },
     {
-      "skill": "InDesign",
+      "skill": "flexbox",
       "level": 8,
-      "type": "design",
-      "group": "graphic"
+      "type": "frontend",
+      "description": ""
     },
     {
-      "skill": "Material Design",
+      "skill": "html",
+      "level": 10,
+      "type": "frontend",
+      "description": ""
+    },
+    {
+      "skill": "jade",
+      "level": 9,
+      "type": "frontend",
+      "description": ""
+    },
+    {
+      "skill": "javascript",
+      "level": 10,
+      "type": "frontend",
+      "description": "I build end to end features using JavasScript because I value its flexibility, extensibility, and rapidly reinventing ecosystem. It brings together the best of object-oriented and functional programming and with exciting new features in ES6/7, I get more control over concurrency and asynchronicity across the stack."
+    },
+    {
+      "skill": "jquery",
+      "level": 8,
+      "type": "frontend",
+      "description": ""
+    },
+    {
+      "skill": "meteor",
+      "level": 5,
+      "type": "frontend",
+      "description": ""
+    },
+    {
+      "skill": "react",
+      "level": 7,
+      "type": "frontend",
+      "description": "I love React because it allows developers to create highly manageable and componentized frontends that can accurately describe the UI at any given time. The virtual DOM makes rendering incredibly fast while JSX enhances JavaScript with markup capabilities instead of giving HTML clunky superpowers it's not meant to have."
+    },
+    {
+      "skill": "redux",
+      "level": 8,
+      "type": "frontend",
+      "description": ""
+    },
+    {
+      "skill": "sass",
+      "level": 9,
+      "type": "frontend",
+      "description": ""
+    },
+    {
+      "skill": "svg",
+      "level": 7,
+      "type": "frontend",
+      "description": ""
+    },
+    {
+      "skill": "crossfilter",
+      "level": 7,
+      "type": "datavis",
+      "description": ""
+    },
+    {
+      "skill": "d3",
+      "level": 8,
+      "type": "datavis",
+      "description": ""
+    },
+    {
+      "skill": "dimensional charting",
+      "level": 7,
+      "type": "datavis",
+      "description": ""
+    },
+    {
+      "skill": "geojson",
+      "level": 7,
+      "type": "datavis",
+      "description": ""
+    },
+    {
+      "skill": "leaflet",
+      "level": 6,
+      "type": "datavis",
+      "description": ""
+    },
+    {
+      "skill": "matlab",
+      "level": 5,
+      "type": "datavis",
+      "description": ""
+    },
+    {
+      "skill": "express",
+      "level": 8,
+      "type": "backend",
+      "description": ""
+    },
+    {
+      "skill": "jekyll",
+      "level": 8,
+      "type": "backend",
+      "description": ""
+    },
+    {
+      "skill": "node",
+      "level": 9,
+      "type": "backend",
+      "description": ""
+    },
+    {
+      "skill": "python",
+      "level": 5,
+      "type": "backend",
+      "description": ""
+    },
+    {
+      "skill": "access",
+      "level": 9,
+      "type": "database",
+      "description": ""
+    },
+    {
+      "skill": "mongo",
+      "level": 8,
+      "type": "database",
+      "description": ""
+    },
+    {
+      "skill": "mysql",
+      "level": 7,
+      "type": "database",
+      "description": ""
+    },
+    {
+      "skill": "postgres",
+      "level": 8,
+      "type": "database",
+      "description": ""
+    },
+    {
+      "skill": "redis",
+      "level": 5,
+      "type": "database",
+      "description": ""
+    },
+    {
+      "skill": "sqlite",
+      "level": 7,
+      "type": "database",
+      "description": ""
+    },
+    {
+      "skill": "chai",
+      "level": 6,
+      "type": "devops",
+      "description": ""
+    },
+    {
+      "skill": "cloudfront",
+      "level": 7,
+      "type": "devops",
+      "description": ""
+    },
+    {
+      "skill": "git",
+      "level": 9,
+      "type": "devops",
+      "description": ""
+    },
+    {
+      "skill": "grunt",
+      "level": 6,
+      "type": "devops",
+      "description": ""
+    },
+    {
+      "skill": "gulp",
+      "level": 5,
+      "type": "devops",
+      "description": ""
+    },
+    {
+      "skill": "mocha",
+      "level": 7,
+      "type": "devops",
+      "description": ""
+    },
+    {
+      "skill": "requirejs",
+      "level": 6,
+      "type": "devops",
+      "description": ""
+    },
+    {
+      "skill": "s3",
       "level": 4,
+      "type": "devops",
+      "description": ""
+    },
+    {
+      "skill": "webpack",
+      "level": 8,
+      "type": "devops",
+      "description": ""
+    },
+    {
+      "skill": "cocoascript",
+      "level": 6,
       "type": "design",
-      "group": "graphic"
+      "description": ""
     },
     {
-      "skill": "Photoshop",
+      "skill": "illustrator",
+      "level": 8,
+      "type": "design",
+      "description": ""
+    },
+    {
+      "skill": "indesign",
+      "level": 5,
+      "type": "design",
+      "description": ""
+    },
+    {
+      "skill": "photoshop",
+      "level": 7,
+      "type": "design",
+      "description": ""
+    },
+    {
+      "skill": "sketch",
       "level": 9,
       "type": "design",
-      "group": "graphic"
-    },
-    {
-      "skill": "Sketch",
-      "level": 10,
-      "type": "design",
-      "group": "graphic"
-    },
-    {
-      "skill": "Bash",
-      "level": 4,
-      "type": "dev",
-      "group": "code"
-    },
-    {
-      "skill": "BASIC",
-      "level": 9,
-      "type": "dev",
-      "group": "code"
-    },
-    {
-      "skill": "Python",
-      "level": 3,
-      "type": "dev",
-      "group": "code"
-    },
-    {
-      "skill": "Scheme",
-      "level": 2,
-      "type": "dev",
-      "group": "code"
-    },
-    {
-      "skill": "Swift",
-      "level": 5,
-      "type": "dev",
-      "group": "code"
-    },
-    {
-      "skill": "VBA",
-      "level": 10,
-      "type": "dev",
-      "group": "code"
-    },
-    {
-      "skill": "VB.NET",
-      "level": 6,
-      "type": "dev",
-      "group": "code"
-    },
-    {
-      "skill": "Git",
-      "level": 7,
-      "type": "dev",
-      "group": "devtools"
-    },
-    {
-      "skill": "Visual Studio",
-      "level": 7,
-      "type": "dev",
-      "group": "ide"
-    },
-    {
-      "skill": "xCode",
-      "level": 7,
-      "type": "dev",
-      "group": "ide"
-    },
-    {
-      "skill": "Audacity",
-      "level": 1,
-      "type": "media",
-      "group": "sound"
-    },
-    {
-      "skill": "GarageBand",
-      "level": 6,
-      "type": "media",
-      "group": "sound"
-    },
-    {
-      "skill": "After Effects",
-      "level": 1,
-      "type": "media",
-      "group": "video"
-    },
-    {
-      "skill": "iMovie",
-      "level": 8,
-      "type": "media",
-      "group": "video"
-    },
-    {
-      "skill": "Kinetic Typography",
-      "level": 2,
-      "type": "media",
-      "group": "video"
-    },
-    {
-      "skill": "MATLAB",
-      "level": 6,
-      "type": "viz",
-      "group": "stats"
-    },
-    {
-      "skill": "R",
-      "level": 2,
-      "type": "viz",
-      "group": "stats"
-    },
-    {
-      "skill": "D3.js",
-      "level": 7,
-      "type": "viz",
-      "group": "web"
-    },
-    {
-      "skill": "JSON",
-      "level": 8,
-      "type": "viz",
-      "group": "web"
-    },
-    {
-      "skill": "SVG",
-      "level": 8,
-      "type": "viz",
-      "group": "web"
-    },
-    {
-      "skill": "Bourbon",
-      "level": 9,
-      "type": "web",
-      "group": "css"
-    },
-    {
-      "skill": "CSS3",
-      "level": 9,
-      "type": "web",
-      "group": "css"
-    },
-    {
-      "skill": "Flexbox",
-      "level": 9,
-      "type": "web",
-      "group": "css"
-    },
-    {
-      "skill": "Sass",
-      "level": 8,
-      "type": "web",
-      "group": "css"
-    },
-    {
-      "skill": "Chrome DevTools",
-      "level": 9,
-      "type": "web",
-      "group": "devtools"
-    },
-    {
-      "skill": "Firebug",
-      "level": 1,
-      "type": "web",
-      "group": "devtools"
-    },
-    {
-      "skill": "Safari Web Inspector",
-      "level": 9,
-      "type": "web",
-      "group": "devtools"
-    },
-    {
-      "skill": "Bootstrap",
-      "level": 10,
-      "type": "web",
-      "group": "frame"
-    },
-    {
-      "skill": "Foundation",
-      "level": 1,
-      "type": "web",
-      "group": "frame"
-    },
-    {
-      "skill": "Skeleton",
-      "level": 5,
-      "type": "web",
-      "group": "frame"
-    },
-    {
-      "skill": "HTML5",
-      "level": 9,
-      "type": "web",
-      "group": "html"
-    },
-    {
-      "skill": "Jade",
-      "level": 10,
-      "type": "web",
-      "group": "html"
-    },
-    {
-      "skill": "CoffeeScript",
-      "level": 3,
-      "type": "web",
-      "group": "js"
-    },
-    {
-      "skill": "JavaScript",
-      "level": 8,
-      "type": "web",
-      "group": "js"
-    },
-    {
-      "skill": "jQuery",
-      "level": 5,
-      "type": "web",
-      "group": "js"
-    },
-    {
-      "skill": "Parallax",
-      "level": 5,
-      "type": "web",
-      "group": "js"
-    },
-    {
-      "skill": "Jekyll",
-      "level": 9,
-      "type": "web",
-      "group": "site"
-    },
-    {
-      "skill": "WordPress",
-      "level": 6,
-      "type": "web",
-      "group": "site"
+      "description": ""
     }
   ],
   "edges": [
