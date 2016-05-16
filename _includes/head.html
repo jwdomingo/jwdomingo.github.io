@@ -8,7 +8,9 @@
 
 <link rel="stylesheet" type="text/css" href="/css/bootstrap/css/bootstrap.min.css">
 
-<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/{% if layout.css %}{{ layout.css }}{% else %}main{% endif %}.css">
+<link rel='stylesheet' type='text/css' href='/css/font-awesome/css/font-awesome.min.css'>
+
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/{% if page.css %}{{ page.css }}{% elsif layout.css %}{{ layout.css }}{% else %}main{% endif %}.css">
 
 <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url }}">
 
