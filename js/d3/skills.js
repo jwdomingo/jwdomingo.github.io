@@ -38,9 +38,8 @@ d3.json('/js/d3/data/json/skills.json', function (error, json) {
       .append('svg')
       .attr('id', 'skills-vis');
 
-    var skillsVis = document.getElementById('skills-vis');
-    var w = skillsVis.getBoundingClientRect().width;
-    var h = skillsVis.getBoundingClientRect().height;
+    var w = window.innerWidth;
+    var h = window.innerHeight;
 
     if (w <= h) {
       gravY = 8;
