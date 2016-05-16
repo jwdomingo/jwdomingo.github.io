@@ -6,12 +6,12 @@ date:   2016-05-16 12:49:00
 categories: blog theschemeofthings
 ---
 
-<img width="50%" alt="Urban Logistics for Postmates" src="./client/assets/screenshots/urbanlogistics.png">
+<img width="50%" alt="Urban Logistics for Postmates" src="/assets/projects/urban-logistics/urbanlogistics.png">
 
 ###### A sample data visualization dashboard for marketing and growth analysis using generic courier delivery service data provided by [Postmates](https://postmates.com/developer).
 
 
-<img width="100%" alt="Urban Logistics Dashboard" src="./client/assets/screenshots/dashboard.png">
+<img width="100%" alt="Urban Logistics Dashboard" src="/assets/projects/urban-logistics/dashboard.png">
 ___
 
 ### Installation
@@ -41,7 +41,7 @@ npm start
 ```
 ___
 
-<img width="100%" alt="DC.js streamgraph" src="./client/assets/screenshots/dashboard.gif">
+<img width="100%" alt="DC.js streamgraph" src="/assets/projects/urban-logistics/dashboard.gif">
 
 ### A technology agnostic approach
 
@@ -65,7 +65,7 @@ This approach worked out well for my MVP but several thousand coordinate points 
 
 Zillow's map data was great because I now had a level of detail allowing me to zoom into neighborhoods instead of community districts. However, it was still pretty frustrating because a few zones missing (not quite sure why although it could be that the regions missing are areas where deliveries cannot be made such as large parks or airports). Cross-referencing the missing patches against my raw coordinate data and Google Maps, I found that Greenpoint, NY was a huge missing region.
 
-<img width="50%" alt="Missing GeoJSON polygons" src="./client/assets/screenshots/greenpoint.png">
+<img width="50%" alt="Missing GeoJSON polygons" src="/assets/projects/urban-logistics/greenpoint.png">
 
 Luckily I found others were dealing with [the same problem](https://github.com/mypark/neighborhoods-json/blob/master/greenpoint.geojson) and I decided to create my own custom Greenpoint neighborhood polygon. For this reason, I would say the map data is not 100% accurate but I do think it's a good rough estimate.
 
@@ -73,19 +73,19 @@ I should also note when parsing the data, if the pickup and delivery coordinates
 
 In a future iteration, I would spend more time investigating the missing coordinate data.
 
-<img width="50%" alt="Interactive choropleth" src="./client/assets/screenshots/choropleth.gif">
+<img width="50%" alt="Interactive choropleth" src="/assets/projects/urban-logistics/choropleth.gif">
 
 #### Reducing complexity
 
 Generating the map data was a larger task than I anticipated so I decided for the rest of the project, I needed to simplify my approach and head straight for an MVP.
 
-<img width="100%" alt="Stacked line chart" src="./client/assets/screenshots/stackchart.png">
+<img width="100%" alt="Stacked line chart" src="/assets/projects/urban-logistics/stackchart.png">
 
 I created the area chart I initially sought to do and now I wanted to push how I was presenting the number of deliveries per hour in each borough. I wanted to morph my line chart into a [stream graph](http://leebyron.com/streamgraph/stackedgraphs_byron_wattenberg.pdf). It's a type of visualization that can be aesthetically polarizing and challenging to decipher but that just made it all the more provocative for me to try and implement.
 
 Now it may seem that I have a somewhat loose concept of MVP... I emphasize that had very clear learning goals I wanted to accomplish and I was determined to push for something both challenging and enjoyable. While I was complicating the project more than it probably needed to be, I find that's really the essence of a great data visualization project: one that captures the spirit of being able to take all this complex data, thousands and thousands of points, and distill it into something so seemingly simple. And that's what I find so fun about working with large sets of foreign data. It definitely kept me going and at the end of the day, I'm very happy with the challenge I took on.
 
-<img width="100%" alt="Urban Logistics dashboard" src="./client/assets/screenshots/streamgraph.gif">
+<img width="100%" alt="Urban Logistics dashboard" src="/assets/projects/urban-logistics/streamgraph.gif">
 
 #### Some thoughts
 
@@ -93,11 +93,11 @@ After burying myself in the dc.js [docs](https://github.com/dc-js/dc.js/blob/mas
 
 In an attempt to keep my code as modular and functional as possible, I spent some time refactoring my crossfilter dimensions and groups. In doing so, I ended up breaking the filtration capability and elasticity of my models. This [FAQ](https://github.com/dc-js/dc.js/wiki/FAQ#filter-the-data-before-its-charted) ended up becoming an invaluable asset. I learned to create fake groups so dc.js could play nicely with Crossfilter and also that I needed a unique dimension for each chart I wanted to filter.
 
-<img width="60%" alt="Crossfilter on multiple dimensions" src="./client/assets/screenshots/crossfilter.gif">
+<img width="60%" alt="Crossfilter on multiple dimensions" src="/assets/projects/urban-logistics/crossfilter.gif">
 
 Perhaps the biggest time sink was working with the D3 scales, chart axes, legends, and tooltips but what's new 😝? I think those will forever be a pain. I learned a lot by adopting a completely new data visualization stack and it was rewarding to create something that is both aesthetically and intellectually stimulating.
 
-<img width="80%" alt="Initial rendering, minimum viable product" src="./client/assets/screenshots/mvp.png">
+<img width="80%" alt="Initial rendering, minimum viable product" src="/assets/projects/urban-logistics/mvp.png">
 
 The dashboard came along way after adding custom styles to each chart (see old MVP above). If I could change one thing about my code, it would be the way I decoupled my charts. I [separated my concerns](https://www.urbanairship.com/blog/drying-up-d3) as much as possible but I still ended up with the proverbial spaghetti code. I would love to componentize each chart ~~in a future iteration perhaps by using [require.js](http://requirejs.org/)~~ (ES6 modules can't come fast enough!). I used require.js to factor out utility functions but it will take a little more effort to modularize each chart. For now, since no charts are being reused, I'll leave all charts in the same script file until I have more time.
 
@@ -105,8 +105,8 @@ I'm looking forward to more data viz projects and hope to jump into even more ch
 
 ### A few more screenshots
 
-<img width="100%" alt="Datatable drawer" src="./client/assets/screenshots/datatable.png">
+<img width="100%" alt="Datatable drawer" src="/assets/projects/urban-logistics/datatable.png">
 
-<img width="70%" alt="Turnaround time v. delivery distance" src="./client/assets/screenshots/turnaround.png">
+<img width="70%" alt="Turnaround time v. delivery distance" src="/assets/projects/urban-logistics/turnaround.png">
 
-<img width="100%" alt="Crossfitlered datatable" src="./client/assets/screenshots/crossfiltered.png">
+<img width="100%" alt="Crossfitlered datatable" src="/assets/projects/urban-logistics/crossfiltered.png">
