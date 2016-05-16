@@ -5,57 +5,23 @@ subtitle: "Creating an interactive dashboard with dimensional charts and crossfi
 date:   2016-05-16 12:49:00
 categories: blog theschemeofthings
 ---
-
-<img width="50%" alt="Urban Logistics for Postmates" src="/assets/projects/urban-logistics/urbanlogistics.png">
-
-###### A sample data visualization dashboard for marketing and growth analysis using generic courier delivery service data provided by [Postmates](https://postmates.com/developer).
-
+Urban Logistics is a sample data visualization dashboard for marketing and growth analysis using generic courier delivery service data provided by [Postmates](https://postmates.com/developer).
 
 <img width="100%" alt="Urban Logistics Dashboard" src="/assets/projects/urban-logistics/dashboard.png">
-___
 
-### Installation
-
-To set up locally, `npm install` the package dependencies and prepare your raw data.
-
-Raw data should be formatted as a **.csv** file called **`visualize_me.csv`**.
-
-##### Example `visualize_me.csv` data
-
-```
-"job_id","vehicle_type","pickup_place","place_category","item_name","item_quantity","item_category_name","courier_start_lat","courier_start_lng","pickup_point","dropoff_point","delivery_start_time","pickup_arrive_time","pickup_leave_time","dropoff_complete_time"
-
-12345678,"car","Target","Store","Candy",1,"Haribo","40.7219", "-73.9846","[-73.9881,40.722]","[-73.9962,40.7222]","2016-04-17 01:19:29.020782","2016-04-17 01:42:07.212455","2016-04-17 01:50:47.824742","2016-04-17 02:00:41.501304"
-```
-
-Add **`visualize_me.csv`** to the `/server/data` directory and run the following script:
-
-```
-npm run build:data
-```
-
-A new **.csv** data file will be added to the `/client/data` directory. Start the server and head over to `http://localhost:3000/`
-
-```
-npm start
-```
-___
-
-<img width="100%" alt="DC.js streamgraph" src="/assets/projects/urban-logistics/dashboard.gif">
-
-### A technology agnostic approach
+## A technology agnostic approach
 
 I used [dc.js](https://dc-js.github.io/dc.js/) and [Crossfilter](http://square.github.io/crossfilter/) to create an interactive dashboard with multi-dimensional charts. I prioritized these data visualization libraries over [D3](https://d3js.org/) because I wanted to offer a tool for others to derive their own insight from the data rather than create a biased presentation of what I thought the data meant. D3 was still essential to the project but I also wanted to learn a new data vis stack.
 
 Crossfilter is powerful for exploring large multivariate data sets and because I was unfamiliar with the information I was working with, I wanted to create a tool to help me understand it. Using dc.js allowed me to implement a dynamic user interface over the Crossfiltered data.
 
-As a proof of concept, I began with the simple task of creating a stacked area chart, motivated by the header image on Postmate's [engineering blog](http://engineering.postmates.com/).
+As a proof of concept, I began with the simple task of creating a stacked area chart, motivated by the header image on Postmates' [engineering blog](http://engineering.postmates.com/).
 
 <img width="70%" alt="Postmates Engineering Blog" src="http://engineering.postmates.com/images/blog-header.jpg">
 
 I was initially curious where courier deliveries were ending up around New York. I primarily wanted to capture the color story from the graphic above and in order to do so, I needed 3-5 data layers. It was perfect that there are five boroughs and I had all the longitude and latitude data I needed. However, coordindate-to-borough mapping was not readily accessible information so I had to figure out how to parse the coordinates in order to produce accurate location names. The dataset I was working with was also limited to particular delivery zones that spanned across three boroughs. Nonetheless, I had enough layers to create a simple the stack chart.
 
-#### Map hunting
+## Map hunting
 
 I initially considered creating a simple Node service or worker that would make a request to the Google Places API for each dropoff coordinate. Unfortunately, Google does not readily provide neighborhood data.
 
@@ -75,7 +41,7 @@ In a future iteration, I would spend more time investigating the missing coordin
 
 <img width="50%" alt="Interactive choropleth" src="/assets/projects/urban-logistics/choropleth.gif">
 
-#### Reducing complexity
+## Reducing complexity
 
 Generating the map data was a larger task than I anticipated so I decided for the rest of the project, I needed to simplify my approach and head straight for an MVP.
 
@@ -87,7 +53,7 @@ Now it may seem that I have a somewhat loose concept of MVP... I emphasize that 
 
 <img width="100%" alt="Urban Logistics dashboard" src="/assets/projects/urban-logistics/streamgraph.gif">
 
-#### Some thoughts
+## Some thoughts
 
 After burying myself in the dc.js [docs](https://github.com/dc-js/dc.js/blob/master/web/docs/api-latest.md) (it's really well documented!), I was able to piece together the DC implementation of the D3 stream graph. I now had a firmer grasp of how to render the other charts I wanted by navigating the API and relying on my experience with D3. I even answered a Crossfilter question on StackOverflow and was selected as the [best answer](http://stackoverflow.com/questions/36890785/single-crossfilter-dimension-and-group-on-two-columns/36993179#36993179)!
 
@@ -103,7 +69,9 @@ The dashboard came along way after adding custom styles to each chart (see old M
 
 I'm looking forward to more data viz projects and hope to jump into even more charting libraries in the very near future. Stay tuned!
 
-### A few more screenshots
+## A few more screenshots
+
+<img width="100%" alt="DC.js streamgraph" src="/assets/projects/urban-logistics/dashboard.gif">
 
 <img width="100%" alt="Datatable drawer" src="/assets/projects/urban-logistics/datatable.png">
 
