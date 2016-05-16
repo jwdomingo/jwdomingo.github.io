@@ -22,7 +22,7 @@
       "description": ""
     },
     {
-      "skill": "bootstrap",
+      "skill": "boot strap",
       "level": 8,
       "type": "frontend",
       "targets": [],
@@ -39,7 +39,7 @@
       "skill": "css",
       "level": 10,
       "type": "frontend",
-      "targets": ["bootstrap", "sass", "flexbox", "sketch"],
+      "targets": ["boot strap", "sass", "flexbox", "sketch"],
       "description": ""
     },
     {
@@ -120,7 +120,7 @@
       "description": ""
     },
     {
-      "skill": "crossfilter",
+      "skill": "cross filter",
       "level": 7,
       "type": "datavis",
       "targets": [],
@@ -137,7 +137,7 @@
       "skill": "dc.js",
       "level": 7,
       "type": "datavis",
-      "targets": ["crossfilter"],
+      "targets": ["cross filter"],
       "description": ""
     },
     {
@@ -239,7 +239,7 @@
       "description": ""
     },
     {
-      "skill": "cloudfront",
+      "skill": "cloud front",
       "level": 7,
       "type": "devops",
       "targets": [],
@@ -274,7 +274,7 @@
       "description": ""
     },
     {
-      "skill": "requirejs",
+      "skill": "require",
       "level": 6,
       "type": "devops",
       "targets": [],
@@ -284,18 +284,18 @@
       "skill": "s3",
       "level": 4,
       "type": "devops",
-      "targets": ["cloudfront"],
+      "targets": ["cloud front"],
       "description": ""
     },
     {
       "skill": "webpack",
       "level": 8,
       "type": "devops",
-      "targets": ["git", "requirejs"],
+      "targets": ["git", "require"],
       "description": ""
     },
     {
-      "skill": "cocoascript",
+      "skill": "cocoa script",
       "level": 6,
       "type": "design",
       "targets": [],
@@ -305,7 +305,7 @@
       "skill": "illustrator",
       "level": 8,
       "type": "design",
-      "targets": ["photoshop", "indesign", "sketch"],
+      "targets": ["photo shop", "indesign", "sketch"],
       "description": ""
     },
     {
@@ -316,7 +316,7 @@
       "description": ""
     },
     {
-      "skill": "photoshop",
+      "skill": "photo shop",
       "level": 7,
       "type": "design",
       "targets": ["illustrator"],
@@ -326,7 +326,7 @@
       "skill": "sketch",
       "level": 9,
       "type": "design",
-      "targets": ["cocoascript", "illustrator"],
+      "targets": ["cocoa script", "illustrator"],
       "description": ""
     }
   ]
