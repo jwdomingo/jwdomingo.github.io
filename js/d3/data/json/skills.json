@@ -4,276 +4,329 @@
       "skill": "ajax",
       "level": 5,
       "type": "frontend",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "angular",
       "level": 7,
       "type": "frontend",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "backbone",
       "level": 5,
       "type": "frontend",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "bootstrap",
       "level": 8,
       "type": "frontend",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "canvas",
       "level": 6,
       "type": "frontend",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "css",
       "level": 10,
       "type": "frontend",
+      "targets": ["bootstrap", "sass", "flexbox", "sketch"],
       "description": ""
     },
     {
       "skill": "flexbox",
       "level": 8,
       "type": "frontend",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "html",
       "level": 10,
       "type": "frontend",
+      "targets": ["css", "jade", "svg", "canvas", "jekyll"],
       "description": ""
     },
     {
       "skill": "jade",
       "level": 9,
       "type": "frontend",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "javascript",
       "level": 10,
       "type": "frontend",
+      "targets": ["html", "jquery", "angular", "backbone", "meteor", "react", "node"],
       "description": "I build end to end features using JavasScript because I value its flexibility, extensibility, and rapidly reinventing ecosystem. It brings together the best of object-oriented and functional programming and with exciting new features in ES6/7, I get more control over concurrency and asynchronicity across the stack."
     },
     {
       "skill": "jquery",
       "level": 8,
       "type": "frontend",
+      "targets": ["ajax"],
       "description": ""
     },
     {
       "skill": "meteor",
       "level": 5,
       "type": "frontend",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "react",
       "level": 7,
       "type": "frontend",
+      "targets": "redux",
       "description": "I love React because it allows developers to create highly manageable and componentized frontends that can accurately describe the UI at any given time. The virtual DOM makes rendering incredibly fast while JSX enhances JavaScript with markup capabilities instead of giving HTML clunky superpowers it's not meant to have."
     },
     {
       "skill": "redux",
       "level": 8,
       "type": "frontend",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "sass",
       "level": 9,
       "type": "frontend",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "svg",
       "level": 7,
       "type": "frontend",
+      "targets": ["d3", "canvas"],
+      "description": ""
+    },
+    {
+      "skill": "visual basic",
+      "level": 9,
+      "type": "frontend",
+      "targets": ["access"],
       "description": ""
     },
     {
       "skill": "crossfilter",
       "level": 7,
       "type": "datavis",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "d3",
       "level": 8,
       "type": "datavis",
+      "targets": ["dc.js", "leaflet"],
       "description": ""
     },
     {
-      "skill": "dimensional charting",
+      "skill": "dc.js",
       "level": 7,
       "type": "datavis",
+      "targets": ["crossfilter"],
       "description": ""
     },
     {
       "skill": "geojson",
       "level": 7,
       "type": "datavis",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "leaflet",
       "level": 6,
       "type": "datavis",
+      "targets": ["geojson"],
       "description": ""
     },
     {
       "skill": "matlab",
       "level": 5,
       "type": "datavis",
+      "targets": ["d3"],
       "description": ""
     },
     {
       "skill": "express",
       "level": 8,
       "type": "backend",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "jekyll",
       "level": 8,
       "type": "backend",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "node",
       "level": 9,
       "type": "backend",
+      "targets": ["express"],
       "description": ""
     },
     {
       "skill": "python",
       "level": 5,
       "type": "backend",
+      "targets": ["matlab"],
       "description": ""
     },
     {
       "skill": "access",
       "level": 9,
       "type": "database",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "mongo",
       "level": 8,
       "type": "database",
+      "targets": ["postgres", "redis"],
       "description": ""
     },
     {
       "skill": "mysql",
       "level": 7,
       "type": "database",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "postgres",
       "level": 8,
       "type": "database",
+      "targets": ["mysql", "sqlite", "access"],
       "description": ""
     },
     {
       "skill": "redis",
       "level": 5,
       "type": "database",
+      "targets": ["s3"],
       "description": ""
     },
     {
       "skill": "sqlite",
       "level": 7,
       "type": "database",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "chai",
       "level": 6,
       "type": "devops",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "cloudfront",
       "level": 7,
       "type": "devops",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "git",
       "level": 9,
       "type": "devops",
+      "targets": ["grunt", "gulp"],
       "description": ""
     },
     {
       "skill": "grunt",
       "level": 6,
       "type": "devops",
+      "targets": ["mocha"],
       "description": ""
     },
     {
       "skill": "gulp",
       "level": 5,
       "type": "devops",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "mocha",
       "level": 7,
       "type": "devops",
+      "targets": ["chai"],
       "description": ""
     },
     {
       "skill": "requirejs",
       "level": 6,
       "type": "devops",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "s3",
       "level": 4,
       "type": "devops",
+      "targets": ["cloudfront"],
       "description": ""
     },
     {
       "skill": "webpack",
       "level": 8,
       "type": "devops",
+      "targets": ["git", "require"],
       "description": ""
     },
     {
       "skill": "cocoascript",
       "level": 6,
       "type": "design",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "illustrator",
       "level": 8,
       "type": "design",
+      "targets": ["photoshop", "indesign"],
       "description": ""
     },
     {
       "skill": "indesign",
       "level": 5,
       "type": "design",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "photoshop",
       "level": 7,
       "type": "design",
+      "targets": [],
       "description": ""
     },
     {
       "skill": "sketch",
       "level": 9,
       "type": "design",
+      "targets": ["cocoascript", "illustrator"],
       "description": ""
     }
   ],
