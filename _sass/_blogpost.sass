@@ -90,7 +90,7 @@ body
         @media only screen and (min-width: 768px)
           width: 25%
 
-        @media only screen and (max-width: 768px)
+        @media only screen and (max-width: 767px)
           position: fixed
           z-index: 1
           width: 100%
@@ -101,10 +101,10 @@ body
             size: contain
 
           aside
-            min-height: 0
-            height: 200px
+            min-height: 200px
 
             .aside-content
+              height: 60px
               svg
                 height: 60px
 
@@ -112,7 +112,7 @@ body
                 visibility: hidden
 
         @media only screen and (max-width: 443px)
-          position: fixed
+          position: absolute
           z-index: 1
           width: 100%
           min-height: 0
@@ -146,7 +146,7 @@ body
         ul.blogpost-list
           list-style: none
           margin: 50px auto 0
-          height: 200px
+          height: 60vh
           max-width: 95%
           overflow-y: scroll
           border: 1px solid transparentize(white, 0.7)
@@ -177,7 +177,7 @@ body
                 color: $tertiary2
 
             h2
-              font-size: 2em
+              font-size: 1.4em
               margin: 0 0 5px
 
             h6
@@ -191,7 +191,7 @@ body
         z-index: 0
         padding: 10% 15%
 
-        @media only screen and (max-width: 768px)
+        @media only screen and (max-width: 767px)
           margin-top: 200px
           padding: 50px 20px
 
