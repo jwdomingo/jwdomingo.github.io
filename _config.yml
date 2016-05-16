@@ -4,13 +4,15 @@ email: johnwill.domingo@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   A collection of the  skills I've amassed since beginning my web developemnt journey.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://johndomingo.com" # the base hostname & protocol for your site
+url: "https://johndomingo.com" # the base hostname & protocol for your site
 twitter_username: jwdomingo
 github_username:  jwdomingo
 
 # Build settings
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
+sass:
+  style: compressed
 
 analytics:
   provider: google
