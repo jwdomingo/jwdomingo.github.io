@@ -22,7 +22,7 @@
       "description": ""
     },
     {
-      "skill": "boot strap",
+      "skill": "bootstrap",
       "level": 8,
       "type": "frontend",
       "targets": [],
@@ -39,7 +39,7 @@
       "skill": "css",
       "level": 10,
       "type": "frontend",
-      "targets": ["boot strap", "sass", "flexbox", "sketch"],
+      "targets": ["bootstrap", "sass", "flexbox", "sketch"],
       "description": ""
     },
     {
@@ -120,7 +120,7 @@
       "description": ""
     },
     {
-      "skill": "cross filter",
+      "skill": "crossfilter",
       "level": 7,
       "type": "datavis",
       "targets": [],
@@ -137,7 +137,7 @@
       "skill": "dc.js",
       "level": 7,
       "type": "datavis",
-      "targets": ["cross filter"],
+      "targets": ["crossfilter"],
       "description": ""
     },
     {
@@ -239,7 +239,7 @@
       "description": ""
     },
     {
-      "skill": "cloud front",
+      "skill": "cloudfront",
       "level": 7,
       "type": "devops",
       "targets": [],
@@ -284,7 +284,7 @@
       "skill": "s3",
       "level": 4,
       "type": "devops",
-      "targets": ["cloud front"],
+      "targets": ["cloudfront"],
       "description": ""
     },
     {
@@ -295,7 +295,7 @@
       "description": ""
     },
     {
-      "skill": "cocoa script",
+      "skill": "cocoascript",
       "level": 6,
       "type": "design",
       "targets": [],
@@ -305,7 +305,7 @@
       "skill": "illustrator",
       "level": 8,
       "type": "design",
-      "targets": ["photo shop", "indesign", "sketch"],
+      "targets": ["photoshop", "indesign", "sketch"],
       "description": ""
     },
     {
@@ -316,7 +316,7 @@
       "description": ""
     },
     {
-      "skill": "photo shop",
+      "skill": "photoshop",
       "level": 7,
       "type": "design",
       "targets": ["illustrator"],
@@ -326,7 +326,7 @@
       "skill": "sketch",
       "level": 9,
       "type": "design",
-      "targets": ["cocoa script", "illustrator"],
+      "targets": ["cocoascript", "illustrator"],
       "description": ""
     }
   ]
