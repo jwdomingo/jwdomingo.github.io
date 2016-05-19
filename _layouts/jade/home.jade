@@ -736,9 +736,11 @@ html(lang="en")
               I thrive in environments that champion team-driven development but also empower autonomous individuals to have a strong sense of ownership. Reach out if you'd like to work with me!
 
           .col-sm-2.hidden-xs
-            ul
-              li Contact
-              li Blog
+            ul.links
+              li
+                a(href="mailto:johnwill.domingo@gmail.com") Contact
+              li
+                a(href="https://johndomingo.com/blog") Blog
           .col-xs-12.col-sm-3.text-center
             input#social-1(type='radio', name='social')
             input#social-2(type='radio', name='social')
@@ -753,16 +755,16 @@ html(lang="en")
             input#social-close(type='radio', name='social')
             
             ul.social.list-inline
-              li: label(for='social-1'): .frame: i.fa.fa-twitter 
-              li: label(for='social-2'): .frame: i.fa.fa-github-alt
-              li: label(for='social-3'): .frame: i.fa.fa-instagram
-              li: label(for='social-4'): .frame: i.fa.fa-pinterest-p
-              li: label(for='social-5'): .frame: i.fa.fa-google-plus      
-              li: label(for='social-6'): .frame: i.fa.fa-linkedin
-              li: label(for='social-7'): .frame: i.fa.fa-stack-overflow
-              li: label(for='social-8'): .frame: i.fa.fa-codepen
-              li: label(for='social-9'): .frame: i.fa.fa-jsfiddle
-              li: label(for='social-10'): .frame: i.fa.fa-trello
+              li: a(href="https://twitter.com/jwdomingo", target="_blank"): label(for='xsocial-1'): .frame: i.fa.fa-twitter
+              li: a(href="https://github.com/jwdomingo", target="_blank"): label(for='xsocial-2'): .frame: i.fa.fa-github-alt
+              li: a(href="https://www.instagram.com/johnkinthetrunk/", target="_blank"): label(for='xsocial-3'): .frame: i.fa.fa-instagram
+              li: a(href="https://www.pinterest.com/johndomingo", target="_blank"): label(for='xsocial-4'): .frame: i.fa.fa-pinterest-p
+              li: a(href="https://plus.google.com/+JohnWilliamDomingo", target="_blank"): label(for='xsocial-5'): .frame: i.fa.fa-google-plus
+              li: a(href="https://www.linkedin.com/in/jwdomingo", target="_blank"): label(for='xsocial-6'): .frame: i.fa.fa-linkedin
+              li: a(href="http://stackoverflow.com/users/3850619/john-william-domingo", target="_blank"): label(for='xsocial-7'): .frame: i.fa.fa-stack-overflow
+              li: a(href="http://codepen.io/johndomingo/", target="_blank"): label(for='xsocial-8'): .frame: i.fa.fa-codepen
+              li: a(href="https://jsfiddle.net/user/johndomingo", target="_blank"): label(for='xsocial-9'): .frame: i.fa.fa-jsfiddle
+              li: a(href="https://trello.com/johnwilliamdomingo", target="_blank"): label(for='xsocial-10'): .frame: i.fa.fa-trello
               label.social-close(for='social-close') &times;
 
       #footer        
