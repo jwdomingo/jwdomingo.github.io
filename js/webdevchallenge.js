@@ -1,5 +1,5 @@
 $.ajax({
-  url: 'http://johndomingo.com/webdevchallenge/feed.xml',
+  url: 'https://johndomingo.com/webdevchallenge/feed.xml',
   dataType: 'xml',
   success: function(data) {
     $(data).find('channel item').each(function (i) {
